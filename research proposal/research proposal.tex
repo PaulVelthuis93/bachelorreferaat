@@ -1,3 +1,4 @@
+
 % This is "bach-ref-2009.tex" Updated january 29th 2010.
 % This file should be compiled with "sig-alternate-fixed.cls" January 2010.
 % It is based on the ACM style "sig-alternate.cls"
@@ -34,18 +35,24 @@
 
 % refers to the cls file being used
 \documentclass{sig-alternate-br}
-
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\restylefloat{figure}
+\restylefloat{table}
 \begin{document}
+
 %
 % --- Author Metadata here --- DO NOT REMOVE OR CHANGE 
-\conferenceinfo{13$^{th}$ Twente Student Conference on IT}{June 21$^{st}$, 2010, Enschede, The Netherlands.}
-\CopyrightYear{2010} % Allows default copyright year (200X) to be over-ridden - IF NEED BE.
+%\conferenceinfo{13$^{th}$ Twente Student Conference on IT}{June 23$^{st}$, 2010, Enschede, The Netherlands.}
+\CopyrightYear{2015} % Allows default copyright year (200X) to be over-ridden - IF NEED BE.
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 
-\title{Bachelor's Student Conference Proceedings Paper in LaTeX Template}
+\title{micro data server using raspberry pi}
 % In Bachelor Referaat at University of Twente the use of a subtitle is discouraged.
-% \subtitle{[Instructions]}
+ \subtitle{Research Proposal}
 
 %
 % You need the command \numberofauthors to handle the 'placement
@@ -89,11 +96,11 @@
 %
 % 1st. author
 \alignauthor
-1st Author\\
+P.j.e. Velthuis\\
        \affaddr{University of Twente}\\
        \affaddr{P.O. Box 217, 7500AE Enschede}\\
        \affaddr{The Netherlands}\\
-       \email{1st author's email address}
+       \email{p.j.e.velthuis@student.utwente.nl}
 % 2nd. author
 \alignauthor 2nd Author\\
        \affaddr{2nd author's affiliation}\\
@@ -122,7 +129,9 @@ and Julius P.~Kumquat (The Kumquat Consortium, email:
 
 \maketitle
 \begin{abstract}
-In this paper, we describe the formatting guidelines for ACM SIG Proceedings.  
+This document describes a draft research proposal in the
+area of cloud computing services. The main research question
+is: Is a cloud server consisting of Raspberry Pi efficient?
 \end{abstract}
 
 % A category with the (minimum) three required fields (NOT USED in Bachelor Referaat)
@@ -131,183 +140,97 @@ In this paper, we describe the formatting guidelines for ACM SIG Proceedings.
 % \category{D.2.8}{Software Engineering}{Metrics}[complexity
 % measures, performance measures]
 
-\keywords{Keywords are your own designated keywords.}
+\keywords{Cloud computing, Raspberry Pi, ARM performance, micro data server}
 
-\section{Introduction}
-The \textit{proceedings} are the records of the conference. ACM 
-hopes to give these conference by-products a single, high-quality
-appearance. To do this, we ask that authors follow some simple 
-guidelines. In essence, we ask you to make your paper look exactly 
-like this document. The easiest way to do this is simply to down-load 
-a template and replace the content with your own material. 
+\section{Motivation}
+The amount of cloud computing services is increasing fast \cite{armbrust:2009}. 
+Today there are a even some cloud Raspberry Pi services. The density of servers has increased a lot in the past\cite{density}. There are new technologies such as for example the ARM processor. In this research we want to look what the performance is of such  a ARM processor by using the Raspberry Pi. Many companies want to explore the possibilities of for example the Raspberry Pi. Some data centers even offer some Raspberry Pi co-location \cite{hosting,Pcextreme}. A good reason to do this is the very low power usage of a Raspberry Pi. A Raspberry Pi has a power usage between the 3-5 Watt and a server has a power usage between the 75 and 150 watt \cite{Powerusage}. This could mean that it is better to use a Raspberry Pi for specific small tasks that do not demand a whole server. During this research I want to further investigate this power usage.  A Raspberry Pi can be the small data center for the future \cite{tso:2013}. The Raspberry is a rather cheap device for 35 euros. This makes it cheaper to do research in compared to a normal server. The current versions of the Raspberry Pi cannot perform the task of a large scale x86 server \cite{tso:2013}. Building a cloud like this can be a cost effective scale model\cite{tso:2013}. 
 
-\section{Page size}
-All material on each page should fit within a rectangle centered on 
-the page, beginning 2.54 cm (1") from the top of the page and ending 
-with 2.54 cm (1") from the bottom.  The right and left margins should be 
-1.9 cm (.75").  The text should be in two 8.18 cm columns with a .83 cm 
-(.33") gutter. Page format is International A4.
 
-\section{Typeset text}
-\subsection{Normal or body text}
-Please use a 9-point Times Roman font, or other Roman font with 
-serifs, as close as possible in appearance to Times Roman in which 
-these guidelines have been set. The goal is to have a 9-point text, 
-as you see here. Please use sans-serif or non-proportional fonts 
-only for special purposes, such as distinguishing source code text. 
-If Times Roman is not available, try the font named Computer Modern
-Roman. On a Macintosh, use the font named Times. Right margins 
-should be justified, not ragged.
 
-\subsection{Title and authors}
-The title (Helvetica 18-point bold), authors' names (Helvetica 
-12-point) and affiliations (Helvetica 10-point) run across the full 
-width of the page - one column wide. We also recommend an  e-mail 
-address (Helvetica 12-point). See the top of this page for three 
-addresses. If only one address is needed, center all address text. 
-For two addresses, use two centered tabs, and so on.
 
-\subsection{First Page Copyright Notice}
-Please leave the Copyright Notice on the first page as it is but 
-change the date and the number of the conference, if necessary.
+%\subsection{References and Citations}
+%Footnotes should be Times New Roman 9-point, and justified to the 
+%full width of the column.\footnote{A footnote in 9-point Times New Roman.}
 
-\subsection{Subsequent Pages}
-For pages other than the first page, start at the top of the page, and 
-continue in double-column format.  The two columns on the last page 
-should be as close to equal length as possible.
+%Use the "ACM Reference format" for references - that is, a numbered 
+%list at the end of the article, ordered alphabetically and formatted 
+%accordingly. See examples of some typical reference types, in the new 
+%"ACM Reference format", at the end of this document. Within this 
+%template, use the style named references for the text. Acceptable 
+%abbreviations, for journal names, can be found here: 
+%http://library.caltech.edu/reference/abbreviations/
 
-\begin{table}
-\centering \caption{Table captions should be placed above the table}
-\begin{tabular}{|c|c|c|c|} \hline
-\textbf{Graphics} & \textbf{Top} & \textbf{In-between} & \textbf{Bottom}\\ \hline 
-Tables&End&Last&First\\ \hline 
-Figures&Good&Similar&Very well\\
-\hline\end{tabular}
-\end{table}
+%The references are also in 9 pt., but that section (see Section 7) is 
+%ragged right. References should be published materials accessible to 
+%the public. Internal technical reports may be cited only if they are 
+%easily accessible (i.e. you can give the address to obtain the report 
+%within your citation) and may be obtained by any reader. Proprietary
+%information may not be cited. Private communications should be 
+%acknowledged, not referenced  (e.g., "[Robertson, personal communication]")
 
-\subsection{References and Citations}
-Footnotes should be Times New Roman 9-point, and justified to the 
-full width of the column.\footnote{A footnote in 9-point Times New Roman.}
+%\subsection{Page Numbering, Headers and Footers}
+%Do not include headers, footers or page numbers in your submission. 
+%These will be added when the publications are assembled.
 
-Use the "ACM Reference format" for references - that is, a numbered 
-list at the end of the article, ordered alphabetically and formatted 
-accordingly. See examples of some typical reference types, in the new 
-"ACM Reference format", at the end of this document. Within this 
-template, use the style named references for the text. Acceptable 
-abbreviations, for journal names, can be found here: 
-http://library.caltech.edu/reference/abbreviations/
+%\section{Figures / Captions}
+%Place Tables/Figures/Images in text as close to the reference as possible 
+%(See Figure \ref{fig:abc}).  It may extend across both columns. 
 
-The references are also in 9 pt., but that section (see Section 7) is 
-ragged right. References should be published materials accessible to 
-the public. Internal technical reports may be cited only if they are 
-easily accessible (i.e. you can give the address to obtain the report 
-within your citation) and may be obtained by any reader. Proprietary
-information may not be cited. Private communications should be 
-acknowledged, not referenced  (e.g., "[Robertson, personal communication]")
+%\begin{figure}
+%\centering 
+%\epsfig{file=fly2.eps} 
+%\caption{Insert caption to place below figure.}
+%\label{fig:abc} %always place your label after your caption!
+\ %end{figure}
 
-\subsection{Page Numbering, Headers and Footers}
-Do not include headers, footers or page numbers in your submission. 
-These will be added when the publications are assembled.
+%Captions should be Times New Roman 9-point bold.  They should be numbered (e.g., "Table 1" or "Figure 2"), please note that the word for Table and Figure are spelled out. Figure's captions should be centered beneath the image or picture, and Table captions should be centered above the table body.
 
-\section{Figures / Captions}
-Place Tables/Figures/Images in text as close to the reference as possible 
-(See Figure \ref{fig:abc}).  It may extend across both columns. 
+%\section{Sections}
+%The heading of a section should be in Times New Roman 12-point bold in all-capitals flush left with an additional 6-points of white space above the section head.  Sections and subsequent sub- sections should be numbered and flush left. For a section head and a subsection head together (such as Section 3 and subsection 3.1), use no additional space above the subsection head.
 
-\begin{figure}
-\centering 
-\epsfig{file=fly2.eps} 
-\caption{Insert caption to place below figure.}
-\label{fig:abc} %always place your label after your caption!
-\end{figure}
+%\subsection{Subsections}
+%The heading of subsections should be in Times New Roman 12-point bold with only the initial letters capitalized. (Note: For subsections and subsubsections, a word like the or a is not capitalized unless it is the first word of the header.)
 
-Captions should be Times New Roman 9-point bold.  They should be numbered (e.g., "Table 1" or "Figure 2"), please note that the word for Table and Figure are spelled out. Figure's captions should be centered beneath the image or picture, and Table captions should be centered above the table body.
+%\subsubsection{Subsubsections}
+%The heading for subsubsections should be in Times New Roman 11-point italic with initial letters capitalized and 6-points of white space above the subsubsection head.
 
-\section{Sections}
-The heading of a section should be in Times New Roman 12-point bold in all-capitals flush left with an additional 6-points of white space above the section head.  Sections and subsequent sub- sections should be numbered and flush left. For a section head and a subsection head together (such as Section 3 and subsection 3.1), use no additional space above the subsection head.
+%\section{Acknowledgments}
+%Our thanks to ACM SIGCHI for allowing us to modify templates they had developed.
 
-\subsection{Subsections}
-The heading of subsections should be in Times New Roman 12-point bold with only the initial letters capitalized. (Note: For subsections and subsubsections, a word like the or a is not capitalized unless it is the first word of the header.)
+%\section{Introduction to Latex}
+%Typically, the body of a paper is organized into a hierarchical
+%structure, with numbered or unnumbered headings for sections,
+%subsections, sub-subsections, and even smaller sections.  The
+%command \texttt{{\char'134}section} that precedes this paragraph
+%is part of such a hierarchy. \LaTeX\ handles the numbering and placement of these
+%headings for you, when you use the appropriate heading commands
+%around the titles of the headings.  If you want a sub-subsection
+%or smaller part to be unnumbered in your output, simply append an
+%asterisk to the command name.  Examples of both numbered and
+%unnumbered headings will appear throughout the balance of this
+%sample document.
 
-\subsubsection{Subsubsections}
-The heading for subsubsections should be in Times New Roman 11-point italic with initial letters capitalized and 6-points of white space above the subsubsection head.
+%Because the entire article is contained in the \textbf{document}
+%environment, you can indicate the start of a new paragraph with a
+%blank line in your input file; that is why this sentence forms a
+%separate paragraph.
 
-\section{Acknowledgments}
-Our thanks to ACM SIGCHI for allowing us to modify templates they had developed.
+%\subsection{Type Changes and {\subsecit Special} Characters}
+%We have already seen several typeface changes in this sample.  You
+%can indicate italicized words or phrases in your text with the
+%command \texttt{{\char'134}textit}; emboldening with the command
+%\texttt{{\char'134}textbf} and typewriter-style (for instance, for
+%computer code) with \texttt{{\char'134}texttt}.  But remember, you
+%do not have to indicate typestyle changes when such changes are
+%part of the \textit{structural} elements of your article; for
+%instance, the heading of this subsection will be in a sans
 
-\section{Introduction to Latex}
-Typically, the body of a paper is organized into a hierarchical
-structure, with numbered or unnumbered headings for sections,
-subsections, sub-subsections, and even smaller sections.  The
-command \texttt{{\char'134}section} that precedes this paragraph
-is part of such a hierarchy. \LaTeX\ handles the numbering and placement of these
-headings for you, when you use the appropriate heading commands
-around the titles of the headings.  If you want a sub-subsection
-or smaller part to be unnumbered in your output, simply append an
-asterisk to the command name.  Examples of both numbered and
-unnumbered headings will appear throughout the balance of this
-sample document.
+\section{Research questions}
+The main research question
+is: Is a cloud server consisting of Raspberry Pi efficient?
 
-Because the entire article is contained in the \textbf{document}
-environment, you can indicate the start of a new paragraph with a
-blank line in your input file; that is why this sentence forms a
-separate paragraph.
-
-\subsection{Type Changes and {\subsecit Special} Characters}
-We have already seen several typeface changes in this sample.  You
-can indicate italicized words or phrases in your text with the
-command \texttt{{\char'134}textit}; emboldening with the command
-\texttt{{\char'134}textbf} and typewriter-style (for instance, for
-computer code) with \texttt{{\char'134}texttt}.  But remember, you
-do not have to indicate typestyle changes when such changes are
-part of the \textit{structural} elements of your article; for
-instance, the heading of this subsection will be in a sans
-serif\footnote{A third footnote, here. Let's make this a rather
-short one to see how it looks.} typeface, but that is handled by
-the document class file. Take care with the use of\footnote{A
-fourth, and last, footnote.} the curly braces in typeface changes;
-they mark the beginning and end of the text that is to be in the
-different typeface.
-
-You can use whatever symbols, accented characters, or non-English
-characters you need anywhere in your document; you can find a
-complete list of what is available in the \textit{\LaTeX\ User's
-Guide}\cite{Lamport:LaTeX}.
-
-\subsection{Math Equations}
-You may want to display math equations in three distinct styles:
-inline, numbered or non-numbered display.  Each of the three are
-discussed in the next sections.
-
-\subsubsection{Inline (In-text) Equations}
-A formula that appears in the running text is called an inline or
-in-text formula.  It is produced by the \textbf{math} environment,
-which can be invoked with the usual \texttt{{\char'134}begin. .
-.{\char'134}end} construction or with the short form \texttt{\$. .
-.\$}. You can use any of the symbols and structures, from $\alpha$
-to $\omega$, available in \LaTeX\cite{Lamport:LaTeX}; this section
-will simply show a few examples of in-text equations in context.
-Notice how this equation: \begin{math}\lim_{n\rightarrow
-\infty}x=0\end{math}, set here in in-line math style, looks
-slightly different when set in display style.  (See next section).
-
-\subsubsection{Display Equations}
-A numbered display equation -- one set off by vertical space from
-the text and centered horizontally -- is produced by the
-\textbf{equation} environment. An unnumbered display equation is
-produced by the \textbf{displaymath} environment.
-
-Again, in either environment, you can use any of the symbols and
-structures available in \LaTeX; this section will just give a
-couple of examples of display equations in context. First,
-consider the equation, shown as an inline equation above:
-\begin{equation}\lim_{n\rightarrow \infty}x=0\end{equation}
-Notice how it is formatted somewhat differently in the
-\textbf{displaymath} environment.  Now, we'll enter an unnumbered
-equation:
-\begin{displaymath}\sum_{i=0}^{\infty} x + 1\end{displaymath}
-and follow it with another numbered equation:
-\begin{equation}\sum_{i=0}^{\infty}x_i=\int_{0}^{\pi+2} f\end{equation}
-just to demonstrate \LaTeX's able handling of numbering.
+In order to come to a good answer we first need to build our own Raspberry Pi setup. There needs to be decided with which benchmark the performance will be measured. After we have measured the performance we can see   
 
 \subsection{Citations}
 Citations to articles \cite{bowman:reasoning, clark:pct,
@@ -333,193 +256,81 @@ This article shows only the plainest form of the citation command,
 using \texttt{{\char'134}cite}. This is what is stipulated in the
 SIGS style specifications. No other citation format is endorsed or
 supported.
+\subsection{What cloud services are there}
+Eucalyptus https://www.eucalyptus.com/eucalyptus-cloud/get-started
+Hazelcast
 
-\subsection{Tables}
-Because tables cannot be split across pages, the best placement
-for them is typically the top of the page nearest their initial
-cite.  To ensure this proper ``floating'' placement of tables, use
-the environment \textbf{table} to enclose the table's contents and
-the table caption.  The contents of the table itself must go in
-the \textbf{tabular} environment, to be aligned properly in rows
-and columns, with the desired horizontal and vertical rules.
-Again, detailed instructions on \textbf{tabular} material is found
-in the \textit{\LaTeX\ User's Guide}.
+\subsection{What cloud services are already running on Raspberry pi}
+In the PcExtreme article \cite{Pcextreme} there are running several services on a Raspberry Pi.
+For example a webserver, a DNS server, a chat server, a mail server, a vpn server or a monitoring server. 
 
-Immediately following this sentence is the point at which Table 1
-is included in the input file; compare the placement of the table
-here with the table in the printed dvi output of this document.
+\subsection{What are the main characteristics of a Raspberry Pi cloud computer}
+
+\subsection{What software can be used for a Raspberry Pi cloud}
+To investigate this I want to make a experimentation cloud with Raspberry Pi's to see if it will work as a cloud. 
+
+\subsection{Is it reachable to build small personal Raspberry Pi clouds for server}
+With this subquestion I want to find out if it is possible to let users have small Raspberry Pi servers such as now is happening at PcExtreme as an experiment. 
+
+
+\section{Research approach}
+For the experiment we need a Raspberry Pi with a static Ip address and we need a sd card for the OS.  A Raspberry Pi can be used as a webserver or DNS server. For the experiment we need a Raspberry Pi B that can make use of the Ethernet.
+
+Experiment making a VPN:
+\url{http://readwrite.com/2014/04/10/raspberry-pi-vpn-tutorial-server-secure-web-browsing}
+
+Glasgow Raspberry Pi
+\url{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6679872}
+Limited software:
+lightweight,
+httpd,
+servers, 
+hadoop
+
+ICanCloud is a cloud simulation program.
+
+
+\url{http://www.lighttpd.net/}
+
+Raspberry Pi project Glasgow
+\url{https://raspberrypicloud.wordpress.com/}
+Runs Linux from sanddisk 16 gb
+
+Owncloud
+Data storage like dropbox
 
 \begin{table}
-\centering \caption{Frequency of Special Characters}
-\begin{tabular}{|c|c|l|} \hline
-Non-English or Math&Frequency&Comments\\ \hline \O & 1 in 1,000&
-For Swedish names\\ \hline $\pi$ & 1 in 5& Common in math\\ \hline
-\$ & 4 in 5 & Used in business\\ \hline
-$\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
-\hline\end{tabular}
+	\centering \caption{Cost breakdown of a testbed consisting 56 servers} 
+
+\begin{tabular}{|c|c|c|} \hline
+\textbf{Server}&  \textbf{Power} \textbf{Needs Cooling?} \\ \hline
+Testbed  & $112,000 (@$2,000) 10,080W/h (@180W/h) & Yes \\ \hline
+PiCloud & $1,960 (@$35) 196W/h (@3.5W/h) & No \\ \hline
+\end{tabular}
+\label{tab:cost}
 \end{table}
 
-To set a wider table, which takes up the whole width of the page's
-live area, use the environment \textbf{table*} to enclose the
-table's contents and the table caption.  As with a single-column
-table, this wide table will ``float" to a location deemed more
-desirable. Immediately following this sentence is the point at
-which Table 2 is included in the input file; again, it is
-instructive to compare the placement of the table here with the
-table in the printed dvi output of this document.
+\section{Planning}
 
+Hallootjes
+\begin{table}
+	\centering \caption{Planning}
+	\begin{tabular}{|c|c|c|} \hline
+		\textbf{Week} & \textbf{Date} & \textbf{Activity} \\ \hline 
+		6-7&6 Feb. -15 Feb&Collect literature and software\\ \hline 
+		11-14&5 March 12 April&Start building test environment\\ \hline
+		14&6 April - 12 April&Answer subquestion 1\\ \hline
+		15&13 April - 20 April&Answer subquestion 2\\ \hline
+		16&21 April - 28April&Answer subquestion 3\\ \hline
+		18&4 May-10 May& conclusion and check coherency \\ \hline
+		19&11 May-18 May& Finalize paper \\ \hline
+		\end{tabular}
+		\label{tab:planning}
+\end{table}
+Here above is the ~\ref{tab:planning}.
 
-\begin{table*}
-\centering \caption{Some Typical Commands}
-\begin{tabular}{|c|c|l|} \hline
-Command&A Number&Comments\\ \hline \texttt{{\char'134}alignauthor}
-& 100& Author alignment\\ \hline
-\texttt{{\char'134}numberofauthors}& 200& Author enumeration\\
-\hline \texttt{{\char'134}table}& 300 & For tables\\ \hline
-\texttt{{\char'134}table*}& 400& For wider tables\\
-\hline\end{tabular}
-\end{table*}
-% end the environment with {table*}, NOTE not {table}!
+\section{State of the Art}
 
-\subsection{Figures}
-Like tables, figures cannot be split across pages; the best
-placement for them is typically the top or the bottom of the page
-nearest their initial cite.  To ensure this proper ``floating''
-placement of figures, use the environment \textbf{figure} to
-enclose the figure and its caption.
-
-This sample document contains examples of \textbf{.eps} and
-\textbf{.ps} files to be displayable with \LaTeX.  More details on
-each of these is found in the \textit{Author's Guide}.
-
-\begin{figure}
-\centering \epsfig{file=fly.eps} \caption{A sample black and white
-graphic (.eps format).}
-\end{figure}
-
-\begin{figure}
-\centering \epsfig{file=fly.eps, height=1in, width=1in} \caption{A
-sample black and white graphic (.eps format) that has been resized
-with the \texttt{epsfig} command.}
-\end{figure}
-
-
-As was the case with tables, you may want a figure that spans two
-columns.  To do this, and still to ensure proper ``floating''
-placement of tables, use the environment \textbf{figure*} to
-enclose the figure and its caption.
-\begin{figure*}
-\centering \epsfig{file=flies.eps} \caption{A sample black and
-white graphic (.eps format) that needs to span two columns of
-text.}
-\end{figure*}
-and don't forget to end the environment with {figure*}, not
-{figure}!
-
-Note that either {\textbf{.ps}} or {\textbf{.eps}} formats are
-used; use the \texttt{{\char'134}epsfig} or
-\texttt{{\char'134}psfig} commands as appropriate for the
-different file types.
-
-\begin{figure}
-\centering \psfig{file=rosette.ps, height=1in, width=1in,}
-\caption{A sample black and white graphic (.ps format) that has
-been resized with the \texttt{psfig} command.} \vskip -6pt
-\end{figure}
-
-\subsection{Theorem-like Constructs}
-Other common constructs that may occur in your article are the
-forms for logical constructs like theorems, axioms, corollaries
-and proofs.  There are two forms, one produced by the command
-\texttt{{\char'134}newtheorem} and the other by the command
-\texttt{{\char'134}newdef}; perhaps the clearest and easiest way
-to distinguish them is to compare the two in the output of this
-sample document:
-
-This uses the \textbf{theorem} environment, created by
-the\linebreak\texttt{{\char'134}newtheorem} command:
-\newtheorem{theorem}{Theorem}
-\begin{theorem}
-Let $f$ be continuous on $[a,b]$.  If $G$ is an antiderivative for
-$f$ on $[a,b]$, then
-\begin{displaymath}\int^b_af(t)dt = G(b) - G(a).\end{displaymath}
-\end{theorem}
-
-The other uses the \textbf{definition} environment, created by the
-\texttt{{\char'134}newdef} command:
-\newdef{definition}{Definition}
-\begin{definition}
-If $z$ is irrational, then by $e^z$ we mean the unique number
-which has logarithm $z$: \begin{displaymath}{\log e^z =
-z}\end{displaymath}
-\end{definition}
-
-Two lists of constructs that use one of these forms is given in
-the \textit{Author's  Guidelines}.
-
-There is one other similar construct environment, which is already
-set up for you; i.e. you must \textit{not} use a
-\texttt{{\char'134}newdef} command to create it: the
-\textbf{proof} environment.  Here is a example of its use:
-\begin{proof}
-Suppose on the contrary there exists a real number $L$ such that
-\begin{displaymath}
-\lim_{x\rightarrow\infty} \frac{f(x)}{g(x)} = L.
-\end{displaymath}
-Then
-\begin{displaymath}
-l=\lim_{x\rightarrow c} f(x) = \lim_{x\rightarrow c} \left[ g{x}
-\cdot \frac{f(x)}{g(x)} \right ] = \lim_{x\rightarrow c} g(x)
-\cdot \lim_{x\rightarrow c} \frac{f(x)}{g(x)} = 0\cdot L = 0,
-\end{displaymath}
-which contradicts our assumption that $l\neq 0$.
-\end{proof}
-
-Complete rules about using these environments and using the two
-different creation commands are in the \textit{Author's Guide};
-please consult it for more detailed instructions.  If you need to
-use another construct, not listed therein, which you want to have
-the same formatting as the Theorem or the
-Definition\cite{salas:calculus} shown above, use the
-\texttt{{\char'134}newtheorem} or the \texttt{{\char'134}newdef}
-command, respectively, to create it.
-
-\subsection*{A {\secit Caveat} for the \TeX\ Expert}
-Because you have just been given permission to use the
-\texttt{{\char'134}newdef} command to create a new form, you might
-think you can use \TeX's \texttt{{\char'134}def} to create a new
-command: \textit{Please refrain from doing this!} Remember that
-your \LaTeX\ source code is primarily intended to create
-camera-ready copy, but may be converted to other forms -- e.g.
-HTML. If you inadvertently omit some or all of the
-\texttt{{\char'134}def}s recompilation will be, to say the least,
-problematic.
-
-\section{Conclusions}
-This paragraph will end the body of this sample document. Remember
-that you might still have Acknowledgments or Appendices; brief
-samples of these follow.  There is still the Bibliography to deal
-with; and we will make a disclaimer about that here: with the
-exception of the reference to the \LaTeX\ book, the citations in
-this paper are to articles which have nothing to do with the
-present subject and are used as examples only.
-%\end{document}  % This is where a 'short' article might terminate
-
-
-% Ugliest hack in human history. 
-% Columns on Last Page Should Be Made As Close As Possible to Equal Length
-\vspace{70 mm}
-.
-\vspace{10 mm}
-
-%ACKNOWLEDGMENTS are optional
-\section{Acknowledgments}
-This section is optional; it is a location for you to acknowledge
-grants, funding, editing assistance and what have you.  In the
-present case, for example, the authors would like to thank Gerald
-Murray of ACM for his help in codifying this \textit{Author's
-Guide} and the \textbf{.cls} and \textbf{.tex} files that it
-describes.
 
 %
 % The following two commands are all you need in the
@@ -539,50 +350,5 @@ describes.
 \newpage
 %APPENDICES are optional
 
-\appendix
-%Appendix A
-\section{Headings in Appendices}
-The rules about hierarchical headings discussed above for the body
-of the article are different in the appendices. In the
-\textbf{appendix} environment, the command \textbf{section} is
-used to indicate the start of each Appendix, with alphabetic order
-designation (i.e. the first is A, the second B, etc.) and a title
-(if you include one).  So, if you need hierarchical structure
-\textit{within} an Appendix, start with \textbf{subsection} as the
-highest level. Here is an outline of the body of this document in
-Appendix-appropriate form:
-\subsection{Introduction}
-\subsection{The Body of the Paper}
-\subsubsection{Type Changes and  Special Characters}
-\subsubsection{Math Equations}
-\paragraph{Inline (In-text) Equations}
-\paragraph{Display Equations}
-\subsubsection{Citations}
-\subsubsection{Tables}
-\subsubsection{Figures}
-\subsubsection{Theorem-like Constructs}
-\subsubsection*{A Caveat for the \TeX\ Expert}
-\subsection{Conclusions}
-\subsection{Acknowledgments}
-\subsection{Additional Authors}
-This section is inserted by \LaTeX; you do not insert it. You just
-add the names and information in the
-\texttt{{\char'134}additionalauthors} command at the start of the
-document.
-\subsection{References}
-Generated by bibtex from your ~.bib file.  Run latex, then bibtex,
-then latex twice (to resolve references) to create the ~.bbl file.
-Insert that ~.bbl file into the .tex source file and comment out
-the command \texttt{{\char'134}thebibliography}.
-% This next section command marks the start of
-% Appendix B, and does not continue the present hierarchy
-\section{More Help for the Hardy}
-The sig-alternate.cls file itself is chock-full of succinct and
-helpful comments.  If you consider yourself a moderately
-experienced to expert user of \LaTeX, you may find reading it
-useful but please remember not to change it.
-%\balancecolumns % GM June 2007
-% That's all folks!
 
-\balancecolumns
 \end{document}
