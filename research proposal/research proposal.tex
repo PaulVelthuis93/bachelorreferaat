@@ -54,36 +54,11 @@
 % In Bachelor Referaat at University of Twente the use of a subtitle is discouraged.
  \subtitle{Research Proposal}
 
-%
-% You need the command \numberofauthors to handle the 'placement
-% and alignment' of the authors beneath the title.
-%
-% For aesthetic reasons, we recommend 'three authors at a time'
-% i.e. three 'name/affiliation blocks' be placed beneath the title.
-%
-% NOTE: You are NOT restricted in how many 'rows' of
-% "name/affiliations" may appear. We just ask that you restrict
-% the number of 'columns' to three.
-%
-% Because of the available 'opening page real-estate'
-% we ask you to refrain from putting more than six authors
-% (two rows with three columns) beneath the article title.
-% More than six makes the first-page appear very cluttered indeed.
-%
-% Use the \alignauthor commands to handle the names
-% and affiliations for an 'aesthetic maximum' of six authors.
-% Add names, affiliations, addresses for
-% the seventh etc. author(s) as the argument for the
-% \additionalauthors command.
-% These 'additional authors' will be output/set for you
-% without further effort on your part as the last section in
-% the body of your article BEFORE References or any Appendices.
 
-\numberofauthors{1} %  in this sample file, there are a *total*
-% of EIGHT authors. SIX appear on the 'first-page' (for formatting
-% reasons) and the remaining two appear in the \additionalauthors section.
-%
-\author{
+
+
+\numberofauthors{1} 
+\author{ 
 % You can go ahead and credit any number of authors here,
 % e.g. one 'row of three' or two rows (consisting of one row of three
 % and a second row of one, two or three).
@@ -95,8 +70,7 @@
 % e-mail address with \email.
 %
 % 1st. author
-\alignauthor
-P.j.e. Velthuis\\
+\alignauthor P.j.e. Velthuis\\
        \affaddr{University of Twente}\\
        \affaddr{P.O. Box 217, 7500AE Enschede}\\
        \affaddr{The Netherlands}\\
@@ -114,18 +88,13 @@ P.j.e. Velthuis\\
        \affaddr{2nd line of address}\\
        \email{3rd author's email address}
 }
-% There's nothing stopping you putting the seventh, eighth, etc.
-% author on the opening page (as the 'third row') but we ask,
-% for aesthetic reasons that you place these 'additional authors'
-% in the \additional authors block, viz.
-\additionalauthors{Additional authors: John Smith (The
-Th{\o}rv{\"a}ld Group, email: {\texttt{jsmith@affiliation.org}})
-and Julius P.~Kumquat (The Kumquat Consortium, email:
-{\texttt{jpkumquat@consortium.net}}).}
-\date{30 July 1999}
-% Just remember to make sure that the TOTAL number of authors
-% is the number that will appear on the first page PLUS the
-% number that will appear in the \additionalauthors section.
+
+%\additionalauthors{Additional authors: John Smith (The
+%Th{\o}rv{\"a}ld Group, email: {\texttt{jsmith@affiliation.org}})
+%and Julius P.~Kumquat (The Kumquat Consortium, email:
+%{\texttt{jpkumquat@consortium.net}}).}
+%\date{30 July 1999}
+
 
 \maketitle
 \begin{abstract}
@@ -134,17 +103,13 @@ area of cloud computing services. The main research question
 is: Is a cloud server consisting of Raspberry Pi efficient?
 \end{abstract}
 
-% A category with the (minimum) three required fields (NOT USED in Bachelor Referaat)
-% \category{H.4}{Information Systems Applications}{Miscellaneous}
-%A category including the fourth, optional field follows...
-% \category{D.2.8}{Software Engineering}{Metrics}[complexity
-% measures, performance measures]
-
 \keywords{Cloud computing, Raspberry Pi, ARM performance, micro data server}
 
 \section{Motivation}
-The amount of cloud computing services is increasing fast \cite{armbrust:2009}. 
-Today there are a even some cloud Raspberry Pi services. The density of servers has increased a lot in the past\cite{density}. There are new technologies such as for example the ARM processor. In this research we want to look what the performance is of such  a ARM processor by using the Raspberry Pi. Many companies want to explore the possibilities of for example the Raspberry Pi. Some data centers even offer some Raspberry Pi co-location \cite{hosting,Pcextreme}. A good reason to do this is the very low power usage of a Raspberry Pi. A Raspberry Pi has a power usage between the 3-5 Watt and a server has a power usage between the 75 and 150 watt \cite{Powerusage}. This could mean that it is better to use a Raspberry Pi for specific small tasks that do not demand a whole server. During this research I want to further investigate this power usage.  A Raspberry Pi can be the small data center for the future \cite{tso:2013}. The Raspberry is a rather cheap device for 35 euros. This makes it cheaper to do research in compared to a normal server. The current versions of the Raspberry Pi cannot perform the task of a large scale x86 server \cite{tso:2013}. Building a cloud like this can be a cost effective scale model\cite{tso:2013}. 
+Today there are many cloud services. The amount of cloud computing services is increasing fast \cite{armbrust:2009}.  Despite the attention
+from the research community, research and development of
+Cloud Computing services is still in it's childhood\cite{tso:2013}. 
+ In this research the Raspberry Pi cloud services will be investigated. A reason for this is that the density of servers has increased a lot in the past\cite{density}. There are new technologies such as for example the ARM processor. Many companies want to explore the possibilities of for example the Raspberry Pi and his ARM Processor. Some data centers even offer some cloud computing using the Raspberry Pi. A reason for this is the co-location and the low power usage of a Raspberry Pi\cite{hosting,Pcextreme}.  A Raspberry Pi has a power usage between the 3-5 Watt and a server has a power usage between the 75 and 150 watt \cite{Powerusage}. This could mean that it is better to use a Raspberry Pi for specific small tasks that do not demand a whole server. During this research I want to further investigate this power usage.  A Raspberry Pi can be the small data center for the future \cite{tso:2013}. The Raspberry is a rather cheap device for 35 euros. This makes it cheaper to do research in compared to a normal server. The current versions of the Raspberry Pi cannot perform the task of a large scale x86 server \cite{tso:2013}. Building a cloud like this can be a cost effective scale model\cite{tso:2013}. It's a Ideal testbed for testing distributed software. 
 
 
 
@@ -256,25 +221,35 @@ This article shows only the plainest form of the citation command,
 using \texttt{{\char'134}cite}. This is what is stipulated in the
 SIGS style specifications. No other citation format is endorsed or
 supported.
-\subsection{What cloud services are there}
+\subsection{What is small scale cloud computing}
+In this research I want to do some small scale cloud computing. The main motivation behind is is that it is ways to expensive to simulate large scale cloud computing. Another reason is the Co-location that can be used with small scale cloud computing. Because of this it could be better in executing small tasks. More motivation is that it does not use a lot of space and power. 
 Eucalyptus https://www.eucalyptus.com/eucalyptus-cloud/get-started
 Hazelcast
 
-\subsection{What cloud services are already running on Raspberry pi}
+\subsection{What are the most promising cloud services}
 In the PcExtreme article \cite{Pcextreme} there are running several services on a Raspberry Pi.
 For example a webserver, a DNS server, a chat server, a mail server, a vpn server or a monitoring server. 
-
-\subsection{What are the main characteristics of a Raspberry Pi cloud computer}
-
-\subsection{What software can be used for a Raspberry Pi cloud}
+In this research I want to test some cloud services and programs to see if they are suitable for the Raspberry Pi. 
 To investigate this I want to make a experimentation cloud with Raspberry Pi's to see if it will work as a cloud. 
 
-\subsection{Is it reachable to build small personal Raspberry Pi clouds for server}
-With this subquestion I want to find out if it is possible to let users have small Raspberry Pi servers such as now is happening at PcExtreme as an experiment. 
 
+
+\subsection{Is it reachable to build small personal Raspberry Pi clouds for services}
+With this subquestion I want to find out if it is possible to let users have small Raspberry Pi servers such as now is happening at PcExtreme as an experiment. I also want to know what the performance of this small Raspberry Pi cloud is. 
+
+\subsection{Is it possible to improve cloud programs using small scale Raspberry Pi's}
+
+
+\section{Research Methods}
+This research will investigate a cloud computer consisting of Raspberry Pi's. The research method for this would be the Design Science research method. this is a method to solve field problems. This research will make use of the design Science method proposed by Hevner\cite{hevner:2007}
 
 \section{Research approach}
 For the experiment we need a Raspberry Pi with a static Ip address and we need a sd card for the OS.  A Raspberry Pi can be used as a webserver or DNS server. For the experiment we need a Raspberry Pi B that can make use of the Ethernet.
+In the setup video is explained how I can make such a cluster.
+\url{https://www.youtube.com/watch?v=JtX9lVDsqzg}.
+If I have made such I cluster I can start doing some tests on it. We will use applications also super computers will use such as Mpich. We will use Fortran to rank our raspberry pi server. 
+I am for example curious about what the duration is between small seperated tasks and large tasks. 
+
 
 Experiment making a VPN:
 \url{http://readwrite.com/2014/04/10/raspberry-pi-vpn-tutorial-server-secure-web-browsing}
@@ -298,6 +273,41 @@ Runs Linux from sanddisk 16 gb
 
 Owncloud
 Data storage like dropbox
+
+Raspberry pi cluster
+\url{https://www.youtube.com/watch?v=vHJ4ZeXT_Zc}
+
+
+Test big task and several small tasks
+
+Raspberry py 2 windows
+\url{http://www.science20.com/the_conversation/upgraded_raspberry_pi_offers_windows_and_linux-152986}
+
+Southphampton
+\url{http://www.southampton.ac.uk/~sjc/raspberrypi/pi_supercomputer_southampton_web.pdf}
+
+Teach purpose Cassandra. Seems difficult to self implement.
+
+\url{http://devfluid.tumblr.com/post/49530425707/installing-cassandra-1-2-4-on-raspberry-pi}
+
+testing cassandra server
+\url{http://www.linux.com/news/embedded-mobile/mobile-linux/747326-teaching-cassandra-cluster-setups-with-the-raspberry-pi-}
+
+
+Testing difference
+Hadoop
+Cassandra
+MongoDB
+CouchDB
+
+
+\url{http://www.widriksson.com/raspberry-pi-hadoop-cluster/}
+Hadoop cluster
+
+spark possible faster than hadoop
+\url{http://spark.apache.org/}
+
+
 
 \begin{table}
 	\centering \caption{Cost breakdown of a testbed consisting 56 servers} 
