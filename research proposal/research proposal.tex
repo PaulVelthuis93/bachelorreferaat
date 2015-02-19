@@ -100,43 +100,26 @@
 \begin{abstract}
 This document describes a draft research proposal in the
 area of cloud computing services. The main research question
-is: Is a cloud server consisting of Raspberry Pi efficient?
+is: What is the performance of raspberry pi load balancing service using video streaming? To answer this question a micro raspberry pi video streaming service will be build. 
 \end{abstract}
 
-\keywords{Cloud computing, Raspberry Pi, ARM performance, micro data server}
+\keywords{Cloud computing, Raspberry Pi, ARM performance, micro data server, video streaming, load balancing}
 
 \section{Motivation}
-Today there are many cloud services. The amount of cloud computing services is increasing fast \cite{armbrust:2009}.  Despite the attention
+Today there are many cloud services. This amount of cloud computing services is increasing fast \cite{armbrust:2009}.  Despite the attention
 from the research community, research and development of
 Cloud Computing services is still in it's childhood\cite{tso:2013}. 
- In this research the Raspberry Pi cloud services will be investigated. A reason for this is that the density of servers has increased a lot in the past\cite{density}. There are new technologies such as for example the ARM processor. Many companies want to explore the possibilities of for example the Raspberry Pi and his ARM Processor. Some data centers even offer some cloud computing using the Raspberry Pi. A reason for this is the co-location and the low power usage of a Raspberry Pi\cite{hosting,Pcextreme}.  A Raspberry Pi has a power usage between the 3-5 Watt and a server has a power usage between the 75 and 150 watt \cite{Powerusage}. This could mean that it is better to use a Raspberry Pi for specific small tasks that do not demand a whole server. During this research I want to further investigate this power usage.  A Raspberry Pi can be the small data center for the future \cite{tso:2013}. The Raspberry is a rather cheap device for 35 euros. This makes it cheaper to do research in compared to a normal server. The current versions of the Raspberry Pi cannot perform the task of a large scale x86 server \cite{tso:2013}. Building a cloud like this can be a cost effective scale model\cite{tso:2013}. It's a Ideal testbed for testing distributed software. 
+In this research the Raspberry Pi cloud services will be investigated. A reason for this is that the density of servers has increased a lot in the past\cite{density}. There are new technologies such as for example the ARM processor. Many companies want to explore the possibilities of for example the Raspberry Pi and his ARM Processor. Some data centers even offer some cloud computing using the Raspberry Pi. A reason for this is the co-location and the low power usage of a Raspberry Pi\cite{hosting,Pcextreme}.  A Raspberry Pi has a power usage between the 3-5 Watt. A normal server has a power usage between the 75 and 150 watt \cite{Powerusage}. This could mean that it is better to use a Raspberry Pi for specific small tasks that do not demand a whole server. During this research I want to further investigate the performance of the Raspberry pi as a server.  A Raspberry Pi can be the small data center for the future \cite{tso:2013}. The Raspberry is a rather cheap device for 35 euros. This makes it cheaper to do research in compared to a normal server. This is also the mean reason why the Raspberry pi was ones created. The current versions of the Raspberry Pi cannot perform the task of a large scale x86 server \cite{tso:2013}. Building a cloud like this can be a cost effective scale model\cite{tso:2013}. It's a ideal testbed for testing distributed software. During this research we will investigate the performance of a raspberry pi as a video streamer to other computers. The reason I want to investigate it with video streaming is because this demands a lot of bandwidth from the network and could be one of the first things that should be improved. 
+
+\section{Specific problem}
+
+Today a lot of people watch their movies online using video streaming. \url{http://www.volkskrant.nl/media/nederland-op-vijfde-plek-met-bijna-miljoen-netflix-abonnees~a3851031/}
+The Netherlands have for example one million subscribers for Netflix. Netflix is a video streaming service that makes HD movies watching possible. For this Netflix makes use of a content distribution network (CDN). On the internet
+this is also known as a on demand service \cite{Adhikari:2012}. Netflix makes use of
+MPEG-DASH a protocol that makes streaming over http possible \cite{martin:2013}. The problem is that Netflix is responsible for  29.7\% of the peak downstream traffic in US  \cite{Adhikari:2012}. In the Netherlands more and more users are making use of video streaming as Youtube and Netflix.  In this research we want to investigate if it is possible to make small micro data centers with raspberry pi's. This research will try to find out how this cloud works. There will be taken a look in for example the load balancing of video streaming. In this way it can be possible to see improvements that can be made in the load balancing so that the servers can be used more efficient. This is also build to learn more from load balancing and a computer cluster. This can be really useful, because nowadays it's still done on relatively expensive servers. 
 
 
 
-
-%\subsection{References and Citations}
-%Footnotes should be Times New Roman 9-point, and justified to the 
-%full width of the column.\footnote{A footnote in 9-point Times New Roman.}
-
-%Use the "ACM Reference format" for references - that is, a numbered 
-%list at the end of the article, ordered alphabetically and formatted 
-%accordingly. See examples of some typical reference types, in the new 
-%"ACM Reference format", at the end of this document. Within this 
-%template, use the style named references for the text. Acceptable 
-%abbreviations, for journal names, can be found here: 
-%http://library.caltech.edu/reference/abbreviations/
-
-%The references are also in 9 pt., but that section (see Section 7) is 
-%ragged right. References should be published materials accessible to 
-%the public. Internal technical reports may be cited only if they are 
-%easily accessible (i.e. you can give the address to obtain the report 
-%within your citation) and may be obtained by any reader. Proprietary
-%information may not be cited. Private communications should be 
-%acknowledged, not referenced  (e.g., "[Robertson, personal communication]")
-
-%\subsection{Page Numbering, Headers and Footers}
-%Do not include headers, footers or page numbers in your submission. 
-%These will be added when the publications are assembled.
 
 %\section{Figures / Captions}
 %Place Tables/Figures/Images in text as close to the reference as possible 
@@ -147,112 +130,63 @@ Cloud Computing services is still in it's childhood\cite{tso:2013}.
 %\epsfig{file=fly2.eps} 
 %\caption{Insert caption to place below figure.}
 %\label{fig:abc} %always place your label after your caption!
-\ %end{figure}
+ %end{figure}
 
-%Captions should be Times New Roman 9-point bold.  They should be numbered (e.g., "Table 1" or "Figure 2"), please note that the word for Table and Figure are spelled out. Figure's captions should be centered beneath the image or picture, and Table captions should be centered above the table body.
-
-%\section{Sections}
-%The heading of a section should be in Times New Roman 12-point bold in all-capitals flush left with an additional 6-points of white space above the section head.  Sections and subsequent sub- sections should be numbered and flush left. For a section head and a subsection head together (such as Section 3 and subsection 3.1), use no additional space above the subsection head.
-
-%\subsection{Subsections}
-%The heading of subsections should be in Times New Roman 12-point bold with only the initial letters capitalized. (Note: For subsections and subsubsections, a word like the or a is not capitalized unless it is the first word of the header.)
-
-%\subsubsection{Subsubsections}
-%The heading for subsubsections should be in Times New Roman 11-point italic with initial letters capitalized and 6-points of white space above the subsubsection head.
-
-%\section{Acknowledgments}
-%Our thanks to ACM SIGCHI for allowing us to modify templates they had developed.
-
-%\section{Introduction to Latex}
-%Typically, the body of a paper is organized into a hierarchical
-%structure, with numbered or unnumbered headings for sections,
-%subsections, sub-subsections, and even smaller sections.  The
-%command \texttt{{\char'134}section} that precedes this paragraph
-%is part of such a hierarchy. \LaTeX\ handles the numbering and placement of these
-%headings for you, when you use the appropriate heading commands
-%around the titles of the headings.  If you want a sub-subsection
-%or smaller part to be unnumbered in your output, simply append an
-%asterisk to the command name.  Examples of both numbered and
-%unnumbered headings will appear throughout the balance of this
-%sample document.
-
-%Because the entire article is contained in the \textbf{document}
-%environment, you can indicate the start of a new paragraph with a
-%blank line in your input file; that is why this sentence forms a
-%separate paragraph.
-
-%\subsection{Type Changes and {\subsecit Special} Characters}
-%We have already seen several typeface changes in this sample.  You
-%can indicate italicized words or phrases in your text with the
-%command \texttt{{\char'134}textit}; emboldening with the command
-%\texttt{{\char'134}textbf} and typewriter-style (for instance, for
-%computer code) with \texttt{{\char'134}texttt}.  But remember, you
-%do not have to indicate typestyle changes when such changes are
-%part of the \textit{structural} elements of your article; for
-%instance, the heading of this subsection will be in a sans
 
 \section{Research questions}
 The main research question
-is: Is a cloud server consisting of Raspberry Pi efficient?
+is: What is the performance of a raspberry pi load balancing service using video streaming?
 
-In order to come to a good answer we first need to build our own Raspberry Pi setup. There needs to be decided with which benchmark the performance will be measured. After we have measured the performance we can see   
+In order to come to a good answer we need to  research several things
 
-\subsection{Citations}
-Citations to articles \cite{bowman:reasoning, clark:pct,
-braams:babel, herlihy:methodology}, conference proceedings
-\cite{clark:pct} or books \cite{salas:calculus, Lamport:LaTeX}
-listed in the Bibliography section of your article will occur
-throughout the text of your article. You should use BibTeX to
-automatically produce this bibliography; you simply need to insert
-one of several citation commands with a key of the item cited in
-the proper location in the \texttt{.tex} file
-\cite{Lamport:LaTeX}. The key is a short reference you invent to
-uniquely identify each work; in this sample document, the key is
-the first author's surname and a word from the title.  This
-identifying key is included with each item in the \texttt{.bib}
-file for your article.
+build our own Raspberry Pi setup. There needs to be decided with which benchmark the performance will be measured. After we have measured the performance we can see   
 
-The details of the construction of the \texttt{.bib} file are
-beyond the scope of this sample document, but more information can
-be found in the \textit{Author's Guide}, and exhaustive details in
-the \textit{\LaTeX\ User's Guide}\cite{Lamport:LaTeX}.
 
-This article shows only the plainest form of the citation command,
-using \texttt{{\char'134}cite}. This is what is stipulated in the
-SIGS style specifications. No other citation format is endorsed or
-supported.
-\subsection{What is small scale cloud computing}
-In this research I want to do some small scale cloud computing. The main motivation behind is is that it is ways to expensive to simulate large scale cloud computing. Another reason is the Co-location that can be used with small scale cloud computing. Because of this it could be better in executing small tasks. More motivation is that it does not use a lot of space and power. 
-Eucalyptus https://www.eucalyptus.com/eucalyptus-cloud/get-started
-Hazelcast
+\subsection{What is small scale cloud computing?}
+In this research I want to do some small scale cloud computing. The main motivation behind is is that it is ways to expensive to simulate large scale cloud computing. Another reason is the Co-location that can be used with small scale cloud computing. Because of this it could be better in executing small tasks. Small scale cloud computing is cloud computing with smaller computation amounts than normal. More motivation is that it does not use a lot of space and power. 
+Resources I could use for small scale cloud computing:
 
-\subsection{What are the most promising cloud services}
-In the PcExtreme article \cite{Pcextreme} there are running several services on a Raspberry Pi.
-For example a webserver, a DNS server, a chat server, a mail server, a vpn server or a monitoring server. 
-In this research I want to test some cloud services and programs to see if they are suitable for the Raspberry Pi. 
+ 
+
+
+\subsection{What is cloud video streaming}
+There are a lot of cloud services nowadays. These include a webserver, a DNS server, a chat server, a mail server, a vpn server or a monitoring server or even a video streaming service. 
+Today a lot of people watch their movies online using video streaming. \url{http://www.volkskrant.nl/media/nederland-op-vijfde-plek-met-bijna-miljoen-netflix-abonnees~a3851031/} The netherlands have for example one million subscribers for Netflix. Netflix is a video streaming service that makes HD movies watching possible. For this Netflix makes use of a content distribution network (CDN). On the internet this is also known as a on demand service. They make use of amazon its AWS with a AWS cloud, Amazon simpleDB , S3 and cassandra for file storage \cite{Adhikari:2012}. Netflix makes use of MPEG-DASH a protocol that makes streaming over http possible. In this research I want to investigate more in the video streaming as a cloud service. 
 To investigate this I want to make a experimentation cloud with Raspberry Pi's to see if it will work as a cloud. 
-
-
-
+Resources I could use for cloud video streaming:
+ 
+\subsection{What kind of different load balancing techniques are there?}
+In distributed servers it is very important that good load balancing takes place. For this reason I want to further investigate in what kind of load balancing techniques there are. 
+Resources I could use for load balancing:
+ 
 \subsection{Is it reachable to build small personal Raspberry Pi clouds for services}
-With this subquestion I want to find out if it is possible to let users have small Raspberry Pi servers such as now is happening at PcExtreme as an experiment. I also want to know what the performance of this small Raspberry Pi cloud is. 
+With this subquestion I want to find out if it is possible to let users have small Raspberry Pi servers I also want to know what the performance of this small Raspberry Pi cloud is. 
+Resources:
+\cite{Pcextreme}
 
-\subsection{Is it possible to improve cloud programs using small scale Raspberry Pi's}
-
+\subsection{Is it possible to improve load balancing using small scale Raspberry Pi's}
+For this research I want to investigate if it is possible to do more research in the 
+load balancing techniques that can be used in a raspberry pi. A example of this would be the round robin protocol.
+Resources:
 
 \section{Research Methods}
 This research will investigate a cloud computer consisting of Raspberry Pi's. The research method for this would be the Design Science research method. this is a method to solve field problems. This research will make use of the design Science method proposed by Hevner\cite{hevner:2007}
 
 \section{Research approach}
-For the experiment we need a Raspberry Pi with a static Ip address and we need a sd card for the OS.  A Raspberry Pi can be used as a webserver or DNS server. For the experiment we need a Raspberry Pi B that can make use of the Ethernet.
-In the setup video is explained how I can make such a cluster.
-\url{https://www.youtube.com/watch?v=JtX9lVDsqzg}.
-If I have made such I cluster I can start doing some tests on it. We will use applications also super computers will use such as Mpich. We will use Fortran to rank our raspberry pi server. 
-I am for example curious about what the duration is between small seperated tasks and large tasks. 
+For the experiment we need a Raspberry Pi with a static Ip address and we need a sd card for the OS. For the experiment we need a Raspberry Pi B that can make use of the Ethernet. This is because a Raspberry Pi can be used as a webserver and this is needed to have this in order to make video streaming possible. This webserver will make video streaming possible. It will have a VPN to make it possible to put video's on the Raspberry pi \cite{VPN:2014}. 
+So I will first make this video streaming webserver. 
+After this we will make a cluster with one Raspberry Pi as a load balancer and the other two as a video stream pi. If I have made such I cluster I can start doing some tests on it. For example some test in streaming in different quality with load balancing. The setup of the raspberry Pi can be seen in the figure below ~\ref{fig:setup}.
+
+\begin{figure}
+\centering 
+\includegraphics[width=0.4\textwidth]{raspberry pi setup.jpg}
+\caption{Insert caption to place below figure.}
+\label{fig:setup} %always place your label after your caption!
+\end{figure}
 
 
-Experiment making a VPN:
-\url{http://readwrite.com/2014/04/10/raspberry-pi-vpn-tutorial-server-secure-web-browsing}
+
+
 
 Glasgow Raspberry Pi
 \url{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6679872}
@@ -266,7 +200,8 @@ ICanCloud is a cloud simulation program.
 
 
 \url{http://www.lighttpd.net/}
-
+\url{https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-load-balancing}
+\url{http://www.networkinghowtos.com/howto/load-balancing-with-nginx/}
 Raspberry Pi project Glasgow
 \url{https://raspberrypicloud.wordpress.com/}
 Runs Linux from sanddisk 16 gb
@@ -322,8 +257,7 @@ PiCloud & $1,960 (@$35) 196W/h (@3.5W/h) & No \\ \hline
 
 \section{Planning}
 
-Hallootjes
-\begin{table}
+\begin{table}[H]
 	\centering \caption{Planning}
 	\begin{tabular}{|c|c|c|} \hline
 		\textbf{Week} & \textbf{Date} & \textbf{Activity} \\ \hline 
@@ -337,15 +271,15 @@ Hallootjes
 		\end{tabular}
 		\label{tab:planning}
 \end{table}
-Here above is the ~\ref{tab:planning}.
+Here above is the ~\ref{tab:planning}. The main research question is split up into several sub questions. These subquestions have each one week for answering. After that there is time to write the conclusion and answer the main question. Then there is still some time left to finalize the paper. 
 
 \section{State of the Art}
+Today there are many cloud services. This amount of cloud computing services is increasing fast \cite{armbrust:2009}.  Despite the attention
+from the research community, research and development of
+Cloud Computing services is still in it's childhood\cite{tso:2013}. Today there is a lot of people that use video streaming and this will become even more. People want to have everything has to be accessible through the network around the clock \cite{youseff:2008}. One thing that people want on demand are there series. Currently Netflix has 30\% of the downstream in the United States. 
 
+In this paper we will make a load balancing service for the Raspberry Pi.  
 
-%
-% The following two commands are all you need in the
-% initial runs of your .tex file to
-% produce the bibliography for the citations in your paper.
 
 \bibliographystyle{abbrv}
 \bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
