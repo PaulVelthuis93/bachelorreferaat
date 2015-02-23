@@ -1,0 +1,131 @@
+\begin{thebibliography}{10}
+
+\bibitem{abrahamsson:2013}
+P.~Abrahamsson, S.~Helmer, N.~Phaphoom, L.~Nicolodi, N.~Preda, L.~Miori,
+  M.~Angriman, J.~Rikkila, X.~Wang, K.~Hamily, et~al.
+\newblock Affordable and energy-efficient cloud computing clusters: The bolzano
+  raspberry pi cloud cluster experiment.
+\newblock In {\em Cloud Computing Technology and Science (CloudCom), 2013 IEEE
+  5th International Conference on}, volume~2, pages 170--175. IEEE, 2013.
+
+\bibitem{Adhikari:2012}
+V.~Adhikari, Y.~Guo, F.~Hao, M.~Varvello, V.~Hilt, M.~Steiner, and Z.-L. Zhang.
+\newblock Unreeling netflix: Understanding and improving multi-cdn movie
+  delivery.
+\newblock In {\em INFOCOM, 2012 Proceedings IEEE}, pages 1620--1628, March
+  2012.
+
+\bibitem{armbrust:2009}
+M.~Armbrust, O.~Fox, R.~Griffith, A.~D. Joseph, Y.~Katz, A.~Konwinski, G.~Lee,
+  D.~Patterson, A.~Rabkin, I.~Stoica, et~al.
+\newblock M.: Above the clouds: a berkeley view of cloud computing.
+\newblock {\em Communications of the ACM}, 2009.
+
+\bibitem{southampton}
+P.~S. Cox.
+\newblock Steps to make raspberry pi supercomputer.
+
+\bibitem{cox:2014}
+S.~J. Cox, J.~T. Cox, R.~P. Boardman, S.~J. Johnston, M.~Scott, and N.~S.
+  O’brien.
+\newblock Iridis-pi: a low-cost, compact demonstration cluster.
+\newblock {\em Cluster Computing}, 17(2):349--358, 2014.
+
+\bibitem{volkskrant}
+de~Volkskrant.
+\newblock Nederland op vijfde plek met bijna miljoen netflix-abonnees.
+
+\bibitem{raspberry-pi}
+R.~P. FOUNDATION.
+\newblock What is a raspberry pi?
+
+\bibitem{hevner:2007}
+A.~R. Hevner.
+\newblock A three cycle view of design science research.
+\newblock {\em Scandinavian journal of information systems}, 19(2):4, 2007.
+
+\bibitem{nginx-load-balancing-2}
+N.~HOWTOS.
+\newblock Load balancing with nginx.
+
+\bibitem{g-streamer}
+IBEX.
+\newblock Streaming video using gstreamer.
+
+\bibitem{computer-networking}
+K.~W.~R. James F.~Kurose.
+\newblock {\em Computer Networking A Top-Down Approach}.
+\newblock Pearson, sixth edition edition, 2012.
+
+\bibitem{raspberry-video}
+jelleke60.
+\newblock How-to: Raspberry pi media server (easy).
+
+\bibitem{density}
+T.~D. Journal.
+\newblock The datacenter journal. raising data center power density.
+
+\bibitem{martin:2013}
+J.~Martin, Y.~Fu, N.~Wourms, and T.~Shaw.
+\newblock Characterizing netflix bandwidth consumption.
+\newblock In {\em Consumer Communications and Networking Conference (CCNC),
+  2013 IEEE}, pages 230--235. IEEE, 2013.
+
+\bibitem{load-balancing}
+T.~U. of~Tennessee.
+\newblock What load balancing methods are available?
+
+\bibitem{VPN:2014}
+L.~Orsini.
+
+\bibitem{Pcextreme}
+PCextreme.
+\newblock Raspberry pi colocatie.
+
+\bibitem{Powerusage}
+PCextreme.
+\newblock Waarom doen we dit.
+
+\bibitem{plissonneau:2012}
+L.~Plissonneau and E.~Biersack.
+\newblock A longitudinal view of http video streaming performance.
+\newblock In {\em Proceedings of the 3rd Multimedia Systems Conference}, pages
+  203--214. ACM, 2012.
+
+\bibitem{hosting}
+raspberry hosting.
+\newblock Raspberry pi hosting. raspberry pi in the heart of europe.
+
+\bibitem{richardson:2012}
+M.~Richardson and S.~Wallace.
+\newblock {\em Getting Started with Raspberry Pi}.
+\newblock " O'Reilly Media, Inc.", 2012.
+
+\bibitem{nginx-load-balancing}
+E.~Sverdlov.
+\newblock How to set up nginx load balancing.
+
+\bibitem{video-1080p}
+tpy's.
+\newblock Live 1080p video streaming from the raspberry pi to browsers using
+  nginx and rtmp.
+
+\bibitem{tso:2013}
+F.~P. Tso, D.~R. White, S.~Jouet, J.~Singer, and D.~P. Pezaros.
+\newblock The glasgow raspberry pi cloud: A scale model for cloud computing
+  infrastructures.
+\newblock In {\em Distributed Computing Systems Workshops (ICDCSW), 2013 IEEE
+  33rd International Conference on}, pages 108--112. IEEE, 2013.
+
+\bibitem{wolf:1997}
+J.~L. Wolf, S.~Y. Philip, and H.~Shachnai.
+\newblock Disk load balancing for video-on-demand systems.
+\newblock {\em Multimedia Systems}, 5(6):358--370, 1997.
+
+\bibitem{youseff:2008}
+L.~Youseff, M.~Butrico, and D.~Da~Silva.
+\newblock Toward a unified ontology of cloud computing.
+\newblock In {\em Grid Computing Environments Workshop, 2008. GCE'08}, pages
+  1--10. IEEE, 2008.
+
+\end{thebibliography}
