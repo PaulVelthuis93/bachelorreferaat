@@ -15,25 +15,11 @@ V.~Adhikari, Y.~Guo, F.~Hao, M.~Varvello, V.~Hilt, M.~Steiner, and Z.-L. Zhang.
 \newblock In {\em INFOCOM, 2012 Proceedings IEEE}, pages 1620--1628, March
   2012.
 
-\bibitem{ab}
-Apache.
-\newblock ab - apache http server benchmarking tool.
-\newblock \url{http://httpd.apache.org/docs/2.2/programs/ab.html}, 2015.
-\newblock Last accessed March 2, 2015.
-
 \bibitem{armbrust:2009}
 M.~Armbrust, O.~Fox, R.~Griffith, A.~D. Joseph, Y.~Katz, A.~Konwinski, G.~Lee,
   D.~Patterson, A.~Rabkin, I.~Stoica, et~al.
 \newblock M.: Above the clouds: a berkeley view of cloud computing.
 \newblock {\em Communications of the ACM}, 2009.
-
-\bibitem{permission}
-askubuntu.
-\newblock Changing permissions for folders and files in /var/www/.
-\newblock
-  \url{http://askubuntu.com/questions/416528/changing-permissions-for-folders-and-files-in-var-www},
-  2014.
-\newblock Last accessed March 8, 2015.
 
 \bibitem{beloglazov2012energy}
 A.~Beloglazov, J.~Abawajy, and R.~Buyya.
@@ -61,6 +47,13 @@ S.~J. Cox, J.~T. Cox, R.~P. Boardman, S.~J. Johnston, M.~Scott, and N.~S.
   O’brien.
 \newblock Iridis-pi: a low-cost, compact demonstration cluster.
 \newblock {\em Cluster Computing}, 17(2):349--358, 2014.
+
+\bibitem{dan1996load}
+A.~Dan and D.~Sitaram.
+\newblock Load balancing in video-on-demand servers by allocating buffer to
+  streams with successively larger buffer requirements until the buffer
+  requirements of a stream can not be satisfied, Aug.~6 1996.
+\newblock US Patent 5,544,327.
 
 \bibitem{volkskrant}
 de~Volkskrant.
@@ -112,11 +105,13 @@ N.~HOWTOS.
   \url{http://www.networkinghowtos.com/howto/load-balancing-with-nginx/}, 2013.
 \newblock Last accessed February 27, 2015.
 
-\bibitem{iapc}
-IAPC.
-\newblock Assortiment.
-\newblock \url{https://www.iapc.utwente.nl/assortiment}, 2015.
-\newblock Last accessed March 8, 2015.
+\bibitem{g-streamer}
+IBEX.
+\newblock Streaming video using gstreamer.
+\newblock
+  \url{http://www.raspberry-projects.com/pi/pi-hardware/raspberry-pi-camera/streaming-video-using-gstreamer},
+  2014.
+\newblock Last accessed February 27, 2015.
 
 \bibitem{computer-networking}
 K.~W.~R. James F.~Kurose.
@@ -137,19 +132,13 @@ T.~D. Journal.
   October 2013.
 \newblock Last accessed February 27, 2015.
 
-\bibitem{dropbox-clone}
-koff1979.
-\newblock Raspberry pi owncloud (dropbox clone).
+\bibitem{beowolf-setup}
+J.~Kiepert.
+\newblock Creating a raspberry pi-based beowulf cluster.
 \newblock
-  \url{http://www.instructables.com/id/Raspberry-Pi-Owncloud-dropbox-clone/},
-  2015.
-\newblock Last accessed February 28, 2015.
-
-\bibitem{nmon}
-LINUX.
-\newblock nmon for linux.
-\newblock \url{http://nmon.sourceforge.net/pmwiki.php}, 2012.
-\newblock Last accessed March 2, 2015.
+  \url{http://coen.boisestate.edu/ece/files/2013/05/Creating.a.Raspberry.Pi-Based.Beowulf.Cluster_v2.pdf},
+  May 2013.
+\newblock Last accessed February 27, 2015.
 
 \bibitem{martin:2013}
 J.~Martin, Y.~Fu, N.~Wourms, and T.~Shaw.
@@ -164,18 +153,19 @@ A.~P. Miettinen and J.~K. Nurminen.
   Cloud Computing}, HotCloud'10, pages 4--4, Berkeley, CA, USA, 2010. USENIX
   Association.
 
-\bibitem{bandwidth}
-S.~Moon.
-\newblock 18 commands to monitor network bandwidth on linux server.
-\newblock \url{http://www.binarytides.com/linux-commands-monitor-network/},
-  2014.
-\newblock Last accessed March 2, 2015.
+\bibitem{load-balancing}
+T.~U. of~Tennessee.
+\newblock What load balancing methods are available?
+\newblock \url{https://help.utk.edu/kb/index2.php?func=show&e=1699}, 2015.
+\newblock Last accessed February 19, 2015.
 
-\bibitem{nginx-load-balancing-3}
-Nginx.
-\newblock Using nginx as http load balancer.
-\newblock \url{http://nginx.org/en/docs/http/load_balancing.html}, 2015.
-\newblock Last accessed February 28, 2015.
+\bibitem{VPN:2014}
+L.~Orsini.
+\newblock Building a raspberry pi vpn part one: How and why to build a server.
+\newblock
+  \url{http://readwrite.com/2014/04/10/raspberry-pi-vpn-tutorial-server-secure-web-browsing},
+  2014.
+\newblock Last accessed February 27, 2015.
 
 \bibitem{owncloud}
 ownCloud.
@@ -195,14 +185,6 @@ PCextreme.
 \newblock \url{http://raspberrycolocatie.nl/why/}, 2013.
 \newblock Last accessed February 27, 2015.
 
-\bibitem{Raspberry-media-server}
-N.~Peers.
-\newblock How to build the best raspberry pi media server.
-\newblock
-  \url{http://www.techradar.com/news/digital-home/media-servers/how-to-build-the-best-raspberry-pi-media-server-1163133/2},
-  2015.
-\newblock Last accessed February 27, 2015.
-
 \bibitem{plissonneau:2012}
 L.~Plissonneau and E.~Biersack.
 \newblock A longitudinal view of http video streaming performance.
@@ -219,11 +201,6 @@ raspberry hosting.
 \newblock Raspberry pi hosting. raspberry pi in the heart of europe.
 \newblock \url{https://raspberry-hosting.com/en}, 2015.
 \newblock Last accessed February 27, 2015.
-
-\bibitem{richardson:2012}
-M.~Richardson and S.~Wallace.
-\newblock {\em Getting Started with Raspberry Pi}.
-\newblock " O'Reilly Media, Inc.", 2012.
 
 \bibitem{nginx-load-balancing}
 E.~Sverdlov.
@@ -246,6 +223,11 @@ F.~P. Tso, D.~R. White, S.~Jouet, J.~Singer, and D.~P. Pezaros.
   infrastructures.
 \newblock In {\em Distributed Computing Systems Workshops (ICDCSW), 2013 IEEE
   33rd International Conference on}, pages 108--112. IEEE, 2013.
+
+\bibitem{wolf:1997}
+J.~L. Wolf, S.~Y. Philip, and H.~Shachnai.
+\newblock Disk load balancing for video-on-demand systems.
+\newblock {\em Multimedia Systems}, 5(6):358--370, 1997.
 
 \bibitem{youseff:2008}
 L.~Youseff, M.~Butrico, and D.~Da~Silva.

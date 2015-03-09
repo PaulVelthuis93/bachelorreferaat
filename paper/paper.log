@@ -1,9 +1,7 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.14)  9 MAR 2015 12:14
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.14)  2 MAR 2015 21:21
 entering extended mode
-**research*proposal.tex
-
-("C:\Users\Paul\Documents\bachelorreferaat\research_proposal\research proposal.
-tex"
+**paper.tex
+(C:\Users\Paul\Documents\bachelorreferaat\paper\paper.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -15,9 +13,8 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-
-(C:\Users\Paul\Documents\bachelorreferaat\research_proposal\sig-alternate-br.cl
-s ("C:\Program Files (x86)\mik\tex\latex\graphics\epsfig.sty"
+(C:\Users\Paul\Documents\bachelorreferaat\paper\sig-alternate-br.cls
+("C:\Program Files (x86)\mik\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
 ("C:\Program Files (x86)\mik\tex\latex\graphics\graphicx.sty"
@@ -390,30 +387,10 @@ tly
 )
 \Hy@SectionHShift=\skip46
 )
-("C:\Program Files (x86)\mik\tex\latex\tools\tabularx.sty"
-Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+\@float@every@figure=\toks38
+\@float@every@table=\toks39
 
-("C:\Program Files (x86)\mik\tex\latex\tools\array.sty"
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen134
-\extrarowheight=\dimen135
-\NC@list=\toks38
-\extratabsurround=\skip47
-\backup@length=\skip48
-)
-\TX@col@width=\dimen136
-\TX@old@table=\dimen137
-\TX@old@col=\dimen138
-\TX@target=\dimen139
-\TX@delta=\dimen140
-\TX@cols=\count125
-\TX@ftn=\toks39
-)
-\@float@every@figure=\toks40
-\@float@every@table=\toks41
-
-("C:\Users\Paul\Documents\bachelorreferaat\research_proposal\research proposal.
-aux")
+(C:\Users\Paul\Documents\bachelorreferaat\paper\paper.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
@@ -446,16 +423,14 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files (x86)\mik\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count126
+\c@section@level=\count125
 )
 LaTeX Info: Redefining \ref on input line 35.
 LaTeX Info: Redefining \pageref on input line 35.
 LaTeX Info: Redefining \nameref on input line 35.
 
-("C:\Users\Paul\Documents\bachelorreferaat\research_proposal\research proposal.
-out")
-("C:\Users\Paul\Documents\bachelorreferaat\research_proposal\research proposal.
-out")
+(C:\Users\Paul\Documents\bachelorreferaat\paper\paper.out)
+(C:\Users\Paul\Documents\bachelorreferaat\paper\paper.out)
 \@outlinefile=\write3
 Requested font "cmr6" at 6.0pt
 Requested font "cmmi9" at 9.0pt
@@ -465,14 +440,15 @@ Requested font "cmsy6" at 6.0pt
 Requested font "cmex9" at 9.0pt
 Requested font "cmex7" at 6.0pt
 Requested font "cmex7" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+msa on input line 87.
- ("C:\Program Files (x86)\mik\tex\latex\amsfonts\umsa.fd"
+LaTeX Font Info:    Try loading font information for U+msa on input line 91.
+
+("C:\Program Files (x86)\mik\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 Requested font "msam10" at 9.0pt
 Requested font "msam7" at 6.0pt
 Requested font "msam5" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+msb on input line 87.
+LaTeX Font Info:    Try loading font information for U+msb on input line 91.
 
 ("C:\Program Files (x86)\mik\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -480,7 +456,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Requested font "msbm10" at 9.0pt
 Requested font "msbm7" at 6.0pt
 Requested font "msbm5" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+lasy on input line 87.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 91.
 
 ("C:\Program Files (x86)\mik\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -489,89 +465,63 @@ Requested font "lasy9" at 9.0pt
 Requested font "lasy6" at 6.0pt
 Requested font "lasy5" at 5.0pt
 
-Overfull \hbox (1009.19989pt too wide) in paragraph at lines 87--87
+Overfull \hbox (1009.19989pt too wide) in paragraph at lines 91--91
  [][][][][] 
  []
 
 
-Overfull \hbox (7.80002pt too wide) in paragraph at lines 87--87
+Overfull \hbox (7.80002pt too wide) in paragraph at lines 91--91
  [] 
  []
 
-Missing character: There is no ’ in font aer9!
 ("C:\Program Files (x86)\mik\tex\generic\oberdiek\se-ascii-print.def"
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
-)
-Overfull \hbox (2.38896pt too wide) in paragraph at lines 104--106
-\T1/aer/m/n/9 makes HD movies watch-ing pos-si-ble. For this Net-flix makes
- []
-
-Missing character: There is no ’ in font aer9!
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--113
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--113
-
- []
-
-[1
+) [1
 
 
 ]
-Overfull \hbox (7.10538pt too wide) in paragraph at lines 114--119
-\T1/aer/m/n/9 Small scale cloud com-put-ing is cloud com-put-ing with smaller
+Overfull \hbox (1.42606pt too wide) in paragraph at lines 144--145
+[]\T1/aer/m/n/9 The video stream-ing hap-pens with TCP. TCP sends frames
  []
 
-Missing character: There is no ’ in font ptmb8t!
-
-Overfull \hbox (2.42213pt too wide) in paragraph at lines 126--126
-[]\secfnt What is the per-fect setup for a Rasp-berry
- []
-
+[2]
 File: Design_science.png Graphic file (type QTm)
-<use  "Design_science.png" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-File: Pi2ModB1GB_-comp.jpeg Graphic file (type QTm)
-
-<use  "Pi2ModB1GB_-comp.jpeg" >
-Overfull \hbox (48.27385pt too wide) in paragraph at lines 171--181
- [][] 
- []
-
-
-LaTeX Warning: File `raspberry pi setup.jpg' not found on input line 188.
-
-File: raspberry pi setup.jpg Graphic file (type QTm)
-<use  "raspberry pi setup.jpg" > [2]
+ <use  "Design_science.png" >
 Requested font "aebx9" at 9.0pt
 
-Overfull \hbox (17.85347pt too wide) in paragraph at lines 219--237
- [][] 
+
+LaTeX Warning: File `raspberry pi setup.jpg' not found on input line 180.
+
+File: raspberry pi setup.jpg Graphic file (type QTm)
+<use  "raspberry pi setup.jpg" >
+File: Pi2ModB1GB_-comp.jpeg Graphic file (type QTm)
+ <use  "Pi2ModB1GB_-comp.jpeg" >
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+Overfull \hbox (9.99394pt too wide) in paragraph at lines 215--220
+\T1/aer/m/n/9 One of these has been the su-per-com-puter build by Southamp-
  []
 
 
-("C:\Users\Paul\Documents\bachelorreferaat\research_proposal\research proposal.
-bbl"
+Overfull \hbox (2.70453pt too wide) in paragraph at lines 222--223
+[]\T1/aer/m/n/9 People want to have ev-ery-thing has to be ac-ces-si-ble throug
+h
+ []
+
+(C:\Users\Paul\Documents\bachelorreferaat\paper\paper.bbl
 Requested font "aeti9" at 9.0pt
-LaTeX Font Info:    Try loading font information for T1+aett on input line 21.
- ("C:\Program Files (x86)\mik\tex\latex\ae\t1aett.fd"
+ [4]
+LaTeX Font Info:    Try loading font information for T1+aett on input line 41.
+
+("C:\Program Files (x86)\mik\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 Requested font "aett9" at 9.0pt
- [3]
-Overfull \hbox (43.17279pt too wide) in paragraph at lines 31--37
-\T1/aett/m/n/9 changing-[]permissions-[]for-[]folders-[]and-[]files-[]in-[]var-
-[]www$[]\T1/aer/m/n/9 , 
- []
-
 Missing character: There is no ’ in font aer9!
 
-Overfull \hbox (118.62762pt too wide) in paragraph at lines 66--72
+Overfull \hbox (118.62762pt too wide) in paragraph at lines 59--65
 \T1/aett/m/n/9 nederland-[]op-[]vijfde-[]plek-[]met-[]bijna-[]miljoen-[]netflix
 -[]abonnees~a3851031/$[]\T1/aer/m/n/9 , 
  []
@@ -580,31 +530,30 @@ Overfull \hbox (118.62762pt too wide) in paragraph at lines 66--72
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (55.25565pt too wide) in paragraph at lines 199--205
-\T1/aett/m/n/9 how-[]to-[]build-[]the-[]best-[]raspberry-[]pi-[]media-[]server-
-[]1163133 / 
+Overfull \hbox (37.95686pt too wide) in paragraph at lines 163--169
+\T1/aett/m/n/9 raspberry-[]pi-[]vpn-[]tutorial-[]server-[]secure-[]web-[]browsi
+ng$[]\T1/aer/m/n/9 , 
  []
 
-[4])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 264.
- [5
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 264.
+ [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
 
-("C:\Users\Paul\Documents\bachelorreferaat\research_proposal\research proposal.
-aux")
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 264.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 264.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 264.
+(C:\Users\Paul\Documents\bachelorreferaat\paper\paper.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 247.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 247.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 247.
  ) 
 Here is how much of TeX's memory you used:
- 10364 strings out of 429025
- 144199 string characters out of 3167967
- 218543 words of memory out of 3000000
- 13544 multiletter control sequences out of 15000+200000
+ 10274 strings out of 429025
+ 142953 string characters out of 3167967
+ 217543 words of memory out of 3000000
+ 13460 multiletter control sequences out of 15000+200000
  40496 words of font info for 53 fonts, out of 3000000 for 9000
  912 hyphenation exceptions out of 8191
- 39i,10n,46p,1136b,427s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,10n,46p,1998b,426s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on research*proposal.pdf (5 pages).
+Output written on paper.pdf (5 pages).
