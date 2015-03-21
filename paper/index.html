@@ -1,19 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title</title>
 
-<!-- saved from url=(0047)http://www.tinkernut.com/demos/html5/video.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-		<title>My Video Page</title>
-		<style>
-			body {
-			background: brown;
-			color: #CCCCCC;
-			}
-		</style>
-	<style type="text/css"></style></head>
-	<body>
-	<video controls="controls" tabindex="0" poster="thumb.png" autoplay="autoplay" loop="loop">
-		<source src="dog.ogv" type="video/ogg">
-		<iframe title="YouTube video player" width="480" height="390" src="./My Video Page_files/iYuG55vOIVc.html" frameborder="0" allowfullscreen="">
-		</iframe>
-	</video>
-	
-</body></html>
+<!-- strobe -->
+<script type="text/javascript" src="strobe/lib/swfobject.js"></script>
+<script type="text/javascript">
+    var parameters = {  
+         src: "rtmp://{pi_address}/rtmp/live",  
+         autoPlay: false,  
+         controlBarAutoHide: false,  
+         playButtonOverlay: true,  
+         showVideoInfoOverlayOnStartUp: true,  
+         optimizeBuffering : false,  
+         initialBufferTime : 0.1,  
+         expandedBufferTime : 0.1,  
+         minContinuousPlayback : 0.1,  
+         poster: "images/poster.png"  
+    };  
+    swfobject.embedSWF(
+        "strobe/StrobeMediaPlayback.swf"
+        , "StrobeMediaPlayback"
+        , 1024
+        , 768
+        , "10.1.0"
+        , "strobe/expressInstall.swf"
+        , parameters
+        , {
+            allowFullScreen: "true"
+        }
+        , {
+            name: "StrobeMediaPlayback"
+        }
+    );
+</script>
+
+
+</head>
+<body>
+<div id="StrobeMediaPlayback"></div>
+</body>
+</html>

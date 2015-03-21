@@ -129,14 +129,6 @@ jelleke60.
 \newblock \url{http://www.raspberrypi.org/forums/viewtopic.php?t=56149}, 2013.
 \newblock Last accessed February 27, 2015.
 
-\bibitem{density}
-T.~D. Journal.
-\newblock The datacenter journal. raising data center power density.
-\newblock
-  \url{http://www.datacenterjournal.com/it/raising-data-center-power-density/},
-  October 2013.
-\newblock Last accessed February 27, 2015.
-
 \bibitem{dropbox-clone}
 koff1979.
 \newblock Raspberry pi owncloud (dropbox clone).
@@ -149,13 +141,21 @@ koff1979.
 LINUX.
 \newblock nmon for linux.
 \newblock \url{http://nmon.sourceforge.net/pmwiki.php}, 2012.
-\newblock Last accessed March 2, 2015.
+\newblock Last accessed March 16, 2015.
 
 \bibitem{martin:2013}
 J.~Martin, Y.~Fu, N.~Wourms, and T.~Shaw.
 \newblock Characterizing netflix bandwidth consumption.
 \newblock In {\em Consumer Communications and Networking Conference (CCNC),
   2013 IEEE}, pages 230--235. IEEE, 2013.
+
+\bibitem{net-neutrality}
+K.~McCarthy.
+\newblock This isn't net neutrality. this is net google. this is net netflix
+  – the fcc's new masters.
+\newblock \url{http://www.theregister.co.uk/2015/03/13/net_neutrality_rules/ },
+  2012.
+\newblock Last accessed March 16, 2015.
 
 \bibitem{Miettinen:2010:EEM:1863103.1863107}
 A.~P. Miettinen and J.~K. Nurminen.
@@ -170,6 +170,12 @@ S.~Moon.
 \newblock \url{http://www.binarytides.com/linux-commands-monitor-network/},
   2014.
 \newblock Last accessed March 2, 2015.
+
+\bibitem{mosberger1998httperf}
+D.~Mosberger and T.~Jin.
+\newblock httperf—a tool for measuring web server performance.
+\newblock {\em ACM SIGMETRICS Performance Evaluation Review}, 26(3):31--37,
+  1998.
 
 \bibitem{nginx-load-balancing-3}
 Nginx.
@@ -224,6 +230,12 @@ raspberry hosting.
 M.~Richardson and S.~Wallace.
 \newblock {\em Getting Started with Raspberry Pi}.
 \newblock " O'Reilly Media, Inc.", 2012.
+
+\bibitem{httperf-2}
+rt.
+\newblock Increase “open files limit”.
+\newblock \url{https://rtcamp.com/tutorials/benchmark/httperf/}, 2015.
+\newblock Last accessed March 16, 2015.
 
 \bibitem{nginx-load-balancing}
 E.~Sverdlov.
