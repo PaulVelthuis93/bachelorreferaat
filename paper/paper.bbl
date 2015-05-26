@@ -15,11 +15,17 @@ V.~Adhikari, Y.~Guo, F.~Hao, M.~Varvello, V.~Hilt, M.~Steiner, and Z.-L. Zhang.
 \newblock In {\em INFOCOM, 2012 Proceedings IEEE}, pages 1620--1628, March
   2012.
 
-\bibitem{armbrust:2009}
-M.~Armbrust, O.~Fox, R.~Griffith, A.~D. Joseph, Y.~Katz, A.~Konwinski, G.~Lee,
-  D.~Patterson, A.~Rabkin, I.~Stoica, et~al.
-\newblock M.: Above the clouds: a berkeley view of cloud computing.
-\newblock {\em Communications of the ACM}, 2009.
+\bibitem{rtmp}
+Adobe.
+\newblock Real-time messaging protocol (rtmp) specification.
+\newblock \url{http://www.adobe.com/devnet/rtmp.html}, 2015.
+\newblock Last accessed May 9, 2015.
+
+\bibitem{arut}
+R.~Arutyunyan.
+\newblock Nginx-based media streaming server.
+\newblock \url{https://github.com/arut/nginx-rtmp-module}, 2015.
+\newblock Last accessed May 5, 2015.
 
 \bibitem{beloglazov2012energy}
 A.~Beloglazov, J.~Abawajy, and R.~Buyya.
@@ -34,13 +40,11 @@ A.~Beloglazov and R.~Buyya.
 \newblock In {\em Cluster, Cloud and Grid Computing (CCGrid), 2010 10th
   IEEE/ACM International Conference on}, pages 577--578. IEEE, 2010.
 
-\bibitem{southampton}
-P.~S. Cox.
-\newblock Steps to make raspberry pi supercomputer.
-\newblock
-  \url{http://www.southampton.ac.uk/~sjc/raspberrypi/pi_supercomputer_southampton_web.pdf},
-  2012.
-\newblock Last accessed February 20, 2015.
+\bibitem{cassandra}
+Cassandra.
+\newblock Welcome to apache cassandra.
+\newblock \url{http://cassandra.apache.org/}, 2015.
+\newblock Last accessed May 25, 2015.
 
 \bibitem{cox:2014}
 S.~J. Cox, J.~T. Cox, R.~P. Boardman, S.~J. Johnston, M.~Scott, and N.~S.
@@ -59,7 +63,7 @@ A.~Dan and D.~Sitaram.
 de~Volkskrant.
 \newblock Nederland op vijfde plek met bijna miljoen netflix-abonnees.
 \newblock
-  \url{http://www.volkskrant.nl/media/nederland-op-vijfde-plek-met-bijna-miljoen-netflix-abonnees~a3851031/},
+  http://www.volkskrant.nl/media/nederland-op-vijfde-plek-met-bijna-miljoen-netflix-abonnees~a3851031/,
   2015.
 \newblock Last accessed February 27, 2015.
 
@@ -69,23 +73,11 @@ M.~D. Dikaiakos, D.~Katsaros, P.~Mehra, G.~Pallis, and A.~Vakali.
   research.
 \newblock {\em Internet Computing, IEEE}, 13(5):10--13, 2009.
 
-\bibitem{drago2012inside}
-I.~Drago, M.~Mellia, M.~M~Munafo, A.~Sperotto, R.~Sadre, and A.~Pras.
-\newblock Inside dropbox: understanding personal cloud storage services.
-\newblock In {\em Proceedings of the 2012 ACM conference on Internet
-  measurement conference}, pages 481--494. ACM, 2012.
-
-\bibitem{dropbox}
-Dropbox.
-\newblock Share the power of great sync with external collaborators.
-\newblock \url{https://www.dropbox.com/business/uses/file-sharing}.
-\newblock Last accessed March 2, 2015.
-
-\bibitem{raspberry-pi}
-R.~P. FOUNDATION.
-\newblock What is a raspberry pi?
-\newblock \url{http://www.raspberrypi.org/help/what-is-a-raspberry-pi/}, 2015.
-\newblock Last accessed February 27, 2015.
+\bibitem{ffmpeg}
+FFmpeg.
+\newblock Ffmpeg.
+\newblock \url{https://www.ffmpeg.org/}, 2015.
+\newblock Last accessed May 9, 2015.
 
 \bibitem{hevner:2007}
 A.~R. Hevner.
@@ -98,39 +90,16 @@ C.~H{\"o}fer and G.~Karagiannis.
 \newblock {\em Journal of Internet Services and Applications}, 2(2):81--94,
   2011.
 
-\bibitem{nginx-load-balancing-2}
-N.~HOWTOS.
-\newblock Load balancing with nginx.
-\newblock
-  \url{http://www.networkinghowtos.com/howto/load-balancing-with-nginx/}, 2013.
-\newblock Last accessed February 27, 2015.
-
-\bibitem{g-streamer}
-IBEX.
-\newblock Streaming video using gstreamer.
-\newblock
-  \url{http://www.raspberry-projects.com/pi/pi-hardware/raspberry-pi-camera/streaming-video-using-gstreamer},
-  2014.
-\newblock Last accessed February 27, 2015.
+\bibitem{ipref}
+Ipref.
+\newblock Ipref.
+\newblock \url{https://iperf.fr/}, 2015.
+\newblock Last accessed May 9, 2015.
 
 \bibitem{computer-networking}
 K.~W.~R. James F.~Kurose.
 \newblock {\em Computer Networking A Top-Down Approach}.
 \newblock Pearson, sixth edition edition, 2012.
-
-\bibitem{raspberry-video}
-jelleke60.
-\newblock How-to: Raspberry pi media server (easy).
-\newblock \url{http://www.raspberrypi.org/forums/viewtopic.php?t=56149}, 2013.
-\newblock Last accessed February 27, 2015.
-
-\bibitem{density}
-T.~D. Journal.
-\newblock The datacenter journal. raising data center power density.
-\newblock
-  \url{http://www.datacenterjournal.com/it/raising-data-center-power-density/},
-  October 2013.
-\newblock Last accessed February 27, 2015.
 
 \bibitem{beowolf-setup}
 J.~Kiepert.
@@ -140,11 +109,31 @@ J.~Kiepert.
   May 2013.
 \newblock Last accessed February 27, 2015.
 
+\bibitem{dietpi}
+D.~Knight.
+\newblock Dietpi for raspberry pi's.
+\newblock \url{http://fuzon.co.uk/phpbb/viewtopic.php?f=8&t=6}, 2014.
+\newblock Last accessed May 21, 2015.
+
 \bibitem{martin:2013}
 J.~Martin, Y.~Fu, N.~Wourms, and T.~Shaw.
 \newblock Characterizing netflix bandwidth consumption.
 \newblock In {\em Consumer Communications and Networking Conference (CCNC),
   2013 IEEE}, pages 230--235. IEEE, 2013.
+
+\bibitem{net-neutrality}
+K.~McCarthy.
+\newblock This isn't net neutrality. this is net google. this is net netflix
+  – the fcc's new masters.
+\newblock \url{http://www.theregister.co.uk/2015/03/13/net_neutrality_rules/ },
+  2012.
+\newblock Last accessed March 16, 2015.
+
+\bibitem{wowza}
+W.~media systems.
+\newblock The world's leading streaming technology.
+\newblock \url{http://www.wowza.com/}, 2015.
+\newblock Last accessed May 22, 2015.
 
 \bibitem{Miettinen:2010:EEM:1863103.1863107}
 A.~P. Miettinen and J.~K. Nurminen.
@@ -153,25 +142,17 @@ A.~P. Miettinen and J.~K. Nurminen.
   Cloud Computing}, HotCloud'10, pages 4--4, Berkeley, CA, USA, 2010. USENIX
   Association.
 
-\bibitem{load-balancing}
-T.~U. of~Tennessee.
-\newblock What load balancing methods are available?
-\newblock \url{https://help.utk.edu/kb/index2.php?func=show&e=1699}, 2015.
-\newblock Last accessed February 19, 2015.
+\bibitem{netflix}
+Netflix.
+\newblock Netflix.
+\newblock \url{https://www.netflix.com/}, 2015.
+\newblock Last accessed May 25, 2015.
 
-\bibitem{VPN:2014}
-L.~Orsini.
-\newblock Building a raspberry pi vpn part one: How and why to build a server.
-\newblock
-  \url{http://readwrite.com/2014/04/10/raspberry-pi-vpn-tutorial-server-secure-web-browsing},
-  2014.
-\newblock Last accessed February 27, 2015.
-
-\bibitem{owncloud}
-ownCloud.
-\newblock owncloud.
-\newblock \url{https://owncloud.org/}.
-\newblock Last accessed March 2, 2015.
+\bibitem{nginx}
+Nginx.
+\newblock Nginx.
+\newblock \url{http://nginx.com/}, 2015.
+\newblock Last accessed May 25, 2015.
 
 \bibitem{Pcextreme}
 PCextreme.
@@ -179,43 +160,25 @@ PCextreme.
 \newblock \url{http://raspberrycolocatie.nl/}, October 2013.
 \newblock Last accessed February 27, 2015.
 
-\bibitem{Powerusage}
-PCextreme.
-\newblock Waarom doen we dit.
-\newblock \url{http://raspberrycolocatie.nl/why/}, 2013.
-\newblock Last accessed February 27, 2015.
+\bibitem{jwplayer}
+J.~Player.
+\newblock Jw player.
+\newblock \url{http://www.jwplayer.com/}, 2015.
+\newblock Last accessed May 9, 2015.
 
-\bibitem{plissonneau:2012}
-L.~Plissonneau and E.~Biersack.
-\newblock A longitudinal view of http video streaming performance.
-\newblock In {\em Proceedings of the 3rd Multimedia Systems Conference}, pages
-  203--214. ACM, 2012.
+\bibitem{jmeter}
+A.~software foundation.
+\newblock Apache jmeter.
+\newblock \url{http://jmeter.apache.org/}, 2053.
+\newblock Last accessed May 9, 2015.
 
-\bibitem{qian:2009}
-L.~Qian, Z.~Luo, Y.~Du, and L.~Guo.
-\newblock Cloud computing: An overview.
-\newblock In {\em Cloud Computing}, pages 626--631. Springer, 2009.
-
-\bibitem{hosting}
-raspberry hosting.
-\newblock Raspberry pi hosting. raspberry pi in the heart of europe.
-\newblock \url{https://raspberry-hosting.com/en}, 2015.
-\newblock Last accessed February 27, 2015.
-
-\bibitem{nginx-load-balancing}
-E.~Sverdlov.
-\newblock How to set up nginx load balancing.
+\bibitem{microserver}
+techrepublic.
+\newblock 10 things you should know about microservers.
 \newblock
-  \url{https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-load-balancing},
-  2012.
-\newblock Last accessed February 27, 2015.
-
-\bibitem{video-1080p}
-tpy's.
-\newblock Live 1080p video streaming from the raspberry pi to browsers using
-  nginx and rtmp.
-\newblock \url{http://tpy.tw/?p=109}, 2014.
-\newblock Last accessed February 27, 2015.
+  \url{http://www.techrepublic.com/blog/10-things/10-things-you-should-know-about-microservers/},
+  2013.
+\newblock Last accessed May 9, 2015.
 
 \bibitem{tso:2013}
 F.~P. Tso, D.~R. White, S.~Jouet, J.~Singer, and D.~P. Pezaros.
@@ -224,15 +187,16 @@ F.~P. Tso, D.~R. White, S.~Jouet, J.~Singer, and D.~P. Pezaros.
 \newblock In {\em Distributed Computing Systems Workshops (ICDCSW), 2013 IEEE
   33rd International Conference on}, pages 108--112. IEEE, 2013.
 
-\bibitem{wolf:1997}
-J.~L. Wolf, S.~Y. Philip, and H.~Shachnai.
-\newblock Disk load balancing for video-on-demand systems.
-\newblock {\em Multimedia Systems}, 5(6):358--370, 1997.
+\bibitem{smil}
+W3C.
+\newblock Synchronized multimedia integration language.
+\newblock \url{http://www.w3.org/TR/SMIL/}, 2015.
+\newblock Last accessed May 15, 2015.
 
-\bibitem{youseff:2008}
-L.~Youseff, M.~Butrico, and D.~Da~Silva.
-\newblock Toward a unified ontology of cloud computing.
-\newblock In {\em Grid Computing Environments Workshop, 2008. GCE'08}, pages
-  1--10. IEEE, 2008.
+\bibitem{youtube}
+Youtube.
+\newblock Youtube.
+\newblock \url{https://www.youtube.com/}, 2015.
+\newblock Last accessed May 22, 2015.
 
 \end{thebibliography}

@@ -48,6 +48,12 @@ A.~Beloglazov and R.~Buyya.
 \newblock In {\em Cluster, Cloud and Grid Computing (CCGrid), 2010 10th
   IEEE/ACM International Conference on}, pages 577--578. IEEE, 2010.
 
+\bibitem{bennett2007netflix}
+J.~Bennett and S.~Lanning.
+\newblock The netflix prize.
+\newblock In {\em Proceedings of KDD cup and workshop}, volume 2007, page~35,
+  2007.
+
 \bibitem{southampton}
 P.~S. Cox.
 \newblock Steps to make raspberry pi supercomputer.
@@ -225,6 +231,12 @@ raspberry hosting.
 \newblock Raspberry pi hosting. raspberry pi in the heart of europe.
 \newblock \url{https://raspberry-hosting.com/en}, 2015.
 \newblock Last accessed February 27, 2015.
+
+\bibitem{raspbian}
+Raspbian.
+\newblock Welcome to raspbian.
+\newblock \url{http://www.raspbian.org/}, 2015.
+\newblock Last accessed March 21, 2015.
 
 \bibitem{richardson:2012}
 M.~Richardson and S.~Wallace.

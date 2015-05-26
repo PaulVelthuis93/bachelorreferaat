@@ -1,4 +1,3 @@
-
 % This .tex file (and associated .cls) produces:
 %       1) The Permission Statement
 %       2) The Conference (location) Info information
@@ -11,10 +10,9 @@
 % (defaulted to 200X) and the ACM Copyright Data
 % (defaulted to X-XXXXX-XX-X/XX/XX).
 % e.g.
-% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
 % \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
 %
-% ---------------------------------------------------------------------------------------------------------------
+
 % This .tex source is an example which *does* use
 % the .bib file (from which the .bbl file % is produced).
 % REMEMBER HOWEVER: After having produced the .bbl file,
@@ -22,14 +20,19 @@
 % your .bbl file into your source .tex file so as to provide
 % ONE 'self-contained' source file.
 %
-
 % refers to the cls file being used
 \documentclass{sig-alternate-br}
 \usepackage{float}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
 
+\newcommand\todo[1]{
+	\textcolor{green}{#1}
+}
 \restylefloat{figure}
 \restylefloat{table}
 \begin{document}
@@ -41,11 +44,9 @@
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 
-\title{micro data server using raspberry pi}
+\title{Small Data Center using Raspberry Pi 2 for Video Streaming}
 % In Bachelor Referaat at University of Twente the use of a subtitle is discouraged.
- \subtitle{Research Proposal}
-
-
+ \subtitle{}
 
 
 \numberofauthors{1} 
@@ -61,7 +62,7 @@
 % e-mail address with \email.
 %
 % 1st. author
-\alignauthor P.j.e. Velthuis\\
+\alignauthor P.J.E. Velthuis\\
        \affaddr{University of Twente}\\
        \affaddr{P.O. Box 217, 7500AE Enschede}\\
        \affaddr{The Netherlands}\\
@@ -89,147 +90,256 @@
 
 \maketitle
 \begin{abstract}
-This paper describes the performance of raspberry pi load balancing service using video streaming.
+This is a paper in the area of cloud computing. Cloud computing is a trend IT that customers move computing and data away from desktop and portable PCs into data centers. These data centers require a lot of power and cooling. Nowadays approximately 30\% of the data coming from these data centers is video streaming. The Raspberry Pi 2 is a low cost device that can be used in a cloud for video streaming. In this paper a further investigation in the Raspberry Pi 2 cloud is done. This research is a design research in which a design is made for a video streaming cloud consisting of Raspberry Pi's. 
 \end{abstract}
 
-\keywords{Cloud computing, Raspberry Pi,  micro data server, video streaming, load balancing}
+\keywords{Cloud computing, Raspberry Pi 2,  micro data center, video streaming, load balancing}
 
 \section{Introduction}
-Today cloud computing becomes more important. The amount of cloud computing services is increasing fast \cite{armbrust:2009}.  Despite the attention from the research community, research and development of Cloud Computing services is still in it's childhood~\cite{tso:2013}. 
-Cloud computing is a trend IT that people move computing and data away from desktop and portable PCs into large data centers~\cite{dikaiakos:2009}. People will in the future access internet services over lightweight portable devices. In this research the Raspberry Pi cloud services will be investigated. A reason for this is that the density of servers has increased a lot in the past~\cite{density}. There are new technologies such as for example the ARM processor. Many companies want to explore the possibilities of for example the Raspberry Pi and his ARM Processor. Some data centers even offer some cloud computing using the Raspberry Pi. A reason for this is the small location that the Raspberry Pi needs, and the low power usage of a Raspberry Pi\cite{hosting,Pcextreme}.  A Raspberry Pi has a power usage between the 3-5 Watt. A normal server has a power usage between the 75 and 250 watt \cite{Powerusage,beloglazov2012energy}. This could mean that it is better to use a Raspberry Pi for specific small tasks that do not demand a whole server. During this research there will be a investigation on the performance of the Raspberry pi as a server.  A Raspberry Pi can be the small data center for the future \cite{tso:2013}. The Raspberry is a rather cheap device for 35 euros. This makes it cheaper to do research in compared to a normal server. This is also the mean reason why the Raspberry pi was ones created. The current versions of the Raspberry Pi cannot perform the task of a large scale x86 server \cite{tso:2013}. Building a cloud like this can be a cost effective scale model\cite{tso:2013}. It's a ideal testbed for testing distributed software. During this research we will investigate the performance of a raspberry pi as a video streamer to other computers. The reason I want to investigate it with video streaming is because this demands a lot of bandwidth from the network and could be one of the first things that should be improved. 
+Today most of us have some data in the cloud. But despite the attention from the community, research and development of Cloud Computing services are still in its early days~\cite{tso:2013}. \newline
+Cloud computing is a trend in IT that moves customers computing and data away from desktop and portable PCs into large data centers \cite{dikaiakos:2009}. In the future most internet users are expected to access internet services over lightweight portable devices requiring a lot of data bandwidth \cite{dikaiakos:2009}. This bandwidth usage causes bottlenecks. To prevent these bottlenecks people build data centers around the globe. On these data servers a lot of improvements can be made \cite{abrahamsson:2013,beloglazov:2010}. 
+These data servers for example require a lot of space and cooling. There are now new technologies such as for example the powerful ARM processor. Many companies want to explore the possibilities of the Raspberry Pi 2 , because of its ARM processor and the price \cite{Pcextreme}. Some data centers already offer some cloud computing using the Raspberry Pi 2. \newline
+A Raspberry Pi 2 has a power usage between the 3-5 Watt and is a small computer. A normal server has a power usage between the 75 and 250 watt~\cite{Pcextreme,beloglazov2012energy}. The low power consumption and its computing power could mean that it is better to use a Raspberry Pi 2 for specific small tasks that do not demand an entire server. For this reason research will be done on the performance of the Raspberry Pi 2 as a small data center. \newline
+A Raspberry Pi cloud can be the small data center for the future \cite{tso:2013}. The Raspberry is sold for 40 euro, this price makes it cheaper to do research in compared to a normal server. Building a cloud like this can be a cost effective scale model\cite{tso:2013}. It's a ideal testbed for testing distributed software. 
 
-Today a lot of people watch their movies online using video streaming. The Netherlands have for example one million subscribers for Netflix \cite{volkskrant}. Netflix is a video streaming service that makes HD movies watching possible. For this Netflix makes use of a content distribution network (CDN). On the internet this is also known as a on demand service \cite{Adhikari:2012}. Netflix makes use of MPEG-DASH a protocol that makes streaming over http possible \cite{martin:2013}. The problem is that Netflix is responsible for  29.7\% of the peak downstream traffic in US  \cite{Adhikari:2012}. In the Netherlands more and more users are making use of video streaming as Youtube and Netflix. In this research there will be a investigation on the possibility to make small micro data centers with raspberry pi's. This research will try to find out how this cloud works. There will be taken a look in for example the load balancing of video streaming. In this way it can be possible to see improvements that can be made in the load balancing so that the servers can be used more efficient. This is also build to learn more from load balancing and a computer cluster. This can be really useful, because nowadays it's still done on relatively expensive servers. 
+The Netherlands have one million subscribers for Netflix \cite{volkskrant}. Netflix is a popular video streaming service that makes HD movies watching possible. For this Netflix makes use of a content distribution network (CDN). On the internet this is known as an on demand service \cite{Adhikari:2012}. Netflix makes use of MPEG-DASH a protocol that makes streaming over HTTP possible \cite{martin:2013}. The problem is that Netflix is responsible for  29,7\% of the peak downstream traffic in US \cite{Adhikari:2012}. Because of this downstream the two main providers Comcast and  AT\&T were limiting the downstream of Netflix. This caused a lot of criticism and a new law for net neutrality has been made as a solution for this criticism \cite{net-neutrality}. \newline
+In the Netherlands video streaming services such as Youtube and Netflix have an increasing amount of users. The data streaming problems coming from these increasing amount of users make it interesting to do more research in data centers with video streaming. Most of the research in computer science nowadays happen on expensive large servers \cite{tso:2013}. For this it can be very useful to see if it is possible to do research on a small computer like a Raspberry Pi 2. The problem is that we do not know if video streaming in a cloud consisting of Raspberry Pi's is possible. 
 
-In this paper we will try to measure the performance of different load balancing techniques using the Raspberry Pi. For this the main research question will be: 
+In this paper there will be an investigation in how useful the Raspberry Pi 2 is in a data center with video streaming. To come to an answer there will be taken a look into the performance of the Raspberry Pi 2. For this the main research question will be: 
 \begin{center}
- What is the performance of a raspberry pi load balancing techniques using video streaming?
+How well does the Raspberry Pi 2 perform in small scale data centers with video streaming? 
 \end{center}
 
-In order to come to a good answer we need to  research several things. Therefore several sub-questions will be researched. These sub-questions will altogether provide a answer to the main research question. 
+In order to come to a good answer we need to  research several things. Therefore some sub-questions will be researched. These sub-questions will altogether provide a answer to the main research question. 
 
 \begin{enumerate}
-	\item What is small scale cloud computing?
-	\item What is cloud video streaming?
-	\item What kind of different load balancing techniques are there?
-	\item Is it reachable to build small personal Raspberry Pi clouds for services?
-	\item Is it possible to improve load balancing using small scale Raspberry Pi's? 
+	\item What are small scale data centers with video streaming and why are they used?
+	\item Is the Raspberry Pi's usable for video streaming?
+	\item How to fit the Raspberry Pi's into a data center considering cooling, space allocation and power?
+	\item What setup does a Raspberry Pi cloud with video streaming require?
+	\item How is availability in a Raspberry pi cluster with video streaming affected by various load balancing techniques? 
 \end{enumerate}
 
-This research will be part literature study and a part of it will be building a small Raspberry Pi cloud to analyze balancing techniques on the Raspberry Pi. For this research cloud video streaming is one of the specific aspects that will be investigated. The load balancing techniques will be optimized for the video streaming. The first three research questions will describe the state of the art. 
-The last two sub-questions will go into the technical research that will investigate the performance and possibility of Raspberry Pi's for cloud video streaming. They last one will investigate of their are improvements in load balancing possible. The five sub-questions are being looked at in the next five sections. Followed by a final section for conclusions and identified areas for future
-work.
-
-
-\section{Small scale computing}
-Today there are many cloud kinds of cloud computing. The amount of cloud computing services is increasing fast \cite{armbrust:2009}. It's now even possible to build your own small cloud using Raspberry Pi's \cite{southampton,abrahamsson:2013}. In this research there will be small scale cloud computing with the Raspberry Pi. The main motivation behind this is that it is ways to expensive to simulate large scale cloud computing. Another reason is the small location that is needed used with small scale cloud computing for Raspberry Pi's\cite{Pcextreme}. The Raspberry Pi is really small compared to a normal server \cite{cox:2014}. Because of this it could be better in executing small tasks. Small scale cloud computing is cloud computing with smaller computation amounts than normal \cite{cox:2014}. More motivation is that it does not use a lot cooling and power \cite{tso:2013}.  Most clients of cloud computing buy the services instead of the hardware and having to set up the servers themselves. 
-The Amazon Elastic Compute Cloud (Amazon EC2) is one of the most widely used infrastructure platforms that these clients use \cite{hofer:2011}. This elasticity of computing resources is very important~\cite{Miettinen:2010:EEM:1863103.1863107}. 
-
-\subsection{What is it?}
-To understand what small scale cloud computing really is we will look more at the specific cloud service called Infrastructure as a Service. To this specific cloud service belongs the online storage. Today a lot of companies have their own virtual machines running in large data centers \cite{beloglazov:2010}. These instances can most often be scaled dynamically to the customer it's need. Using these instances makes it easier management and varying workloads better possible. The Raspberry Pi is a lot cheaper and has less power consumption, because of this it can be interesting 
-to host virtual machines on the Raspberry Pi. The reason we call it small scale is because it is using small Raspberry's instead of large servers. Some providers offer a special hybrid cloud. You can then connect a private cloud to a public cloud \cite{qian:2009}. 
-
-
-\subsection{Storage}
-In the cloud there are several storage systems.  The cloud storage has become an integral part of our modern and mobile lives. Nowadays people own more often multiple devices. Cloud storage made it possible that the files we need are available where and when we want them. There are several ways to do this storage. Dropbox for example stores your information on a local folder on your device, after it has done that it will sync with an online version \cite{drago2012inside, dropbox}. In this way your other devices or the friends you shared the information with will have that information. In this way offline editing is also possible and this makes dropbox really powerful. \newline
-Today there are a lot of problems with security for cloud storage and that's why some people like to do it by themselves. For this there is a cloud service called ownCloud \cite{owncloud}. This service gives you the possibility to host the data where you want. You can even build your own cloud storage system by using ownCloud open source. The security aspect is important, because this can lead to loss or leak of data. Sometimes this can even have legal consequences \cite{hofer:2011}. For all important software used for cloud storage this means that they should be stored server side \cite{hofer:2011}. \newline
-Another problem that is very important is the reachability of the data centers that are used by the cloud. Netflix responsible for 29.7\% of the peak downstream traffic in US  \cite{Adhikari:2012}.
-
-\subsection{Power usage}
-Power usage efficiency is nowadays becoming a more important aspect in cloud computing. This is one of the main problems in cloud computing. Data centers require a lot of electrical power. Therefore we perhaps need to more Green Cloud Computing solutions that reduce the electrical power consumption and reduce the environmental impact of data centers~\cite{beloglazov2012energy}. Besides the power the data center consumes it can be important to look at the traffic pattern. It can make a huge different in sending data in small bursts or in one large burst \cite{Miettinen:2010:EEM:1863103.1863107}. With the increase of lightweight portable devices the energy efficiency becomes more important. This means that a trade-of has to be made between local processing and computation offloading \cite{Miettinen:2010:EEM:1863103.1863107}. This is computation offloading makes cloud computing more and more important. 
-
-\section{Video streaming}
-There are a lot of cloud services nowadays. These include a webserver, a DNS server, a chat server, a mail server, a vpn server or a monitoring server or even a video streaming service. \newline
-Today a lot of people watch their movies online using video streaming and this amount of people is increasing. The netherlands have for example one million subscribers for Netflix \cite{volkskrant}. One thing that these users want is the on demand video streaming. They don't want to store the data itself and they want to have a wide choice of different videos. Netflix is a video streaming service that makes HD movies watching possible. For this Netflix makes use of a content distribution network (CDN). On the internet this is also known as a on demand service. They make use of amazon its AWS, Amazon simpleDB , S3 and cassandra for file storage \cite{Adhikari:2012}. Netflix makes use of MPEG-DASH a protocol that makes streaming over http possible. Currently Netflix has 30\% of the downstream in the United States~\cite{computer-networking}. To make this video streaming possible Netflix does some things in the cloud. These are content ingestion, content processing and uploading different versions to the CDN (Content Distribution Networks)~\cite{Adhikari:2012}. Content ingestion means that Netflix receives the studio master version of the movies and uploads these to the cloud. In the cloud there are then created many different formats for each movie. Once all these versions have been created they are distributed over the multiple CDNS. 
-
-The video streaming happens with TCP. TCP sends frames to the client and in these frames is the video stored. Of course if the available TCP send rate is large enough then the video will play without any delays. But if the TCP send rate is less then needed then the video play will alternate between periods of continuous playout and periods of freezing~\cite{computer-networking}. Its very important that video freezing or audio playing faster then the video does not happen. This is why multimedia applications have high performance requirements. For this their are models to predict the performance and techniques to find a minimal cost bandwidth allocation that will result in all user requirements being met. 
-
-\subsection{HTTP streaming}
-HTTP streaming is one way to stream a video. In HTTP streaming the HTTP GET request specifies the specific range of bytes the client wants to retrieve from the desired video~\cite{computer-networking}. In this way the client can correctly receive the video. If the client receives to much then its buffer for video playing can get full. To prevent throwing data away the server will then stop sending. To prevent throwing data away the client will have a not to large buffer. \newline
-There is also a new kind of HTTP streaming called DASH (Dynamic Adaptive Streaming over HTTP)~\cite{computer-networking}. In DASH the video is encoded into several different versions. If the bandwidth is high, then the client selects chunks from a high-rate version and the way around~\cite{computer-networking}. The possibility to switch between bit rate versions is in video streaming very important. To make a smooth transition between these versions possible there are intermediate versions so that the client will see less suddenly the change in video quality. In HTTP streaming the server stores the video with a different URL.   
-
-To investigate video streaming there will be an experimentation cloud with Raspberry Pi's to see if these small mini computers will work as a cloud. 
-Resources I could use for cloud video streaming:
-\cite{g-streamer,raspberry-video,video-1080p, plissonneau:2012}
- 
-\section{Load balancing}
-In distributed servers it is very important that good load balancing takes place. There are several choices that have to be made by choosing a load balancer for a service. These choices can for example be performance, reliability and features.There are several load balancing techniques out there, for example priority queuing~\cite{computer-networking}. This means that packets in the output queue are prioritized. This is typically done in a first in first out way. Another type of queuing is the round robin. Round robin puts packets into different classes. It will first look for a packet in a given class and if there is none in that class it will look for the next packet \cite{computer-networking}. A more abstract form of round robin is weighted fair queuing. The difference between these is that each class may receive a differential amount of service in any interval of time \cite{computer-networking}.  
-\subsection{Video streaming and load balancing}
-For video streaming several load balancing techniques can be used. There can be a non-uniform demand for different movies. One solution to overcome this problem would be to replicate the most popular movies. One obvious problem is then that it is expensive in terms of storage space required. To solve this you can use dynamic replication to solve the load demand~\cite{dan1996load}. By using this you move portions of a movie to less used storage devices. The allocation of these movies only happen when there is a to high increase on one specific storage device. In this way load imbalances can be prevented \cite{dan1996load}. \newline
-Load balancers are generally grouped in two layers. Layer 4 (FTP,IP, UDP, TCP )and layer 7 the application layer. Layer 7 load balancers distribute request based upon data in the application layer, this can for example be HTTP. A lot of video streaming services use http streaming \cite{Adhikari:2012}. 
-
-\cite{wolf:1997,load-balancing}
-
+This research is part literature study and a part of it is building a small Raspberry Pi cloud to analyze balancing techniques on the Raspberry Pi 2. For this research cloud video streaming is one of the specific aspects that will be investigated. The first two research questions describe the state of the art. The last three sub-questions go into the technical research that will investigate the performance and possibility of Raspberry Pi's for cloud video streaming. The five sub-questions are being looked at in the next sections. Followed by a final section for conclusions and identified areas for future work.
 
 \section{Research Methods}
-This research will investigate a cloud computer consisting of Raspberry Pi's. The research method for this would be the Design Science research method. this is a method to solve field problems. This research will make use of the design Science method proposed by Hevner~\cite{hevner:2007}. This design method has three variants. 
+This research will investigate a cloud computer consisting of Raspberry Pi's. The research method for this would be the Design Science research method. this is a method to solve field problems. This research will make use of the Design Science method proposed by Hevner~\cite{hevner:2007}. This design method has three parts. 
 \begin{figure}[H]
 	\centering 
 	\includegraphics[width=0.4\textwidth]{Design_science.png}
 	\caption{Design Science}
 	\label{fig:design} %always place your label after your caption!
 \end{figure}
-The \textbf{relevance cycle} is important, because you first have to identify the problems and opportunities. The \textbf{design cycle} is where you actually build the design. The \textbf{rigor cycle} matters because it can give you two types of additional knowledge. It provides past knowledge to ensure its invention and it's there to guarantee that the now product is a research contribution.
+The \textbf{relevance cycle} is important, because you first have to identify the problems and opportunities. To identify these problems we will gave some more background information in the next section. The \textbf{design cycle} is where you actually build the design. This will be highlighted in the Setup \& Experiment section. The \textbf{rigor cycle} matters because it can give you two types of additional knowledge. It provides past knowledge to ensure its invention and it's there to guarantee that the new product is a research contribution. This will for example be taken into account in the Result section. 
 
-\section{Research approach}
-For the experiment we need a Raspberry Pi with a static Ip address and we need a sd card for the OS. For the experiment we need a Raspberry Pi B that can make use of the Ethernet. This is because a Raspberry Pi can be used as a webserver and this is needed to have this in order to make video streaming possible. This webserver will make video streaming possible. It will have a VPN to make it possible to put video's on the Raspberry pi \cite{VPN:2014}. 
-So I will first make this video streaming webserver. 
-After this we will make a cluster with one Raspberry Pi as a load balancer and the other two as a video stream pi. If I have made such I cluster I can start doing some tests on it. For example some test in streaming in different quality with load balancing. The setup of the raspberry Pi can be seen in the figure below ~\ref{fig:setup}.
+\todo{UML sequence diagram}
 
+\section{Background}
+\subsection{Small scale computing}
+Small scale cloud computing is cloud computing with smaller computation amounts than normal \cite{cox:2014}. Most users that operate in the cloud buy the services instead of buying the hardware and having to set up the servers themselves. This service is called Infrastructure as a Service. To this specific cloud service belongs the online storage of data. The Amazon Elastic Compute Cloud (Amazon EC2) is one of the most widely used infrastructure platforms that these clients use \cite{hofer:2011}. This elasticity of computing resources is very important \cite{Miettinen:2010:EEM:1863103.1863107}. A lot of companies have their own virtual machines running in large data centers \cite{beloglazov:2010}. The advantage is that these instances can be scaled dynamically to the customer it's need. Using these instances makes easier management of the computers and varying workloads possible. 
+
+Several cloud services have a huge demand on the network. This high demand can sometimes make it possible that data centers are unreachable.
+That is a reason why many companies have their own data centers. These data centers are small and not energy efficient. Another reason why companies have their own data center is because they don't want their data to be in somebody else his hands.  Netflix a cloud service is responsible for approximately 30\% of the peak downstream traffic in US \cite{Adhikari:2012, computer-networking}. To improve this there are several data patterns possible, it can for example make a huge different in sending data in small bursts or in one large burst.
+
+A CDN makes use of small data centers. This is because in a CDN you can get your data that is from America from a more nearby storage place. For example a website may be hosted in America. This website is connected to a CDN and in this way its possible to get your data from a more nearby server that has a copy of that website. For example if you live in Amsterdam you can perhaps get your data from London where the CDN is located instead of America. In this way the latency is decreased and there is a shorter connection distance and you have faster load times. 
+
+Power Usage Efficiency (PUE) is nowadays becoming a more important aspect in cloud computing. Keeping the power usage low is one of the main challenges of cloud computing. The data centers now are only 12 till 20\% of the time operating, while all the servers inside are still using energy. Keeping these data centers up requires a lot of electrical power. Therefore we perhaps need to more Green Cloud Computing solutions that reduce the electrical power consumption and reduce the environmental impact of data centers~\cite{beloglazov2012energy}. For example with data centers that are using microservers. More information about this is in the next section. \newline 
+With the increase of lightweight portable devices the energy efficiency becomes more important. For example can the data center do the graphic calculations needed to create a good video, however then more data needs to be send of the network. This will save energy, but will increase the data over the network. This means that a trade-off has to be made between local processing and computation offloading \cite{Miettinen:2010:EEM:1863103.1863107}. Computation offloading makes the data centers do the calculations, therefore making cloud computing more important. 
+
+\subsection{Microserver}
+Microservers come to good use in small data centers \cite{microserver}.  They are smaller in size, computer power and consume less electricity. This makes them perfect for high traffic usage tasks.  Its cheaper to a small device than a big server inside a data center, so smaller microservers make a data center more dynamic. The ability to add and remove more easily microservers can save a lot of energy. It's also better for optimization. A micro server often has a different processor compared to a normal server. ARM is a processor a micro server might use. This processor does not have so much overhead compared to a Intel one. The Intel processor is better at complex tasks, while the Arm processor is better at small tasks \cite{microserver}. The difference in these processes is because of their design. The ARM has the possibility to optimize it for a special task. In the data center of the future more of these dedicated processors will be used. 
+
+\subsection{Streaming}\label{sec:stream}
+Video streaming happens with TCP or HTTP. TCP sends frames to the client and in these frames is the video stored. Of course if the available TCP send rate is large enough then the video will play without any delays. But if the TCP send rate is less then needed then the video play will alternate between periods of continuous playout and periods of freezing~\cite{computer-networking}. Its very important that video freezing or audio playing faster then the video does not happen. This is why multimedia applications have high performance requirements. 
 \begin{figure}[H]
-\centering 
-\includegraphics[width=0.4\textwidth]{raspberry pi setup.jpg}
-\caption{Raspberry Setup}
-\label{fig:setup} %always place your label after your caption!
+	\centering 
+	\includegraphics[width=0.4\textwidth]{VideoStreaming.jpg}
+	\caption{Raspberry Pi 2 model B}
+	\label{fig:stream} %always place your label after your caption!
 \end{figure}
-For the load balancing we will make use of Nginx for this we will use the following sources:
-\cite{nginx-load-balancing, nginx-load-balancing-2}
+HTTP streaming is used for streaming a video. In HTTP streaming the HTTP GET request specifies the specific range of bytes the client wants to retrieve from the desired video~\cite{computer-networking}. In this way the client can correctly receive the video, if it receives too much data then its buffer for video playing can get full. To prevent throwing data away the server will then stop sending. To prevent throwing data away the client will have a not to large buffer. \newline
+There is a important streaming technique called adaptive streaming. This streaming algorithm is often used for video on demand (VOD). It improves the experience for the end-user by adapting the video quality dynamically to the viewers network condition \cite{ffmpeg}. This techniques looks to the clients CPU possibility and it's network possibilities. It delivers small sized chunks at multiple bitrates. This techniques is used for HTTP Live Streaming (HLS). This makes use of RTMP streaming and HTTP. This way of streaming is released in 2014. It codifies video in the H.264 format.\newline
+There is another special kind of HTTP streaming called DASH (Dynamic Adaptive Streaming over HTTP)~\cite{computer-networking}. In DASH the video is encoded into several different versions. If the bandwidth is high, then the client selects chunks from a high-rate version and the way around~\cite{computer-networking}. The possibility to switch between bit rate versions is in video streaming very important. To make a smooth transition between these versions possible there are intermediate versions so that the client will see less suddenly the change in video quality. In HTTP streaming the server stores the video with a different URL.   
 
-\section{Raspberry pi}
+
+\subsection{Video streaming and load balancing}
+For video streaming several load balancing techniques can be used. There are several choices that have to be made by choosing a load balancer for a service. These choices can for example be performance, reliability and features. There can be a non-uniform demand for different movies. One solution to overcome this problem would be to replicate the most popular movies. One obvious problem is then that it is expensive in terms of storage space required. To solve this you can use dynamic replication to solve the load demand~\cite{dan1996load}. By using this you move portions of a movie to less used storage devices. The allocation of these movies only happen when there is a to high increase on one specific storage device. In this way load imbalances can be prevented \cite{dan1996load}. \newline
+Load balancers are generally grouped in two layers. Layer 4 (FTP,IP, UDP, TCP )and layer 7 the application layer. Layer 7 load balancers distribute request based upon data in the application layer. Here below are some protocols and languages used for this:
+\begin{enumerate}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+	\item HTTP, is the hypertext transfer protocol. In section \ref{sec:stream} are mentioned some usages of this protocol. A lot of video streaming services use HTTP streaming \cite{Adhikari:2012}.  
+	\item RTMP is a real time messaging protocol ~\cite{rtmp}. It is developed for streaming data between a player and a server. It is encapsulated in HTTP to traverse firewalls. It gives more video player options compared to normal HTTP thus giving the user a better experience. A disadvantage compared to normal HTTP is that it is sensitive for data spikes. These data spikes can result in a overload of the buffer which results in a empty buffer, this can lead to a stop in the video playing. 
+	\item Synchronized Multimedia Integration Language (SMIL) describes multimedia presentations \cite{smil}. SMIL refers to media objects by URLs, allowing them to be shared between presentations and stored on different servers for load balancing. 
+\end{enumerate}
+
+
+\subsection{Video streaming in a data center}
+
+Nowadays a lot of people watch their movies online using video streaming and this amount of people is increasing. The Netherlands have for example one million subscribers for Netflix \cite{volkskrant}. One thing that these users want is the on demand video streaming. They do not want to store the data itself and they want to have a wide choice of different videos. Netflix is a video streaming service that makes HD movies watching possible. This is known as a on demand service. For this Netflix makes use of a content distribution network (CDN). They make use of amazon its AWS, simpleDB , S3 and Cassandra for file storage \cite{Adhikari:2012}. Netflix makes use of MPEG-DASH a protocol that makes streaming over HTTP possible. To make this possible Netflix does several things in the cloud. 
+
+ \begin{enumerate}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+ 	\item Content ingestion, this means that Netflix receives the studio master version of the movies and uploads these to the cloud. 
+ 	\item Content processing, this means that in the cloud many different formats are created for each movie.
+ 	\item Uploading different versions to the CDN,	this means that all the versions that have been made are distributed over the CDN.
+ \end{enumerate}
+Netflix ~\cite{Adhikari:2012}
+
+
+
+
+\subsubsection{Video stream CDN}
+Video streamer Netflix has  it's own CDN. This CDN is fully operational in 2015 and now they still use some other CDN's like Akamai. Reasons for having an own CDN is that the load balancing can be better improved. The CDN that Netflix has created is called Open Connect. To make their CDN possible they work together with the ISP providers. They use high performance HTTP delivery to get the content to the users. By having their own CDN they can get the video's faster to their users, because they can optimize their video stream algorithms for their own CDN. Besides this its possible that in this way the data going over the network can be decreased.
+
+
+\section{Related work}
+
+There have been several cloud projects with the Raspberry Pi. \newline
+One of these has been the supercomputer build by Southampton~\cite{cox:2014}. Here they build it with 64 raspberry Pi's . They used a Message Passing interface to communicate between the Raspberry Pi's. The research was done in order to see what the performance of a low-power high performance cluster is. \newline
+The project of the university of Glasgow~\cite{tso:2013}. This data center has 56 Raspberry Pi's. It is build for research and education purposes for a cloud data center. They have a Hadoop running on their servers. \newline
+There was another project called the Beowulf cluster~\cite{beowolf-setup}. This project was created for a PhD assignment. This cluster is build for collaboratively processing sensor data.  A Beowulf cluster is simply a collection of identical, commodity computer hardware based systems~\cite{beowolf-setup}. The big advantage of the Raspberry Pi in this project was that it is cheap and it does not need a cluster administrator to watch over everything you do. 
+
+For Video streaming there are several projects. These projects are often done by service providers such as Google with their video streamer Youtube. \newline
+NGINX is busy with their Video streaming project. NGINX works together with Netflix to give users the best video watching experience. NGINX is a scalable service with high performance load balancing.  Netflix is together with NGINX busy with their project Open Connect. This project wants to improve the load balancing for video streaming over the whole network. \newline
+Another service is WOWZA \cite{wowza}. WOWZA provides video streaming for a lot of companies and universities. WOWZA has done several projects for video streaming and has build with the University of Maine a content management system for their online videos. 
+One mayor video stream service is of course Youtube \cite{youtube}. Youtube was once started as a project with the aim to remove the technical barriers to share videos online. Nowadays Youtube is still working hard on optimizing their video streaming service. Youtube has a online API so developers can join in and start their own projects. Youtube has its own projects for example helping mobile gamers stream their video, helping with live streaming and many more.
+
+\section{System description}\label{sec:system}
+
 \begin{figure}[H]
-\centering 
-\includegraphics[width=0.4\textwidth]{Pi2ModB1GB_-comp.jpeg}
-\caption{Raspberry Pi 2 model B}
-\label{fig:raspberry} %always place your label after your caption!
+	\centering 
+	\includegraphics[width=0.4\textwidth]{Pi2ModB1GB_-comp.jpeg}
+	\caption{Raspberry Pi 2 model B}
+	\label{fig:raspberry} %always place your label after your caption!
 \end{figure}
 \begin{table}[H]
-	\centering \caption{Specificaties}
+	\centering \caption{Specifications}
 	\begin{tabular}{|c|c|} \hline
-		Ethernet & 100 MBps \\ \hline
+		Ethernet & 100 Mbps \\ \hline
 		USB & 4 x USB 2.0 \\ \hline
 		Video out & HDMI 1.4 \\ \hline
 		Audio & 2 x analog \\ \hline
 		CPU & 900MHz quad-core ARM Cortex-A7 \\ \hline
 		card slot & Micro SD  \\ \hline
 	\end{tabular}
-		\label{tab:Specificaties}
+	\label{tab:Specificaties}
 \end{table}
-The Raspberry Pi only consumes 3 watts, because of this it doesn't need active cooling. 
-With this subquestion I want to find out if it is possible to let users have small Raspberry Pi servers I also want to know what the performance of this small Raspberry Pi cloud is. 
-Resources:
-\cite{Pcextreme,nginx-load-balancing,nginx-load-balancing-2}
+The Raspberry Pi 2 (RPi 2)only consumes 3 watts, because of this it doesn't need active cooling. The RPi 2 does have a limited ethernet cable of only 100 Mbps. This can be a huge drawback when large amounts of data need to be distributed over the Network. It is however very useful for a investigation in load balancing for video streaming. A small network cable offers still room for analyzing the video stream. The USB 2.0 has not a huge capabilities to share the data from a external harddisk to a user, but it will be enough for this small simulation. A normal Seagate harddisks demands 10 Watt when it is actively streaming videos and when it's standby it has a consumption of 0.1  Watt.
 
-For this research I want to investigate if it is possible to do more research in the 
-load balancing techniques that can be used in a raspberry pi. A example of this would be the round robin queuing~\cite{nginx-load-balancing,nginx-load-balancing-2}.
+This research makes use of three Raspberry Pi's one router and one switch. All these Pi's need power, therefore there is a power supply and 3 micro USB cables. There are three sd cards needed for the Operating System, and other software, to make the RPi 2 work. A cost structure for this can be found in the appendix section~\nameref{sec:cost}.
 
-\subsection{Raspberry Pi cloud projects}
-there have been several cloud projects with the raspberry Pi. \newline
-One of these has been the supercomputer build by Southampton~\cite{cox:2014}. Here they build it with 64 raspberry Pi's . They used a Message Passing interface to communicate between the raspberry pi's. The research was done in order to see what the performance of a low-power high performance cluster is. \newline
-The project of the university of Glasgow~\cite{tso:2013}. This data center has 56 Raspberry Pi's. It is build for research and education purposes for a cloud data center. They have a hadoop running on their servers. \newline
-There was another project called the Beowulf cluster~\cite{beowolf-setup}. This project was created for a phd assignment. This cluster is build for collaboratively processing sensor data.  A Beowulf cluster is simply a collection
-of identical, (typically) commodity computer hardware based systems~\cite{beowolf-setup}. The big advantage of the Raspberry Pi in this project was that it is cheap and it does not need a cluster administrator to watch over everything you do. 
+For some benchmark test a laptop is plugged in, so that several tests can be done from the laptop.
 
-\section{State of the Art}
- People want to have everything has to be accessible through the network around the clock \cite{youseff:2008}. One thing that people want on demand are there film series. Currently Netflix has 30\% of the downstream in the United States. This downstream is huge and that means that there is optimization in this branch possible. To make the video on demand service of Netflix possible they use servers from Amazon. 
 
-In this paper there will be research done on making a load balancing service for the Raspberry Pi.  This service will consist of several raspberry Pi's. These Raspberry Pi's make together a small cloud computer.  The Raspberry Pi is made for research and education purposes \cite{raspberry-pi}. The Raspberry Pi is a cheap device costing around 35 euro. It has a power consumption of only three watt and has quite good processor. For this reason it might be very useful for small scale cloud computing. The raspberry Pi is a small device and is excellent for a lot of small devices in a relatively small place. The Raspberry Pi doesn't use cooling and it can be used for very rapid elasticity and on-demand self-service. Because of it's cooling features and low power consumption it might be a good alternative for the nowadays high power consuming data centers. The raspberry pi is really small so it is a lot easier to place extra pi in a data center compared to a normal server. The Raspberry Pi has one drawback and that is that the processing power is relatively low. By using load balancing there will be taken a look at what load balancing techniques are successful for the Raspberry pi. 
+\section{Setup \& Experiment}
 
-In this research we will make a small raspberry cloud to do research on video streaming using HTTP. This will be done using the design Science method proposed by Hevner\cite{hevner:2007}. After we have done this for the Raspberry Pi there will be looked at streaming using Amazon. In this way we can see how the results are compared to streaming via Amazon. This research will try to find out if the raspberry has enough processing power to stream to multiple web clients. The cloud performance can now be better researched, because everything is at one location and the information about what processes are running on the pi are well defined. In this way we can take a better look at algorithms used in video streaming. This is mostly because there is not a lot of overhead. 
 
-\section{Conclusion and future work}
+\subsection{Experiment approach}
+This setup can be build by following the section \ref{sec:software} in the appendix. More details about the setup can be found in section \ref{sec:setup}. A RPi 2 is used for video streaming with load balancing. For the experiment Raspberry Pi's with a static ip address are needed. This so we can connect easily to them with SSH.  For the experiment we need a Raspberry Pi 2 that can make use of the Ethernet. This is because a RPi 2 is used as a webserver to make video streaming possible. This webserver will make video streaming possible. It will have a VPN to make it possible to put video's on the RPi 2. 
+After this a cluster with one RPi 2 as a load balancer and the other two as a video stream Pi will be build. If such a cluster is made tests can be done and improvements can be made. For example some test in streaming in different quality with load balancing. The setup of the Raspberry Pi 2:
+
+\begin{figure}[H]
+	\centering 
+	\includegraphics[width=0.5\textwidth]{raspsetup.jpg}
+	\caption{Raspberry Setup}
+	\label{fig:setup} %always place your label after your caption!
+\end{figure}
+\begin{enumerate}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex] 
+\item The client who wants to get the video. 
+\item The router who redirects the client to the load balancer. The router will also have the video streamers in this network. If there are to much Raspberry Pi's in a network to connect to a single router a switch can be placed between them. 
+\item The load balancer who redirects the client to the right video streamer.
+\item The video streamer who streams the video to the client.
+\item The video streamer who streams the video to the client.
+\end{enumerate}
+In the section \ref{sec:setup} the software is defined to create a cluster like this.
+
+\subsection{Raspberry Pi 2 inside a data center}
+
+In the end it would be ideal if the RPi 2 will fit inside a data center. It is possible to fit a lot of Raspberry Pi's inside a data center. PCextreme has made it possible to fit 500 Pi's inside a single data rack \cite{Pcextreme}. For this special designed boards are needed. With a special board you can for example reboot them from a distance. \newline In this research we only have 8 Pi's and these fit easily inside the rack. The cooling of the data rack is more than sufficient to cool all these Raspberry's. The power consumption of the RPi 2 is low as you can see in table \ref{tab:cpu} below. The RPi 2 is also easy to replace inside a data center and it can easily be turned on and of, this makes it suitable inside a server rack. A problem that will exist with the Raspberry Pi 2 inside the data center is that every time a Pi's have troubles a help team inside the data center has to fix this for its customer. It is harder to get  a fully automated re-installation as for example a vServer more easily does. 
+
+The setup for this project looked like this:
+\begin{figure}[H]
+	\centering 
+	\includegraphics[width=0.50\textwidth]{setup.jpg}
+	\caption{Project Setup}
+	\label{fig:projectsetup} %always place your label after your caption!
+\end{figure}
+The figure \ref{fig:projectsetup} is photo of the project setup. This project setup is comparable with figure \ref{fig:setup}. The numbers in the front pint to the Raspberry Pi's that are also showed in figure \ref{fig:setup}. The number in the back shows the little router that is behind the power supply. In this picture there is a extra switch to connect all the Raspberry Pi's. To redo this experiment there are only three Raspberry Pi's necessary. \newline 
+This setup can be placed inside of a data center. The switch and the router will then be removed and the rest will be fit nicely into the server rack. The setup that has been made now could easily fit on the project table, so that it was easy to reach them and a lot of research on them could be done. 
+
+To verify that a Pi can operate inside a data center some tests have been done. For these tests a multimeter has been used. The Elro M990 multimeter has been used. The program sysbench has been used to run several CPU tests for the Raspberry Pi 2 its four cores. This is a benchmark test to get a quick impression about the performance of the system. The ampère and volt is measured with the multimeter during the test. the This gave the following results:
+\begin{table}[H]
+	\centering \caption{CPU test}
+	\begin{tabular}{|c|c|c|} \hline
+		Core & Ampère (A) & Volt\\ \hline
+		1 & 0.339 & 4.84 \\ \hline
+		2 & 0.365 & 4 \\ \hline
+		3 & 0.392 & 4 \\ \hline
+		4 & 0.443 & 4 \\ \hline
+	\end{tabular}
+	\label{tab:cpu}
+\end{table}
+
+The idle usage of the Raspberry Pi 2 is 0.312 Ampère and 4.86 Volt. In the table there is showed that with a benchmark test of only one core the Ampère going through the system is only 0.339, this means that it is barely increasing when using one core fully or idle. A normal server needs about 500 watt. Each Raspberry Pi has a consumption of about 3.5 watt, so about 500/3.5=140 Pi's will be possible instead of a single server. By using these small modular systems the power consumption inside a data center can be improved. 
+
+
+\subsection{Raspberry Pi 2 setup}\label{sec:setup}
+In this setup we are going to make a Netflix kind of video stream service. \newline
+\textbf{Dietpi} is the software we use as operating system \cite{dietpi}. This is a diet version of Raspbian the normal Raspberry Pi operating service. The Raspbian again is a diet version of Linux. This makes that Dietpi only has the most necessary software to operate. In this way the memory usage for the operating system stays low. This low memory usage is important, because the creation of different video formats requires a lot of process power. For most systems you want as less unnecessary overhead as possible. \newline
+\textbf{NGINX}~\cite{nginx}: For the load balancing and streaming over HTTP NGINX will be used. A RTMP module from Arut for NGINX will be used to make a media streaming server over HTTP \cite{arut}. NGINX is optimized for ARM. This is a processor the Raspberry Pi 2 is using. One other reason to choose for NGINX and not for a apache webserver is that it uses less memory. NGINX has a more efficient model than apache, and because of this it can handle more HTTP requests. Besides this is for NGINX and Apache the most documentation available on how to do video streaming. \newline
+\textbf{FFmpeg} is a cross-platform solution to record, convert and stream audio and video \cite{ffmpeg}. Using this software makes adaptive streaming and streaming in different formats possible. \newline
+\textbf{JW Player}~\cite{jwplayer}: JW Player is a HTML5/flash embedded media player. It is a open source media player. Besides this also JW player can make it possible to do some load balancing dependable on the bit rate that is coming from the video. It supports dynamic streaming, dynamic streaming consists of multiple single streams with the same content, all in a different quality \cite{jwplayer}. from different streams. The Player uses server modules to stream the video to the client using the formats HTTP FLV or H264.\newline
+Cassandra is a database that helps replicating data across multiple data centers \cite{cassandra}. In the case of this project there are videos stored. This data can automatically be replicated across the nodes for fault-tolerance. In this way its possible to have the data still available when a node crashes.
+
+
+\subsection{Raspberry Pi 2  testing}
+
+In this testing section several test will be done these are: 
+\begin{enumerate}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex] 
+	\item CPU test
+	\item RTMP stream test
+	\item SMIL test
+	\item CPU test with stream
+	\item Cassandra test for file location
+\end{enumerate}
+
+
+The Raspberry Pi's are stress tested to make sure that they are operating in the right way. For this the program stress for Linux is used. 
+This application checks if the CPU is working correctly.
+
+To stress test and see if the server is streaming correctly we use Apache JMeter~\cite{jmeter}. This test with Apache JMeter is used to see how many streams a Raspberry Pi 2 can handle. This test is done with a laptop and RPi2. First a test case is created in Apache JMeter then a RTMP video stream is started and this is checked in a media player and a webpage in a webbrowser. The result is that the RPi 2 can handle a maximum of 25 users for streaming MP4 files at a user at the same time. Depending on what protocol is used the video can freeze, or the video will be displayed on a lower bit rate. If it goes to a lower bit rate it will try to switch back to a higher bitrate with higher quality video when this is possible. 
+
+Streaming videos can be done by NGINX. To test if this is working properly we can test it with a media player like VLC or use a web browser were you can type in the RTMP stream coming from the RPi 2. Test the RTMP stream with different kind of MPEG-4 (MP4 ) files so you can see the quality difference. Test the RTMP stream by copying it in a media player. After that with the JW player support in the browser you can also test it inside your browser. The RTMP stream is streaming about 800 kbit/s for a small 300 MB movie. Theoretically this would mean that according to the formula max users=bandwidth/bit rate stream it will result in 118 users. This is with the Raspberry Pi 2 having a 100 Mbit connection.  The RPi 2 has with the Iperf test a maximum connection of  94.4 Mbps~\cite{ipref}. With a USB 2.0 gigabit adapter this could increase in a 470 Mbit connection resulting in a increasing amount of users for each Raspberry Pi 2. 
+
+
+Testing qualities with top command gives with a stream of a audio file of 7 min, 11 MB and in MP4 format a result of 10m resident size value. 
+With video streaming this gives a resident value of 14m for a file of 230 MB. These processes mostly done by FFmpeg and only a small part is done by NGINX.  For Video on Demand most is done by NGINX and it was clearly visible that this kind of streaming is causing less freezing. This is because you can already start watching before the video is loaded. Video on demand (VOD)is better equipped to load the stream then only RTMP. With only RTMP it's only possible to watch what is at that moment being played like normal television. It also doesn't adjust the bit stream depending on the quality you need. Something VOD does. \newline
+Besides this some streaming with SMIL protocol has been done. This makes it possible to choose your own video streaming rate for the same file, for example 120p or 480p version of a movie. You now can choose the quality by yourself. This is something that Youtube does. There is also a possibility to switch the quality depending on the amount of data that can get over the network. During the test with 100 connections there was freezing when the users can set their own quality. When it is done automatically this was not the case. In apache JMeter it was also possible to see some latency when testing. For this testing videos of different qualities have been made. To make a video of 230 MB into the 3 different lower qualities it requires 200 \% of the CPU power. This is a lot of this has to be done for a lot of movies. So a server that needs to encode a lot of different videos might need a stronger processor. 
+
+For the file location and database it would be nice to run the Cassandra data server. This data server is also used by Netflix to keep track of it's files. It turned out that it was possible to run Cassandra. cqlsh command it is possible to so that the cluster is running.  
+
+
+\section{Result}
+
+For this project a good setup for video streaming has been built. This result has be made possible with NGINX and several other programs. The Raspberry Pi 2 has made load balancing possible with NGINX and JW Player. Besides that it is possible to stream video's over the HTTP with RTMP encapsulated to the user. NGINX has a efficient algorithm to transfer the HTTP with RTMP encapsulated data to the users. It has also a efficient algorithm to do normal load balancing. \newline
+The Raspberry Pi 2 can make videos of different qualities with FFmpeg and it is perfectly capable of distributing these videos of the other Pi's. FFmpeg has a huge demand of the processor power and this can be a problem when a lot of videos have to be encoded. 
+The RPi 2 has a slow internet connection and this means that it streaming capacity is rather limited.  The maximum RTMP stream output for my RPi 2 was for one around 800 kb/s. This can be different for the size and duration of your MP4 stream or FLV. The video streaming with Video on Demand or adaptive streaming has a good performance. It is only limited to around 100 users. The RPi 2 has a rather limited connection, this makes video streaming with the RPi 2 still not to useful. However this experiment shows that the RPi 2 is capable of video streaming. In the future the Raspberry Pi 2 can be better than a normal server, because its more dedicated ARM processor. 
+
+
+In the table \ref{tab:Specificaties} its stated that the Raspberry only has 100 Mbps. Video streaming Its limited ethernet connection is a problem when it comes to video streaming. However with a larger Ethernet cable and a fast connection to a harddisk it would be much better for video streaming then the traditional video streaming from bigger servers.  
+
+\section{Discussion \& Conclusion}
+Small scale data centers are important for the data transfer over the internet. It can avoid internet bottlenecks. Besides that are the smaller cloud computers often better in executing small tasks instead of the bigger ones.  In an ideal case you want to have elasticity over the network. In this way you can increase and decrease the computation of a data center nearby the user, so that data doesn't have to travel so far.For video streaming you want the data as near to the user as possible in order to get him the best quality at the right speed, so that the video doesn't freeze. For video streaming the client needs to buffer a part of the movie. If the server is nearby then it's more easy to adjust the settings of these buffer.  \newline
+The Raspberry Pi 2 can be useful for video streaming. It can definitely be used for further research into video streaming algorithms. This can be algorithms such as video distribution algorithms. The Raspberry Pi 2 is a microserver and has a processor for small tasks which is video streaming. The Raspberry Pi 2 does have some drawbacks for video streaming, but is perfect for education purposes. \newline
+It is possible to fit 500 Raspberry Pi's inside a single server rack. \newline
+For the setup a diet version of the Raspbian operating system is used called Dietpi. Besides this it makes use of NGINX for the server with a streaming module for video. \newline
+In the research several load balancing techniques were used. Cassandra is used in this research to distribute and locate the videos over different Raspberry Pi's. Adaptive streaming is used for Video on demand and normal RTMP streaming is used to setup streams. Improvements on those load balancing techniques were not possible in the scope of this research, but might be possible in future research. 
+\todo{any last words	}
+
+\section{Future work}
+New possibilities with faster USB and Ethernet cable. It is possible to create a gigabit connection over USB 2.0. This will make better video streaming possible and more users can be reached over the HTTP. Work together with streaming services such as NGINX to further develop video streaming services hosted by ARM processors. In the future it would also be possible to run a Cassandra service for the Raspberry Pi 2 this will make the file location of video's possible in a cluster. Netflix is currently looking for a specialist in  Peer-to-Peer distribution for their videos \cite{netflix}.  Peer-to-Peer distribution can be interesting with Raspberry Pi. Besides this it might be interesting to look into Peer-to-Peer distribution in general and for video streaming in specific, there can be taken a look into the technology and legal aspect of  Peer-to-Peer distribution. 
 
 \section{Acknowledgments}
 This paper would not have been possible without the help of Björn Postema and Nick Shot.
-
+\clearpage
 \bibliographystyle{abbrv}
 \bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
 % You must have a proper ".bib" file
@@ -240,8 +350,27 @@ This paper would not have been possible without the help of Björn Postema and N
 % ACM needs 'a single self-contained file'!
 %
 \vspace{50 mm}
-\newpage
+
 %APPENDICES are optional
 
+\clearpage
+\appendix
+
+\section{Cost structure}\label{sec:cost}
+\begin{figure}[H]
+	\includegraphics[scale=0.65]{Kostenoverzicht_cluster.pdf}
+	\label{fig:cost}
+	\caption{Cost structure}
+\end{figure}
+
+
+\section{Software configuration}\label{sec:software}
+
+\subsection{Raspberry Pi 2}
+
+\subsubsection{GitHub}
+For more information about the project its possible to see the GitHub repository. Comments or questions about the code can also be asked there. \newline
+The link is: \newline
+\url{https://github.com/PaulVelthuis93/VideoStreaming}
 
 \end{document}

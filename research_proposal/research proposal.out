@@ -1,13 +1,14 @@
 \BOOKMARK [1][-]{section.1}{Motivation}{}% 1
-\BOOKMARK [1][-]{section.2}{Specific\040problem}{}% 2
+\BOOKMARK [1][-]{section.2}{Problem\040Statement}{}% 2
 \BOOKMARK [1][-]{section.3}{Research\040questions}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{What\040are\040small\040scale\040data\040centers\040with\040video\040streaming\040and\040why\040are\040they\040used?}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Is the Raspberry Pi’s usable for video streaming?}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.1}{What\040are\040micro\040scale\040data\040centers\040with\040video\040streaming\040and\040why\040are\040they\040used?}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Is\040the\040Raspberry\040Pi\040feasible\040for\040video\040streaming?}{section.3}% 5
 \BOOKMARK [2][-]{subsection.3.3}{How\040to\040fit\040the\040Raspberry\040Pi's\040into\040a\040data\040center\040considering\040cooling,\040space\040allocation\040and\040power?}{section.3}% 6
 \BOOKMARK [2][-]{subsection.3.4}{What\040setup\040does\040a\040Raspberry\040Pi\040cloud\040with\040video\040streaming\040require?}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.5}{How\040is\040availability\040in\040a\040Raspberry\040pi\040cluster\040with\040video\040streaming\040affected\040by\040various\040load\040balancing\040techniques?}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.5}{How\040is\040availability\040in\040a\040Raspberry\040Pi\040cluster\040with\040video\040streaming\040affected\040by\040various\040load\040balancing\040techniques?}{section.3}% 8
 \BOOKMARK [1][-]{section.4}{Research\040Methods}{}% 9
 \BOOKMARK [1][-]{section.5}{Research\040approach}{}% 10
 \BOOKMARK [1][-]{section.6}{Planning}{}% 11
 \BOOKMARK [1][-]{section.7}{State\040of\040the\040Art}{}% 12
 \BOOKMARK [1][-]{section.8}{References}{}% 13
+\BOOKMARK [1][-]{appendix.A}{Cost\040structure}{}% 14

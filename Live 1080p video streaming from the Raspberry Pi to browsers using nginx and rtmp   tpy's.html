@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)http://tpy.tw/?p=109 -->
+<html lang="en-US"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp | tpy's</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://tpy.tw/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://tpy.tw/wp-content/themes/twentythirteen/js/html5.js"></script>
+	<![endif]-->
+	<link rel="alternate" type="application/rss+xml" title="tpy&#39;s » Feed" href="http://tpy.tw/?feed=rss2">
+<link rel="alternate" type="application/rss+xml" title="tpy&#39;s » Comments Feed" href="http://tpy.tw/?feed=comments-rss2">
+<link rel="stylesheet" id="twentythirteen-fonts-css" href="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentythirteen-style-css" href="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/style.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='http://tpy.tw/wp-content/themes/twentythirteen/css/ie.css?ver=2013-07-18' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/jquery.js"></script><style type="text/css"></style>
+<script type="text/javascript" src="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/jquery-migrate.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://tpy.tw/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://tpy.tw/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Very nice article for streaming video" href="http://tpy.tw/?p=105">
+<link rel="next" title="Fastest: Nginx + WordPress" href="http://tpy.tw/?p=139">
+<meta name="generator" content="WordPress 4.1">
+<link rel="canonical" href="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's.html">
+<link rel="shortlink" href="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's.html">
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+	<style type="text/css" id="twentythirteen-header-css">
+			.site-header {
+			background: url(http://tpy.tw/wp-content/themes/twentythirteen/images/headers/circle.png) no-repeat scroll top;
+			background-size: 1600px auto;
+		}
+		@media (max-width: 767px) {
+			.site-header {
+				background-size: 768px auto;
+			}
+		}
+		@media (max-width: 359px) {
+			.site-header {
+				background-size: 360px auto;
+			}
+		}
+		</style>
+	</head>
+
+<body class="single single-post postid-109 single-format-standard single-author">
+	<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+			<a class="home-link" href="http://tpy.tw/" title="tpy&#39;s" rel="home">
+				<h1 class="site-title">tpy's</h1>
+				<h2 class="site-description">note</h2>
+			</a>
+
+			<div id="navbar" class="navbar">
+				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+					<button class="menu-toggle" style="display: none;">Menu</button>
+					<a class="screen-reader-text skip-link" href="http://tpy.tw/?p=109#content" title="Skip to content">Skip to content</a>
+					<div class="nav-menu"></div>
+					<form role="search" method="get" class="search-form" action="http://tpy.tw/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>				</nav><!-- #site-navigation -->
+			</div><!-- #navbar -->
+		</header><!-- #masthead -->
+
+		<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+						
+				
+<article id="post-109" class="post-109 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		
+				<h1 class="entry-title">Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp</h1>
+		
+		<div class="entry-meta">
+			<span class="date"><a href="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's.html" title="Permalink to Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp" rel="bookmark"><time class="entry-date" datetime="2014-09-16T19:58:39+00:00">2014-09-16</time></a></span><span class="categories-links"><a href="http://tpy.tw/?cat=1" rel="category">未分類</a></span><span class="author vcard"><a class="url fn n" href="http://tpy.tw/?author=1" title="View all posts by tpy" rel="author">tpy</a></span>					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<h3>Gstremer + RTMP + Browser</h3>
+<p>This approach is mainly referenced from <a href="http://pkula.blogspot.tw/2013/06/live-video-stream-from-raspberry-pi.html">here</a> except that I use <code>gstraemer</code> as streaming/encode provider instead of <code>ffmpeg</code>. Gstreamer is an awesome media framework for streaming service. It is not only powerful but also flexible. The plugin-based architecture makes it very flexible in any situations, from codecs to communication protocols.</p>
+<h3>Install Gstreamer</h3>
+<p>Gstreamer are composed by a gstreamer core and some plugins libraries. Installation please reference <a href="http://tpy.tw/?p=91">this post</a>. Notice that we’re going to use gstreamer’s rtmp module, which is contained in <code>gst-plugins-bad</code>, you must make sure that you have <code>librtmp-dev</code> installed before you compile <code>gst-plugins-bad</code>.</p>
+<h3>Install Nginx &amp; Nginx-rtmp module</h3>
+<p>While gstreamer are good at video encoding and streaming, it’s not probably the best server solution facing the public. We need nginx to re-transmit the rtmp packets to allow multiple client connections.</p>
+<pre><code>sudo apt-get -y install nginx
+sudo apt-get -y remove nginx
+sudo apt-get clean
+</code></pre>
+<p>Make sure <code>/etc/nginx</code> is empty because <code>make install</code> will not overwrite files which already exists.</p>
+<pre><code>sudo rm -rf /etc/nginx/*
+</code></pre>
+<p>Make a temporary folder to build codes</p>
+<pre><code>mkdir -p ~/nginx_src
+cd ~/nginx_src
+git clone https://github.com/arut/nginx-rtmp-module.git
+git clone https://github.com/nginx/nginx.git
+apt-get update
+apt-get install -y curl build-essential libpcre3-dev libpcre++-dev zlib1g-dev libcurl4-openssl-dev libssl-dev
+sudo mkdir -p /var/www
+cd nginx
+./configure --prefix=/var/www --sbin-path=/usr/sbin/nginx --conf-path=/etc/nginx/nginx.conf --pid-path=/var/run/nginx.pid --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-http_ssl_module --without-http_proxy_module --add-module=~/nginx_src/nginx-rtmp-module 
+make -j2  # if you ever faced "memory exhausted" error, try use "make" instead
+sudo make install
+</code></pre>
+<p>Check nginx version and start server.</p>
+<pre><code>nginx -v
+sudo service nginx start
+</code></pre>
+<h3>Setting nginx</h3>
+<p>Edit <code>nginx.conf</code></p>
+<pre><code>user root;
+#Root is only OK if the server is not public. Otherwise you need to increase security on your own.
+# user www-data;
+ #use up to 4 processes if you expect allot of traffic. But this causes issues with rtmp /stat page and possibly pushing/pulling  
+ #worker_processes 4;  
+ worker_processes 1;
+
+ events {  
+   worker_connections 1024;  
+ }
+
+ http {  
+      include /etc/nginx/mime.types;  
+      default_type application/octet-stream;  
+      sendfile on;  
+      keepalive_timeout 65;  
+      #if you want gzip enabled  
+      #gzip on;  
+      #gzip_disable "msie6";
+
+ server {  
+     listen    80;  
+     server_name localhost;
+
+     # sample handlers  
+     #location /on_play {  
+     #  if ($arg_pageUrl ~* localhost) {  
+     #    return 201;  
+     #  }  
+     #  return 202;  
+     #}  
+     #location /on_publish {  
+     #  return 201;  
+     #}  
+     #location /vod {  
+     #  alias /var/myvideos;  
+     #}  
+     # rtmp stat  
+     location /stat {  
+       rtmp_stat all;  
+       rtmp_stat_stylesheet stat.xsl;  
+     }
+
+     location /stat.xsl {  
+       # you can move stat.xsl to a different location  
+       root /home/pi/nginx_way/nginx-rtmp-module;  
+     }
+
+     # rtmp control  
+     location /control {  
+       rtmp_control all;  
+     }  
+     error_page  500 502 503 504 /50x.html;  
+     location = /50x.html {  
+       root  html;  
+     }  
+   }  
+ }  
+ rtmp {  
+   server {  
+     listen 1935; 
+     #chunk_size 8192;
+     ping 30s;  
+     notify_method get;  
+     application rtmp{  
+       live on;
+
+       # You can push this stream to an external rtmp server while accessible locally.
+       # If you experience artefacts and delays on external server lower the bitrate.
+       # There seems to be a bug. When watching local stream and pushing to remote, the remote
+       # stream become really weird with random blocks and strange shadows.(consider 1 one for now)
+       # push rtmp://ip-address-external-rtmp/app/stream;  
+
+       # sample play/publish handlers  
+       #on_play http://localhost:80/on_play;  
+       #on_publish http://localhost:80/on_publish;  
+       # sample recorder  
+       #recorder rec1 {  
+       #  record all;  
+       #  record_interval 30s;  
+       #  record_path /tmp;  
+       #  record_unique on;  
+       #}  
+       # sample HLS  
+       #hls on;  
+       #hls_path /tmp/hls;  
+       #hls_sync 100ms;
+
+      #This will start/stop our ffmpeg script and camera stream (thanks #towolf)
+      #exec gst-launch-1.0 rpicamsrc bitrate=2000000 rotation=90 ! video/x-h264,width=640,height=480,framerate=20/1 ! h264parse ! flvmux ! rtmpsink location='rtmp://localhost:1935/rtmp/live live=1';
+
+      #exec_static ~/rtmp-nginx.sh;
+      #exec_kill_signal term;
+
+     }  
+     # Video on demand  
+     #application vod {  
+     #  play /var/Videos;  
+     #}  
+     # Video on demand over HTTP  
+     #application vod_http {  
+     #  play http://localhost:80/vod/;  
+     #}  
+   }  
+ }  
+</code></pre>
+<p>Restart server</p>
+<pre><code>sudo service nginx restart 
+</code></pre>
+<h3>Install flash rtmp player: StorbeMediaPlayback</h3>
+<p>For client side playback, I use strobe media playback which is an open source media framework from adobe. It seems that it’s not maintained since 2012, but it works great!</p>
+<pre><code>cd /var/www/html
+wget http://sourceforge.net/projects/smp.adobe/files/Strobe%20Media%20Playback%201.6%20Release%20%28source%20and%20binaries%29/
+sudo unzip StrobeMediaPlayback_1.6.328-full.zip
+sudo cp -R StrobeMediaPlayback_1.6.328-full/for\ Flash\ Player\ 10.1/ ../strobe
+</code></pre>
+<p>Some helpful video tutorial <a href="http://inflagrantedelicto.memoryspiral.com/2011/02/getting-started-with-strobe-media-playback-video-series/">here</a></p>
+<h3>setup index.html</h3>
+<p>Edit <code>/var/www/html/index.html</code> and modify <code>{pi_address}</code> to valid address</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Title&lt;/title&gt;
+
+&lt;!-- strobe --&gt;
+&lt;script type="text/javascript" src="strobe/lib/swfobject.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    var parameters = {  
+         src: "rtmp://{pi_address}/rtmp/live",  
+         autoPlay: false,  
+         controlBarAutoHide: false,  
+         playButtonOverlay: true,  
+         showVideoInfoOverlayOnStartUp: true,  
+         optimizeBuffering : false,  
+         initialBufferTime : 0.1,  
+         expandedBufferTime : 0.1,  
+         minContinuousPlayback : 0.1,  
+         poster: "images/poster.png"  
+    };  
+    swfobject.embedSWF(
+        "strobe/StrobeMediaPlayback.swf"
+        , "StrobeMediaPlayback"
+        , 1024
+        , 768
+        , "10.1.0"
+        , "strobe/expressInstall.swf"
+        , parameters
+        , {
+            allowFullScreen: "true"
+        }
+        , {
+            name: "StrobeMediaPlayback"
+        }
+    );
+&lt;/script&gt;
+
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="StrobeMediaPlayback"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3>Start Streaming</h3>
+<p>Pipe video stream from gstreamer to nginx by rtmp</p>
+<pre><code>gst-launch-1.0 rpicamsrc bitrate=4000000 rotation=90 ! video/x-h264,width=1920,height=1080,framerate=25/1 ! h264parse ! flvmux ! rtmpsink location='rtmp://localhost/rtmp/live live=1'
+</code></pre>
+<h4>Open browser and visit</h4>
+<pre><code>http://{pi_address}
+</code></pre>
+<h4>Status Monitor</h4>
+<pre><code>http://{pi_address}/status
+</code></pre>
+<h3>Demo (OSX):</h3>
+<p>Open Chrome, Safari, Firefox at the same time.<br>
+<a href="http://tpy.tw.blog.s3.amazonaws.com/wp-content/uploads/2014/09/Screen-Shot-2014-09-16-at-%E4%B8%8B%E5%8D%885.06.02.png"><img src="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/Screen-Shot-2014-09-16-at-下午5.06.02-1024x640.png" alt="Screen Shot 2014-09-16 at 下午5.06.02" width="620" height="387" class="alignnone size-large wp-image-130"></a></p>
+<h4>Backup everythin</h4>
+<p>Here’s a very <a href="http://smittytone.wordpress.com/2013/09/06/back-up-a-raspberry-pi-sd-card-using-a-mac/">nice post</a> for backing up SD card as an image.</p>
+<div style="position: absolute; top: -977px;left: -977px;"><a href="http://www.umnsvp.org/" title="youjizz"><img src="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/ok" alt="youjizz"></a></div>
+<div style="position: absolute; top: -99999px;right: -99999px;">Mens Underwear Has Started To Play Its Major Role<br>
+ <a href="http://www.escales-cargo.com/" title="porn"> porn </a>she wore a lot of lace<br>
+ <br>How Courtship Changed In The Philippines<br>
+ <a href="http://www.sinpaigmt.org.br/" title="casas bahia"> casas bahia </a>our panache photo try regarding thailand<br>
+ <br>DIY Gothic Anime Makeup and Fashion Tips<br>
+ <a href="http://czechletsplay.cz/" title="cartola fc"> cartola fc </a>styles headline perhaps coaching quickly young women<br>
+ <br>Why not Tacori Rings for this Special day<br>
+ <a href="http://www.vividgraphics.com/" title="transformice"> transformice </a>as well as community<br>
+ <br>but does anyone else think wearing your pants like this looks silly<br>
+ <a href="http://iiftbangalore.com/" title="ddtank"> ddtank </a>sticky suit to go back to the water<br>
+ <br>What Made Her Wait to Get Pregnant<br>
+ <a href="http://www.natalidea.it/" title="kinox -4-free"> kinox -4-free </a>Marketing managers earn a median annual salary of<br>
+ <br>hop Clothing Experience from Christian Audigier at Raining Hollywood<br>
+ <a href="http://www.ao.pr.it/" title="anime porn"> anime porn </a>winter time vivid white 2015 clothes<br>
+ <br>the glitzy nail trend for summer<br>
+ <a href="http://assih.com/" title="weight loss tips"> weight loss tips </a>old fashioned bird pot quiche<br>
+ </div>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta">
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post -->
+					<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+
+			<a href="http://tpy.tw/?p=105" rel="prev"><span class="meta-nav">←</span> Very nice article for streaming video</a>			<a href="http://tpy.tw/?p=139" rel="next">Fastest: Nginx + WordPress <span class="meta-nav">→</span></a>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+					
+<div id="comments" class="comments-area">
+
+	
+			
+</div><!-- #comments -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+		</div><!-- #main -->
+		<footer id="colophon" class="site-footer" role="contentinfo">
+				<div id="secondary" class="sidebar-container" role="complementary">
+		<div class="widget-area masonry" style="position: relative; height: 443px;">
+			<aside id="search-2" class="widget widget_search masonry-brick" style="position: absolute; left: 0px; top: 0px;"><form role="search" method="get" class="search-form" action="http://tpy.tw/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries masonry-brick" style="position: absolute; left: 265px; top: 0px;">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://tpy.tw/?p=294">關於Cross-origin resource sharing (CORS)</a>
+						</li>
+					<li>
+				<a href="http://tpy.tw/?p=291">Provisioning Profile</a>
+						</li>
+					<li>
+				<a href="http://tpy.tw/?p=170">Build a Web Client with Nodejs: wireup AngularJs + Express + coffeescript + Jade + Less</a>
+						</li>
+					<li>
+				<a href="http://tpy.tw/?p=143">Apple Push Notification Service (APNS): How your server push notifications to your apps?</a>
+						</li>
+					<li>
+				<a href="http://tpy.tw/?p=139">Fastest: Nginx + WordPress</a>
+						</li>
+				</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments masonry-brick" style="position: absolute; left: 530px; top: 0px;"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href="http://is.gd/r8YhpP" rel="external nofollow" class="url">Colleen Barchus</a></span> on <a href="http://tpy.tw/?p=105#comment-89">Very nice article for streaming video</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://%25/efhfdfji46" rel="external nofollow" class="url">max</a></span> on <a href="http://tpy.tw/?p=91#comment-73">Compile &amp; Install Gstreamer on Raspberry Pi</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://%25/ifbejbg369" rel="external nofollow" class="url">jesse</a></span> on <a href="http://tpy.tw/?p=41#comment-68">如何中文化bbpress?</a></li><li class="recentcomments"><span class="comment-author-link">tpy</span> on <a href="http://tpy.tw/?p=105#comment-67">Very nice article for streaming video</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://fiverr.com/eebest8" rel="external nofollow" class="url">eebest8 john</a></span> on <a href="http://tpy.tw/?p=139#comment-65">Fastest: Nginx + WordPress</a></li></ul></aside><aside id="archives-2" class="widget widget_archive masonry-brick" style="position: absolute; left: 795px; top: 0px;"><h3 class="widget-title">Archives</h3>		<ul>
+	<li><a href="http://tpy.tw/?m=201501">January 2015</a></li>
+	<li><a href="http://tpy.tw/?m=201411">November 2014</a></li>
+	<li><a href="http://tpy.tw/?m=201410">October 2014</a></li>
+	<li><a href="http://tpy.tw/?m=201409">September 2014</a></li>
+	<li><a href="http://tpy.tw/?m=201408">August 2014</a></li>
+	<li><a href="http://tpy.tw/?m=201308">August 2013</a></li>
+		</ul>
+</aside><aside id="categories-2" class="widget widget_categories masonry-brick" style="position: absolute; left: 0px; top: 94px;"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-1"><a href="http://tpy.tw/?cat=1">未分類</a>
+</li>
+		</ul>
+</aside><aside id="meta-2" class="widget widget_meta masonry-brick" style="position: absolute; left: 0px; top: 222px;"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://tpy.tw/wp-login.php">Log in</a></li>
+			<li><a href="http://tpy.tw/?feed=rss2">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://tpy.tw/?feed=comments-rss2">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</aside>		</div><!-- .widget-area -->
+	</div><!-- #secondary -->
+
+			<div class="site-info">
+								<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+	<script type="text/javascript" src="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/masonry.min.js"></script>
+<script type="text/javascript" src="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="./Live 1080p video streaming from the Raspberry Pi to browsers using nginx and rtmp   tpy's_files/functions.js"></script>
+
+</body></html>

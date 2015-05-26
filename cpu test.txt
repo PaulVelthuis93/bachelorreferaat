@@ -1,0 +1,7 @@
+400 miliampare sysbench 4 cores
+
+330 1 cores
+
+355 2 cores
+
+380 3 cores

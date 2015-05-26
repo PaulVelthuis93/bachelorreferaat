@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.14)  20 MAR 2015 19:24
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.14)  1 APR 2015 08:14
 entering extended mode
 **research*proposal.tex
 
@@ -324,6 +324,7 @@ File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 ("C:\Program Files (x86)\mik\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
+Package hyperref Info: Option `breaklinks' set `true' on input line 4319.
 Package hyperref Info: Hyper figures OFF on input line 4443.
 Package hyperref Info: Link nesting OFF on input line 4448.
 Package hyperref Info: Hyper index ON on input line 4451.
@@ -409,8 +410,27 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \TX@cols=\count125
 \TX@ftn=\toks39
 )
-\@float@every@figure=\toks40
-\@float@every@table=\toks41
+(C:\Users\Paul\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pdfpages.sty
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+
+("C:\Program Files (x86)\mik\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files (x86)\mik\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count126
+\calc@Bcount=\count127
+\calc@Adimen=\dimen141
+\calc@Bdimen=\dimen142
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count128
+\calc@Cskip=\skip51
+)
+(C:\Users\Paul\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
 
 (C:\Users\Paul\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
@@ -427,46 +447,57 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(C:\Users\Paul\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\ppxetex.def
+File: ppxetex.def 2013/08/25 v0.4v Pdfpages driver for XeTeX (AM)
 )
+\AM@pagebox=\box33
+\AM@toc@title=\toks40
+\c@AM@survey=\count129
+\AM@templatesizebox=\box34
+)
+\@float@every@figure=\toks41
+\@float@every@table=\toks42
+
 ("C:\Users\Paul\Documents\bachelorreferaat\research_proposal\research proposal.
 aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box33
+\AtBeginShipoutBox=\box35
 
 
 Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
 (hyperref)                using 11in.
 
-Package hyperref Info: Link coloring OFF on input line 39.
+Package hyperref Info: Link coloring OFF on input line 50.
 ("C:\Program Files (x86)\mik\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\mik\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count126
+\c@section@level=\count130
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 50.
+LaTeX Info: Redefining \pageref on input line 50.
+LaTeX Info: Redefining \nameref on input line 50.
 
 ("C:\Users\Paul\Documents\bachelorreferaat\research_proposal\research proposal.
 out")
@@ -481,14 +512,14 @@ Requested font "cmsy6" at 6.0pt
 Requested font "cmex9" at 9.0pt
 Requested font "cmex7" at 6.0pt
 Requested font "cmex7" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+msa on input line 91.
+LaTeX Font Info:    Try loading font information for U+msa on input line 102.
  ("C:\Program Files (x86)\mik\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 Requested font "msam10" at 9.0pt
 Requested font "msam7" at 6.0pt
 Requested font "msam5" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+msb on input line 91.
+LaTeX Font Info:    Try loading font information for U+msb on input line 102.
 
 ("C:\Program Files (x86)\mik\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -496,7 +527,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Requested font "msbm10" at 9.0pt
 Requested font "msbm7" at 6.0pt
 Requested font "msbm5" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+lasy on input line 91.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 102.
 
 ("C:\Program Files (x86)\mik\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -505,12 +536,12 @@ Requested font "lasy9" at 9.0pt
 Requested font "lasy6" at 6.0pt
 Requested font "lasy5" at 5.0pt
 
-Overfull \hbox (1009.19989pt too wide) in paragraph at lines 91--91
+Overfull \hbox (1009.19989pt too wide) in paragraph at lines 102--102
  [][][][][] 
  []
 
 
-Overfull \hbox (7.80002pt too wide) in paragraph at lines 91--91
+Overfull \hbox (7.80002pt too wide) in paragraph at lines 102--102
  [] 
  []
 
@@ -518,7 +549,7 @@ Overfull \hbox (7.80002pt too wide) in paragraph at lines 91--91
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 )
-Overfull \hbox (2.38896pt too wide) in paragraph at lines 107--109
+Overfull \hbox (2.38896pt too wide) in paragraph at lines 117--119
 \T1/aer/m/n/9 makes HD movies watch-ing pos-si-ble. For this Net-flix makes
  []
 
@@ -526,45 +557,32 @@ Overfull \hbox (2.38896pt too wide) in paragraph at lines 107--109
 
 
 ]
-Overfull \hbox (7.10538pt too wide) in paragraph at lines 118--123
+Overfull \hbox (7.10538pt too wide) in paragraph at lines 128--133
 \T1/aer/m/n/9 Small scale cloud com-put-ing is cloud com-put-ing with smaller
  []
 
-Missing character: There is no ’ in font ptmb8t!
 
-Overfull \hbox (20.21777pt too wide) in paragraph at lines 124--124
-[]\secfnt Is the Rasp-berry Pis us-able for video stream-
+Overfull \hbox (21.53773pt too wide) in paragraph at lines 134--134
+[]\secfnt Is the Rasp-berry Pi fea-si-ble for video stream-
  []
 
-Requested font "aebx9" at 9.0pt
 
-LaTeX Warning: Citation `mosberger1998httperf' on page \thepage  undefined on i
-nput line 138.
-
-
-LaTeX Warning: Citation `httperf-2' on page \thepage  undefined on input line 1
-38.
-
-
-Overfull \hbox (4.24571pt too wide) in paragraph at lines 140--140
-[]\secfnt How is avail-abil-ity in a Rasp-berry pi clus-
+Overfull \hbox (4.90578pt too wide) in paragraph at lines 151--151
+[]\secfnt How is avail-abil-ity in a Rasp-berry Pi clus-
  []
 
 File: Design_science.png Graphic file (type QTm)
 <use  "Design_science.png" >
 File: Pi2ModB1GB_-comp.jpeg Graphic file (type QTm)
  <use  "Pi2ModB1GB_-comp.jpeg" >
-Overfull \hbox (47.76082pt too wide) in paragraph at lines 179--189
- [][] 
- []
 
-[2]
-
-LaTeX Warning: File `raspberry pi setup.jpg' not found on input line 196.
+LaTeX Warning: File `raspberry pi setup.jpg' not found on input line 192.
 
 File: raspberry pi setup.jpg Graphic file (type QTm)
-<use  "raspberry pi setup.jpg" >
-Overfull \hbox (5.6229pt too wide) in paragraph at lines 207--225
+<use  "raspberry pi setup.jpg" > [2]
+Requested font "aebx9" at 9.0pt
+
+Overfull \hbox (21.45325pt too wide) in paragraph at lines 203--220
  [][] 
  []
 
@@ -572,49 +590,72 @@ Overfull \hbox (5.6229pt too wide) in paragraph at lines 207--225
 ("C:\Users\Paul\Documents\bachelorreferaat\research_proposal\research proposal.
 bbl"
 Requested font "aeti9" at 9.0pt
+Requested font "aer8" at 8.0pt
 LaTeX Font Info:    Try loading font information for T1+aett on input line 21.
  ("C:\Program Files (x86)\mik\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Requested font "aett9" at 9.0pt
+Requested font "aett8" at 8.0pt
+Requested font "cmr8" at 8.0pt
+Requested font "cmmi8" at 8.0pt
+Requested font "cmsy8" at 8.0pt
+Requested font "cmex8" at 8.0pt
+Requested font "msam10" at 8.0pt
+Requested font "msbm10" at 8.0pt
+Requested font "lasy8" at 8.0pt
 
-Overfull \hbox (43.17279pt too wide) in paragraph at lines 31--37
-\T1/aett/m/n/9 changing-[]permissions-[]for-[]folders-[]and-[]files-[]in-[]var-
+Overfull \hbox (18.36786pt too wide) in paragraph at lines 31--37
+\T1/aett/m/n/8 changing-[]permissions-[]for-[]folders-[]and-[]files-[]in-[]var-
 []www$[]\T1/aer/m/n/9 , 
  []
 
-[3]
 Missing character: There is no ’ in font aer9!
-
-Overfull \hbox (118.62762pt too wide) in paragraph at lines 66--72
-\T1/aett/m/n/9 nederland-[]op-[]vijfde-[]plek-[]met-[]bijna-[]miljoen-[]netflix
+[3]
+Overfull \hbox (86.33441pt too wide) in paragraph at lines 72--78
+\T1/aett/m/n/8 nederland-[]op-[]vijfde-[]plek-[]met-[]bijna-[]miljoen-[]netflix
 -[]abonnees~a3851031/$[]\T1/aer/m/n/9 , 
  []
 
 Missing character: There is no – in font aer9!
+Missing character: There is no — in font aer9!
 
-Overfull \hbox (55.25565pt too wide) in paragraph at lines 199--205
-\T1/aett/m/n/9 how-[]to-[]build-[]the-[]best-[]raspberry-[]pi-[]media-[]server-
+Overfull \hbox (29.04666pt too wide) in paragraph at lines 211--217
+\T1/aett/m/n/8 how-[]to-[]build-[]the-[]best-[]raspberry-[]pi-[]media-[]server-
 []1163133 / 
  []
 
-) [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 252.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 252.
+Missing character: There is no “ in font aer9!
+Missing character: There is no ” in font aer9!
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+File: Kostenoverzicht_cluster.pdf Graphic file (type QTm)
+
+<use  "Kostenoverzicht_cluster.pdf" >
+Overfull \hbox (317.04352pt too wide) in paragraph at lines 249--251
+[][]
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 253.
+[5
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 253.
 
 ("C:\Users\Paul\Documents\bachelorreferaat\research_proposal\research proposal.
 aux")
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 252.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 252.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 252.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 253.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 253.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 253.
  ) 
 Here is how much of TeX's memory you used:
- 10800 strings out of 429025
- 149067 string characters out of 3167967
- 226663 words of memory out of 3000000
- 13975 multiletter control sequences out of 15000+200000
- 40496 words of font info for 53 fonts, out of 3000000 for 9000
+ 11494 strings out of 429025
+ 159539 string characters out of 3167967
+ 240907 words of memory out of 3000000
+ 14646 multiletter control sequences out of 15000+200000
+ 43644 words of font info for 61 fonts, out of 3000000 for 9000
  912 hyphenation exceptions out of 8191
- 39i,11n,46p,1178b,428s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,11n,46p,1081b,434s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on research*proposal.pdf (4 pages).
+Output written on research*proposal.pdf (5 pages).
