@@ -296,24 +296,33 @@ In this testing section several test will be done these are:
 \begin{enumerate}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex] 
 	\item CPU test
 	\item RTMP stream test
+	\item Video on demand test
 	\item SMIL test
-	\item CPU test with stream
 	\item Cassandra test for file location
 \end{enumerate}
 
+\subsubsection{CPU test}
 
-The Raspberry Pi's are stress tested to make sure that they are operating in the right way. For this the program stress for Linux is used. 
-This application checks if the CPU is working correctly.
+The Raspberry Pi's are stress tested to make sure that they are operating correctly. For this the program stress for Linux is used to monitor its health. All eight Raspberry Pi 2 have been tested using this program and they were working correctly. 
 
-To stress test and see if the server is streaming correctly we use Apache JMeter~\cite{jmeter}. This test with Apache JMeter is used to see how many streams a Raspberry Pi 2 can handle. This test is done with a laptop and RPi2. First a test case is created in Apache JMeter then a RTMP video stream is started and this is checked in a media player and a webpage in a webbrowser. The result is that the RPi 2 can handle a maximum of 25 users for streaming MP4 files at a user at the same time. Depending on what protocol is used the video can freeze, or the video will be displayed on a lower bit rate. If it goes to a lower bit rate it will try to switch back to a higher bitrate with higher quality video when this is possible. 
+Another test is done with FFmpeg. FFmpeg needs a lot of CPU power to create new videos in different formats. To test this the top command of Linux was used. This measures the processor activity in real time. In this test a 230 MB 720p MPEG-4 (MP4 ) video has been made into three different lower qualities videos, it required 200 \% of the CPU power. The output is a 120p, 240p and 480p video file. At 200 \% CPU 2 cores has to be used out of the four to produce the video, this would result in the fact that the Raspberry Pi can only process two videos into different formats at the same time. When you have streamers that have only limited data available they will not have all the different formats. These streamers need to quickly produce these videos to different formats and this can lead till difficulties.  \newline
+If the videos are streamed by using NGINX they use not so much processor power. The CPU power that is needed for a single stream is about 2 \% and this barely increases when more clients are listening to it. This test is done by using web browsers and the Linux top command. 
 
-Streaming videos can be done by NGINX. To test if this is working properly we can test it with a media player like VLC or use a web browser were you can type in the RTMP stream coming from the RPi 2. Test the RTMP stream with different kind of MPEG-4 (MP4 ) files so you can see the quality difference. Test the RTMP stream by copying it in a media player. After that with the JW player support in the browser you can also test it inside your browser. The RTMP stream is streaming about 800 kbit/s for a small 300 MB movie. Theoretically this would mean that according to the formula max users=bandwidth/bit rate stream it will result in 118 users. This is with the Raspberry Pi 2 having a 100 Mbit connection.  The RPi 2 has with the Iperf test a maximum connection of  94.4 Mbps~\cite{ipref}. With a USB 2.0 gigabit adapter this could increase in a 470 Mbit connection resulting in a increasing amount of users for each Raspberry Pi 2. 
+\subsubsection{RTMP stream test}
 
+To stress test and see if the server is streaming correctly we use Apache JMeter~\cite{jmeter}. This test with Apache JMeter is used to see how many streams a Raspberry Pi 2 can handle. This test is done with a laptop and RPi 2. First a test case is created in Apache JMeter then a RTMP video stream is started and this is checked in a media player and a web page in a web browser. The result of this test is that it can handle 25 users for streaming MPEG-4 (MP4 ) files at a user at the same time. If there are more users used the video might freeze. This can result in a bad experience for the user watching the video. The RTMP stream will stream the video only in 720p format. Another test is by opening a media player like VLC were you can type in the RTMP stream address coming from the RPi 2. If the RTMP stream with the 230 MB video of 49 minutes is opened you can see that the video freezes some times do to buffering problems. \newline
+The RTMP stream is streaming about 800 kbit/s for a small 300 MB movie. Theoretically this would mean that according to the formula max users=bandwidth/bit rate stream it will result in 118 users. This is with the Raspberry Pi 2 having a 100 Mbit connection.  The RPi 2 has with the Iperf test a maximum connection of  94.4 Mbps~\cite{ipref}. With a USB 2.0 gigabit adapter this could increase in a 470 Mbit connection resulting in a increasing amount of users for each Raspberry Pi 2. \newline
+If then a different stream is created with for example a audio file of 9 minutes there is no freezing with the VLC player. To test it in the browser a JW player is embedded inside the web page. This browser stream can be maxed with the 118 users that are theoretically possible with the 800 kbit/s stream of the small movie. 
+ 
 
-Testing qualities with top command gives with a stream of a audio file of 7 min, 11 MB and in MP4 format a result of 10m resident size value. 
-With video streaming this gives a resident value of 14m for a file of 230 MB. These processes mostly done by FFmpeg and only a small part is done by NGINX.  For Video on Demand most is done by NGINX and it was clearly visible that this kind of streaming is causing less freezing. This is because you can already start watching before the video is loaded. Video on demand (VOD)is better equipped to load the stream then only RTMP. With only RTMP it's only possible to watch what is at that moment being played like normal television. It also doesn't adjust the bit stream depending on the quality you need. Something VOD does. \newline
-Besides this some streaming with SMIL protocol has been done. This makes it possible to choose your own video streaming rate for the same file, for example 120p or 480p version of a movie. You now can choose the quality by yourself. This is something that Youtube does. There is also a possibility to switch the quality depending on the amount of data that can get over the network. During the test with 100 connections there was freezing when the users can set their own quality. When it is done automatically this was not the case. In apache JMeter it was also possible to see some latency when testing. For this testing videos of different qualities have been made. To make a video of 230 MB into the 3 different lower qualities it requires 200 \% of the CPU power. This is a lot of this has to be done for a lot of movies. So a server that needs to encode a lot of different videos might need a stronger processor. 
+\subsubsection{Video on demand test}
+For the video on demand test a RTMP stream with FFmpeg has been created and NGINX was started to share the video. 
+For Video on Demand most is done by NGINX and it was clearly visible that this kind of streaming is causing less freezing. This is because you can already start watching before the video is loaded. Video on demand (VOD)is better equipped to load the stream then only RTMP. With only RTMP it's only possible to watch what is at that moment being played like normal television. It also doesn't adjust the bit stream depending on the quality you need. Something VOD does. 
 
+\subsubsection{SMIL test}
+Streaming with SMIL protocol has been done. This makes it possible to choose your own video streaming rate for the same file, for example 120p or 480p version of a movie. You now can choose the quality by yourself. This is something that Youtube does. There is also a possibility to switch the quality depending on the amount of data that can get over the network. During the test with 100 connections there was freezing when the users can set their own quality. When it is done automatically this was not the case. In apache JMeter it was also possible to see some latency when testing. For this testing videos of different qualities have been made.
+
+\subsubsection{Cassandra test}
 For the file location and database it would be nice to run the Cassandra data server. This data server is also used by Netflix to keep track of it's files. It turned out that it was possible to run Cassandra. cqlsh command it is possible to so that the cluster is running.  
 
 
@@ -371,6 +380,6 @@ This paper would not have been possible without the help of Björn Postema and N
 \subsubsection{GitHub}
 For more information about the project its possible to see the GitHub repository. Comments or questions about the code can also be asked there. \newline
 The link is: \newline
-\url{https://github.com/PaulVelthuis93/VideoStreaming}
+\url{https://github.com/PaulVelthuis93/bachelorreferaat}
 
 \end{document}

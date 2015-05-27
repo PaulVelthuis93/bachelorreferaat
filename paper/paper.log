@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.14)  26 MAY 2015 14:39
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.14)  27 MAY 2015 16:01
 entering extended mode
 **paper.tex
 (C:\Users\Paul\Documents\bachelorreferaat\paper\paper.tex
@@ -582,11 +582,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 261--262
  [][] 
  []
 
-[5]
-Underfull \vbox (badness 7667) has occurred while \output is active []
-
- [6]
-[7
+[5] [6] [7
 
 ] (C:\Users\Paul\Documents\bachelorreferaat\paper\paper.bbl
 Requested font "aeti9" at 9.0pt
@@ -613,26 +609,32 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: Kostenoverzicht_cluster.pdf Graphic file (type QTm)
 
 <use  "Kostenoverzicht_cluster.pdf" >
-Overfull \hbox (317.04352pt too wide) in paragraph at lines 361--363
+Overfull \hbox (317.04352pt too wide) in paragraph at lines 370--372
 [][]
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 376.
+
+Overfull \hbox (3.59637pt too wide) in paragraph at lines 381--384
+[]$\T1/aett/m/n/9 https : / / github . com / PaulVelthuis93 / bachelorreferaat$
+[] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 385.
 [9
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 385.
  (C:\Users\Paul\Documents\bachelorreferaat\paper\paper.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 376.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 376.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 376.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 385.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 385.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 385.
  ) 
 Here is how much of TeX's memory you used:
- 11089 strings out of 429025
- 153593 string characters out of 3167967
+ 11090 strings out of 429025
+ 153609 string characters out of 3167967
  232117 words of memory out of 3000000
- 14260 multiletter control sequences out of 15000+200000
+ 14261 multiletter control sequences out of 15000+200000
  40496 words of font info for 53 fonts, out of 3000000 for 9000
  912 hyphenation exceptions out of 8191
  39i,11n,46p,1051b,456s stack positions out of 5000i,500n,10000p,200000b,50000s
