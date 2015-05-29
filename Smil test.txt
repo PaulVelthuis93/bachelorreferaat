@@ -1,0 +1,37 @@
+create smil file 
+
+not automattically quality switching
+
+<smil>
+<head>
+<meta base="rtmp://hostip/vod/" />
+</head>
+<body>
+<switch>
+<video src="mp4:sintel-120p.mp4" height="120" />
+<video src="mp4:sintel-240p.mp4" height="240" />
+<video src="mp4:sintel-480p.mp4" height="480" />
+</switch>
+</body>
+</smil>
+
+automatically quality switching
+
+<smil>
+  <head>
+    <meta base="rtmp://hostip/vod/" />
+  </head>
+  <body>
+    <switch>
+      <video src="mp4:sintel-480p.mp4" height="480" system-bitrate="1200000" width="1280" />
+      <video src="mp4:sintel-240p.mp4" height="240" system-bitrate="600000"  />
+      <video src="mp4:sintel-120p.mp4" height="120" system-bitrate="200000"  />
+    </switch>
+  </body>
+</smil>
+
+
+
+
+make sure that nginx is on so that the rtmp stream can be reached
+

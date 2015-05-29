@@ -1,0 +1,5 @@
+Create a JMeter test plan
+
+https://www.youtube.com/watch?v=L11e7BJzzZo
+
+make sure it works for the HTTP stream comming from RTMP . Execute the test with 200 

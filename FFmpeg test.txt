@@ -1,0 +1,7 @@
+create different bitrate files from 720p file
+
+ffmpeg -i sintel.mp4 -c:v libx264 -c:a copy -s 640x480 sintel-480p.mp4
+ffmpeg -i sintel.mp4 -c:v libx264 -c:a copy -s 320x240 sintel-240p.mp4
+ffmpeg -i sintel.mp4 -c:v libx264 -c:a copy -s 160x120 sintel-120p.mp4
+
+stream with 
