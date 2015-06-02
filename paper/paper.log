@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.14)  29 MAY 2015 17:36
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.14)  2 JUN 2015 15:30
 entering extended mode
 **paper.tex
-(C:\Users\Paul\Downloads\bachelorreferaat\paper\paper.tex
+(C:\Users\Paul\Documents\bachelorreferaat\paper\paper.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,7 +13,7 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\Paul\Downloads\bachelorreferaat\paper\sig-alternate-br.cls
+(C:\Users\Paul\Documents\bachelorreferaat\paper\sig-alternate-br.cls
 ("C:\Program Files (x86)\mik\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
@@ -441,7 +441,7 @@ LaTeX Info: Redefining \citeyear on input line 735.
 \@float@every@figure=\toks41
 \@float@every@table=\toks42
 
-(C:\Users\Paul\Downloads\bachelorreferaat\paper\paper.aux)
+(C:\Users\Paul\Documents\bachelorreferaat\paper\paper.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
@@ -480,8 +480,8 @@ LaTeX Info: Redefining \ref on input line 39.
 LaTeX Info: Redefining \pageref on input line 39.
 LaTeX Info: Redefining \nameref on input line 39.
 
-(C:\Users\Paul\Downloads\bachelorreferaat\paper\paper.out)
-(C:\Users\Paul\Downloads\bachelorreferaat\paper\paper.out)
+(C:\Users\Paul\Documents\bachelorreferaat\paper\paper.out)
+(C:\Users\Paul\Documents\bachelorreferaat\paper\paper.out)
 \@outlinefile=\write3
 Requested font "cmr6" at 6.0pt
 Requested font "cmmi9" at 9.0pt
@@ -579,14 +579,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: raspsetup.jpg Graphic file (type QTm)
 
 <use  "raspsetup.jpg" >
-Overfull \hbox (12.0pt too wide) in paragraph at lines 243--244
+Overfull \hbox (12.0pt too wide) in paragraph at lines 244--245
  [][] 
  []
 
 [4]
 File: setup.jpg Graphic file (type QTm)
  <use  "setup.jpg" >
-Overfull \hbox (12.0pt too wide) in paragraph at lines 264--265
+Overfull \hbox (12.0pt too wide) in paragraph at lines 265--266
  [][] 
  []
 
@@ -594,7 +594,16 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 264--265
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-[6] [7] (C:\Users\Paul\Downloads\bachelorreferaat\paper\paper.bbl
+[6]
+Overfull \hbox (1.34506pt too wide) in paragraph at lines 339--341
+\T1/aer/m/n/9 With NG-INX and it's load bal-anc-ing al-go-rithm over HTTP
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+(C:\Users\Paul\Documents\bachelorreferaat\paper\paper.bbl
 Requested font "aeti9" at 9.0pt
 LaTeX Font Info:    Try loading font information for T1+aett on input line 17.
 
@@ -610,115 +619,118 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--39
 
 Missing character: There is no ’ in font aer9!
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--85
+Underfull \hbox (badness 10000) in paragraph at lines 90--96
 []\T1/aer/m/n/9 de Volk-skrant.  Ned-er-land op vi-jfde
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--85
+Underfull \hbox (badness 10000) in paragraph at lines 90--96
 \T1/aer/m/n/9 plek met bi-jna miljoen netflix-abonnees.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--85
+Underfull \hbox (badness 10000) in paragraph at lines 90--96
 \T1/aer/m/n/9 http://www.volkskrant.nl/media/nederland-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--85
+Underfull \hbox (badness 10000) in paragraph at lines 90--96
 \T1/aer/m/n/9 op-vijfde-plek-met-bijna-miljoen-netflix-
  []
 
 
-Underfull \hbox (badness 1303) in paragraph at lines 79--85
+Underfull \hbox (badness 1303) in paragraph at lines 90--96
 \T1/aer/m/n/9 abonnees a3851031/, 2015.  Last ac-cessed May
- []
-
-
-Underfull \hbox (badness 1348) in paragraph at lines 128--134
-[]\T1/aer/m/n/9 J. Kiepert.  Cre-at-ing a rasp-berry pi-based be-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--134
-\T1/aett/m/n/9 files / 2013 / 05 / Creating . a . Raspberry . Pi-[]Based .
- []
-
-Missing character: There is no – in font aer9!
-
-Underfull \hbox (badness 1019) in paragraph at lines 169--175
-\T1/aer/m/it/9 Top-ics in Cloud Com-put-ing\T1/aer/m/n/9 , Hot-Cloud'10, pages
- []
-
-
-Underfull \hbox (badness 1629) in paragraph at lines 189--193
-[]\T1/aer/m/n/9 PCextreme.  Rasp-berry pi colo-catie.  []$\T1/aett/m/n/9 http :
- / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 213--219
-[]\T1/aer/m/n/9 techrepublic.  10 things you should
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 213--219
-\T1/aer/m/n/9 know about mi-croservers.  []$\T1/aett/m/n/9 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 213--219
-\T1/aett/m/n/9 www . techrepublic . com / blog / 10-[]things /
- []
-
-
-Overfull \hbox (4.44537pt too wide) in paragraph at lines 213--219
-\T1/aett/m/n/9 10-[]things-[]you-[]should-[]know-[]about-[]microservers/$[]\T1/
-aer/m/n/9 ,
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8])
-[9
+ [8]
+Underfull \hbox (badness 1348) in paragraph at lines 139--145
+[]\T1/aer/m/n/9 J. Kiepert.  Cre-at-ing a rasp-berry pi-based be-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--145
+\T1/aett/m/n/9 files / 2013 / 05 / Creating . a . Raspberry . Pi-[]Based .
+ []
+
+Missing character: There is no – in font aer9!
+
+Underfull \hbox (badness 1019) in paragraph at lines 180--186
+\T1/aer/m/it/9 Top-ics in Cloud Com-put-ing\T1/aer/m/n/9 , Hot-Cloud'10, pages
+ []
+
+
+Underfull \hbox (badness 1629) in paragraph at lines 200--204
+[]\T1/aer/m/n/9 PCextreme.  Rasp-berry pi colo-catie.  []$\T1/aett/m/n/9 http :
+ / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--230
+[]\T1/aer/m/n/9 techrepublic.  10 things you should
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--230
+\T1/aer/m/n/9 know about mi-croservers.  []$\T1/aett/m/n/9 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--230
+\T1/aett/m/n/9 www . techrepublic . com / blog / 10-[]things /
+ []
+
+
+Overfull \hbox (4.44537pt too wide) in paragraph at lines 224--230
+\T1/aett/m/n/9 10-[]things-[]you-[]should-[]know-[]about-[]microservers/$[]\T1/
+aer/m/n/9 ,
+ []
+
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9
 
 ]
-File: Kostenoverzicht_cluster.pdf Graphic file (type QTm)
- <use  "Kostenoverzicht_cluster.pdf" >
-Overfull \hbox (317.04352pt too wide) in paragraph at lines 385--387
+File: cost_cluster.pdf Graphic file (type QTm)
+
+<use  "cost_cluster.pdf" >
+Overfull \hbox (317.04352pt too wide) in paragraph at lines 390--392
 [][]
  []
 
 
-Overfull \hbox (27.96803pt too wide) in paragraph at lines 391--391
+Overfull \hbox (27.96803pt too wide) in paragraph at lines 396--396
 []\secfnt SOFTWARE CON-FIG-U-RA-TION AND TEST-
  []
 
 
-Overfull \hbox (3.59637pt too wide) in paragraph at lines 396--399
+Overfull \hbox (3.59637pt too wide) in paragraph at lines 401--404
 []$\T1/aett/m/n/9 https : / / github . com / PaulVelthuis93 / bachelorreferaat$
 [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 400.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 405.
 [10
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 400.
- (C:\Users\Paul\Downloads\bachelorreferaat\paper\paper.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 400.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 400.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 400.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 405.
+ (C:\Users\Paul\Documents\bachelorreferaat\paper\paper.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 405.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 405.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 405.
  ) 
 Here is how much of TeX's memory you used:
- 11473 strings out of 429025
- 158642 string characters out of 3167967
- 241359 words of memory out of 3000000
- 14641 multiletter control sequences out of 15000+200000
+ 11478 strings out of 429025
+ 158760 string characters out of 3167967
+ 239502 words of memory out of 3000000
+ 14646 multiletter control sequences out of 15000+200000
  40496 words of font info for 53 fonts, out of 3000000 for 9000
  912 hyphenation exceptions out of 8191
- 39i,11n,45p,1284b,480s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,11n,45p,1382b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on paper.pdf (10 pages).
