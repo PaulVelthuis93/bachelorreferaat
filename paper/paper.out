@@ -3,7 +3,7 @@
 \BOOKMARK [1][-]{section.3}{Background}{}% 3
 \BOOKMARK [2][-]{subsection.3.1}{Small\040scale\040computing}{section.3}% 4
 \BOOKMARK [2][-]{subsection.3.2}{Microserver}{section.3}% 5
-\BOOKMARK [2][-]{subsection.3.3}{Streaming}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.3}{Video\040streaming}{section.3}% 6
 \BOOKMARK [2][-]{subsection.3.4}{Video\040streaming\040and\040load\040balancing}{section.3}% 7
 \BOOKMARK [2][-]{subsection.3.5}{Video\040streaming\040in\040a\040data\040center}{section.3}% 8
 \BOOKMARK [3][-]{subsubsection.3.5.1}{Video\040stream\040CDN}{subsection.3.5}% 9
@@ -20,8 +20,8 @@
 \BOOKMARK [3][-]{subsubsection.6.4.4}{Video\040on\040demand\040test}{subsection.6.4}% 20
 \BOOKMARK [3][-]{subsubsection.6.4.5}{SMIL\040test}{subsection.6.4}% 21
 \BOOKMARK [3][-]{subsubsection.6.4.6}{File\040location\040test}{subsection.6.4}% 22
-\BOOKMARK [1][-]{section.7}{Conclusion}{}% 23
-\BOOKMARK [1][-]{section.8}{Discussion}{}% 24
+\BOOKMARK [1][-]{section.7}{Discussion}{}% 23
+\BOOKMARK [1][-]{section.8}{Conclusion}{}% 24
 \BOOKMARK [1][-]{section.9}{Future\040work}{}% 25
 \BOOKMARK [1][-]{section.10}{Acknowledgments}{}% 26
 \BOOKMARK [1][-]{appendix.A}{Cost\040structure}{}% 27

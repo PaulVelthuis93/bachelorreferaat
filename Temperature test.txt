@@ -1,0 +1,127 @@
+sysbench --test=cpu --cpu-max-prime=20000 run
+
+1 thread
+
+Test execution summary:
+    total time:                          780.2199s
+    total number of events:              10000
+    total time taken by event execution: 780.2027
+    per-request statistics:
+         min:                                 77.97ms
+         avg:                                 78.02ms
+         max:                                114.62ms
+         approx.  95 percentile:              78.03ms
+
+Threads fairness:
+    events (avg/stddev):           10000.0000/0.00
+    execution time (avg/stddev):   780.2027/0.00
+
+2 threads
+sysbench --test=cpu --cpu-max-prime=20000 --num-threads=2 run
+
+Test execution summary:
+    total time:                          390.7195s
+    total number of events:              10000
+    total time taken by event execution: 781.4073
+    per-request statistics:
+         min:                                 77.97ms
+         avg:                                 78.14ms
+         max:                                118.35ms
+         approx.  95 percentile:              78.24ms
+
+Threads fairness:
+    events (avg/stddev):           5000.0000/7.00
+    execution time (avg/stddev):   390.7037/0.01
+
+3 threads
+ sysbench --test=cpu --cpu-max-prime=20000 --num-threads=3 run
+Test execution summary:
+    total time:                          260.6340s
+    total number of events:              10000
+    total time taken by event execution: 781.7872
+    per-request statistics:
+         min:                                 77.96ms
+         avg:                                 78.18ms
+         max:                                118.36ms
+         approx.  95 percentile:              78.45ms
+
+Threads fairness:
+    events (avg/stddev):           3333.3333/9.43
+    execution time (avg/stddev):   260.5957/0.03
+
+4 threads
+
+memory and read gave same result these tests can be run by
+sysbench --test=fileio --file-test-mode=rndwr --file-total-size=16MB --max-requests=1000 --num-threads=4 run
+
+
+Operations performed:  0 Read, 1001 Write, 1155 Other = 2156 Total
+Read 0b  Written 15.641Mb  Total transferred 15.641Mb  (2.8299Mb/sec)
+  181.11 Requests/sec executed
+
+Test execution summary:
+    total time:                          5.5270s
+    total number of events:              1001
+    total time taken by event execution: 0.4751
+    per-request statistics:
+         min:                                  0.06ms
+         avg:                                  0.47ms
+         max:                                 57.35ms
+         approx.  95 percentile:               0.20ms
+
+Threads fairness:
+    events (avg/stddev):           250.2500/104.28
+    execution time (avg/stddev):   0.1188/0.05
+
+
+ sysbench --test=memory --num-threads=4 run
+
+
+Doing memory operations speed test
+Memory block size: 1K
+
+Memory transfer size: 0M
+
+Memory operations type: write
+Memory scope type: global
+Threads started!
+Done.
+
+Operations performed: 0 (    0.00 ops/sec)
+
+0.00 MB transferred (0.00 MB/sec)
+
+
+Test execution summary:
+    total time:                          0.0012s
+    total number of events:              0
+    total time taken by event execution: 0.0000
+    per-request statistics:
+         min:                            18446744073709.55ms
+         avg:                                  0.00ms
+         max:                                  0.00ms
+
+Threads fairness:
+    events (avg/stddev):           0.0000/0.00
+    execution time (avg/stddev):   0.0000/0.00
+
+
+
+The temperatures itself can be found in the excel file
+
+Test done at 23 degrees room temperature
+
+Temperature script:
+
+/bin/bash
+
+timestamp=`date +%F_%H-%M-%S`
+echo "Temperature Log - $(date)" >/usr/temperature_log_$timestamp.txt
+while :
+do
+    temp=`/opt/vc/bin/vcgencmd measure_temp`
+    temp=${temp:5:16}
+    echo $temp >>/usr/temperature_log_$timestamp.txt
+    echo $temp
+    sleep 5
+done

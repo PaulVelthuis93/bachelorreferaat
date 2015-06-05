@@ -116,13 +116,6 @@ A.~R. Hevner.
   (2):\penalty0 4, 2007.
 \newblock \doi{10.1.1.218.5386}.
 
-\bibitem[H{\"o}fer and Karagiannis(2011)]{hofer:2011}
-C.~H{\"o}fer and G.~Karagiannis.
-\newblock Cloud computing services: taxonomy and comparison.
-\newblock \emph{Journal of Internet Services and Applications}, 2\penalty0
-  (2):\penalty0 81--94, 2011.
-\newblock \doi{10.1007/s13174-011-0027-x}.
-
 \bibitem[Ipref(2015)]{ipref}
 Ipref.
 \newblock Ipref.
@@ -207,6 +200,13 @@ J.~Player.
 \newblock Jw player.
 \newblock \url{http://www.jwplayer.com/}, 2015.
 \newblock Last accessed May 29, 2015.
+
+\bibitem[Server(2014)]{nginxvsapache}
+R.~W. Server.
+\newblock Comparing the performance of nginx and apache web servers.
+\newblock http://raspberrywebserver.com/raspberrypicluster/
+  comparing-the-performance-of-nginx-and-apache-web-servers.html, 2014.
+\newblock Last accessed June 5, 2015.
 
 \bibitem[Software(2015)]{stress}
 E.~Software.

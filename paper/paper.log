@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.14)  2 JUN 2015 15:30
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9) (preloaded format=xelatex 2014.9.14)  5 JUN 2015 13:18
 entering extended mode
 **paper.tex
 (C:\Users\Paul\Documents\bachelorreferaat\paper\paper.tex
@@ -442,22 +442,22 @@ LaTeX Info: Redefining \citeyear on input line 735.
 \@float@every@table=\toks42
 
 (C:\Users\Paul\Documents\bachelorreferaat\paper\paper.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -467,7 +467,7 @@ Package caption Info: End \AtBeginDocument code.
 Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
 (hyperref)                using 11in.
 
-Package hyperref Info: Link coloring OFF on input line 39.
+Package hyperref Info: Link coloring OFF on input line 40.
 ("C:\Program Files (x86)\mik\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -476,9 +476,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count128
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
 
 (C:\Users\Paul\Documents\bachelorreferaat\paper\paper.out)
 (C:\Users\Paul\Documents\bachelorreferaat\paper\paper.out)
@@ -491,7 +491,7 @@ Requested font "cmsy6" at 6.0pt
 Requested font "cmex9" at 9.0pt
 Requested font "cmex7" at 6.0pt
 Requested font "cmex7" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+msa on input line 93.
+LaTeX Font Info:    Try loading font information for U+msa on input line 95.
 
 ("C:\Program Files (x86)\mik\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -499,7 +499,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 Requested font "msam10" at 9.0pt
 Requested font "msam7" at 6.0pt
 Requested font "msam5" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+msb on input line 93.
+LaTeX Font Info:    Try loading font information for U+msb on input line 95.
 
 ("C:\Program Files (x86)\mik\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -507,7 +507,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Requested font "msbm10" at 9.0pt
 Requested font "msbm7" at 6.0pt
 Requested font "msbm5" at 5.0pt
-LaTeX Font Info:    Try loading font information for U+lasy on input line 93.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 95.
 
 ("C:\Program Files (x86)\mik\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -516,12 +516,12 @@ Requested font "lasy9" at 9.0pt
 Requested font "lasy6" at 6.0pt
 Requested font "lasy5" at 5.0pt
 
-Overfull \hbox (1009.19989pt too wide) in paragraph at lines 93--93
+Overfull \hbox (1009.19989pt too wide) in paragraph at lines 95--95
  [][][][][] 
  []
 
 
-Overfull \hbox (7.80002pt too wide) in paragraph at lines 93--93
+Overfull \hbox (7.80002pt too wide) in paragraph at lines 95--95
  [] 
  []
 
@@ -529,13 +529,18 @@ Overfull \hbox (7.80002pt too wide) in paragraph at lines 93--93
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 )
-Overfull \hbox (2.38896pt too wide) in paragraph at lines 106--108
-\T1/aer/m/n/9 makes HD movies watch-ing pos-si-ble. For this Net-flix makes
+Overfull \hbox (1.59726pt too wide) in paragraph at lines 102--107
+\T1/aer/m/n/9 This band-width us-age causes bot-tle-necks. To pre-vent these
  []
 
 
-Overfull \hbox (5.81819pt too wide) in paragraph at lines 106--108
-\T1/aer/m/n/9 In the Nether-lands video stream-ing ser-vices such as Youtube
+Overfull \hbox (1.66708pt too wide) in paragraph at lines 102--107
+\T1/aer/m/n/9 bot-tle-necks, data cen-ters are build around the globe. These
+ []
+
+
+Overfull \hbox (8.5883pt too wide) in paragraph at lines 108--110
+\T1/aer/m/n/9 In the Nether-lands, video stream-ing ser-vices such as Youtube
  []
 
 [1
@@ -546,64 +551,60 @@ File: Design_science.png Graphic file (type QTm)
  <use  "Design_science.png" >
 Requested font "aebx9" at 9.0pt
 
-Overfull \hbox (7.10538pt too wide) in paragraph at lines 140--141
+Overfull \hbox (7.10538pt too wide) in paragraph at lines 145--146
 []\T1/aer/m/n/9 Small scale cloud com-put-ing is cloud com-put-ing with smaller
 
  []
 
 File: VideoStreaming.jpg Graphic file (type QTm)
 <use  "VideoStreaming.jpg" > [2]
-Overfull \hbox (11.52501pt too wide) in paragraph at lines 173--174
+Overfull \hbox (3.13426pt too wide) in paragraph at lines 173--175
+\T1/aer/m/n/9 mance, re-li-a-bil-ity and fea-tures. There can be a non-uniform
+ []
+
+
+Overfull \hbox (3.3435pt too wide) in paragraph at lines 173--175
+\T1/aer/m/n/9 this prob-lem would be to repli-cate the most pop-u-lar movies,
+ []
+
+
+Overfull \hbox (11.52501pt too wide) in paragraph at lines 178--179
 []\T1/aer/m/n/9 Synchronized Mul-ti-me-dia In-te-gra-tion Lan-guage (SMIL)
  []
 
 
-Overfull \hbox (2.91942pt too wide) in paragraph at lines 173--174
+Overfull \hbox (2.91942pt too wide) in paragraph at lines 178--179
 \T1/aer/m/n/9 to me-dia ob-jects by URLs, al-low-ing them to be shared
  []
 
-[3]
-Overfull \hbox (9.99394pt too wide) in paragraph at lines 197--201
+
+Overfull \hbox (9.99394pt too wide) in paragraph at lines 202--206
 \T1/aer/m/n/9 One of these has been the su-per-com-puter build by Southamp-
  []
 
 
-Overfull \hbox (2.06572pt too wide) in paragraph at lines 202--206
+Overfull \hbox (2.06572pt too wide) in paragraph at lines 207--211
 \T1/aer/m/n/9 stream-ing for a lot of com-pa-nies and uni-ver-si-ties. WOWZA
  []
 
+[3]
 File: Pi2ModB1GB_-comp.jpeg Graphic file (type QTm)
-<use  "Pi2ModB1GB_-comp.jpeg" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+ <use  "Pi2ModB1GB_-comp.jpeg" >
 File: raspsetup.jpg Graphic file (type QTm)
-
-<use  "raspsetup.jpg" >
-Overfull \hbox (12.0pt too wide) in paragraph at lines 244--245
+ <use  "raspsetup.jpg" >
+Overfull \hbox (12.0pt too wide) in paragraph at lines 249--250
  [][] 
  []
 
 [4]
 File: setup.jpg Graphic file (type QTm)
  <use  "setup.jpg" >
-Overfull \hbox (12.0pt too wide) in paragraph at lines 265--266
- [][] 
- []
-
-
+File: Temperature_Test.png Graphic file (type QTm)
+ <use  "Temperature_Test.png" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-[6]
-Overfull \hbox (1.34506pt too wide) in paragraph at lines 339--341
-\T1/aer/m/n/9 With NG-INX and it's load bal-anc-ing al-go-rithm over HTTP
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
-(C:\Users\Paul\Documents\bachelorreferaat\paper\paper.bbl
+[6] [7] (C:\Users\Paul\Documents\bachelorreferaat\paper\paper.bbl
 Requested font "aeti9" at 9.0pt
 LaTeX Font Info:    Try loading font information for T1+aett on input line 17.
 
@@ -644,31 +645,56 @@ Underfull \hbox (badness 1303) in paragraph at lines 90--96
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
-Underfull \hbox (badness 1348) in paragraph at lines 139--145
+Underfull \hbox (badness 1348) in paragraph at lines 132--138
 []\T1/aer/m/n/9 J. Kiepert.  Cre-at-ing a rasp-berry pi-based be-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--145
+Underfull \hbox (badness 10000) in paragraph at lines 132--138
 \T1/aett/m/n/9 files / 2013 / 05 / Creating . a . Raspberry . Pi-[]Based .
  []
 
 Missing character: There is no – in font aer9!
 
-Underfull \hbox (badness 1019) in paragraph at lines 180--186
+Underfull \hbox (badness 1019) in paragraph at lines 173--179
 \T1/aer/m/it/9 Top-ics in Cloud Com-put-ing\T1/aer/m/n/9 , Hot-Cloud'10, pages
  []
 
 
-Underfull \hbox (badness 1629) in paragraph at lines 200--204
+Underfull \hbox (badness 1629) in paragraph at lines 193--197
 []\T1/aer/m/n/9 PCextreme.  Rasp-berry pi colo-catie.  []$\T1/aett/m/n/9 http :
  / /
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
+[]\T1/aer/m/n/9 R. W. Server.  Com-par-ing the per-for-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
+\T1/aer/m/n/9 mance of ng-inx and apache web servers.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
+\T1/aer/m/n/9 http://raspberrywebserver.com/raspberrypicluster/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
+\T1/aer/m/n/9 comparing-the-performance-of-nginx-and-apache-
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 205--210
+\T1/aer/m/n/9 web-servers.html, 2014.  Last ac-cessed June 5,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
 Underfull \hbox (badness 10000) in paragraph at lines 224--230
 []\T1/aer/m/n/9 techrepublic.  10 things you should
  []
@@ -690,47 +716,40 @@ aer/m/n/9 ,
  []
 
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9
-
-]
-File: cost_cluster.pdf Graphic file (type QTm)
-
-<use  "cost_cluster.pdf" >
-Overfull \hbox (317.04352pt too wide) in paragraph at lines 390--392
+File: cost_cluster.png Graphic file (type QTm)
+ <use  "cost_cluster.png" >
+Overfull \hbox (306.7987pt too wide) in paragraph at lines 404--406
 [][]
  []
 
 
-Overfull \hbox (27.96803pt too wide) in paragraph at lines 396--396
+Overfull \hbox (27.96803pt too wide) in paragraph at lines 410--410
 []\secfnt SOFTWARE CON-FIG-U-RA-TION AND TEST-
  []
 
 
-Overfull \hbox (3.59637pt too wide) in paragraph at lines 401--404
+Overfull \hbox (3.59637pt too wide) in paragraph at lines 415--418
 []$\T1/aett/m/n/9 https : / / github . com / PaulVelthuis93 / bachelorreferaat$
 [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 405.
-[10
-
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 419.
+[9
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 405.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 419.
  (C:\Users\Paul\Documents\bachelorreferaat\paper\paper.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 405.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 405.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 405.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 419.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 419.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 419.
  ) 
 Here is how much of TeX's memory you used:
- 11478 strings out of 429025
- 158760 string characters out of 3167967
- 239502 words of memory out of 3000000
- 14646 multiletter control sequences out of 15000+200000
+ 11481 strings out of 429025
+ 158819 string characters out of 3167967
+ 241598 words of memory out of 3000000
+ 14648 multiletter control sequences out of 15000+200000
  40496 words of font info for 53 fonts, out of 3000000 for 9000
  912 hyphenation exceptions out of 8191
- 39i,11n,45p,1382b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,11n,45p,1379b,476s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on paper.pdf (10 pages).
+Output written on paper.pdf (9 pages).

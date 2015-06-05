@@ -1,3 +1,163 @@
 apt-get install iperf
 
-ipref -c 
+iperf -c hostname
+Client connecting to 192.168.0.100, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.0.109 port 35114 connected with 192.168.0.100 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec   112 MBytes  94.2 Mbits/sec
+
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  4] local 192.168.0.100 port 5001 connected with 192.168.0.109 port 35114
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-10.0 sec   112 MBytes  94.1 Mbits/sec
+
+so 94.2 Mbits/sec connection
+
+in bits:
+root@bench01:~/iperf# iperf -c 192.168.0.100 -f b
+------------------------------------------------------------
+Client connecting to 192.168.0.100, TCP port 5001
+TCP window size: 44800 Byte (default)
+------------------------------------------------------------
+[  3] local 192.168.0.109 port 35115 connected with 192.168.0.100 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  118095872 Bytes  94285797 bits/sec
+
+bi directional measurement
+
+root@bench01:~/iperf# iperf -c 192.168.0.100 -r				sequential
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+------------------------------------------------------------
+Client connecting to 192.168.0.100, TCP port 5001
+TCP window size: 70.0 KByte (default)
+------------------------------------------------------------
+[  5] local 192.168.0.109 port 35116 connected with 192.168.0.100 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  5]  0.0-10.0 sec   113 MBytes  94.3 Mbits/sec
+[  4] local 192.168.0.109 port 5001 connected with 192.168.0.100 port 36494
+[  4]  0.0-10.0 sec   113 MBytes  94.1 Mbits/sec
+
+iperf -c 192.168.0.100 -d							simultaniously
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+------------------------------------------------------------
+Client connecting to 192.168.0.100, TCP port 5001
+TCP window size: 70.0 KByte (default)
+------------------------------------------------------------
+[  5] local 192.168.0.109 port 35117 connected with 192.168.0.100 port 5001
+[  4] local 192.168.0.109 port 5001 connected with 192.168.0.100 port 36495
+[ ID] Interval       Transfer     Bandwidth
+[  5]  0.0-10.0 sec   110 MBytes  92.4 Mbits/sec
+[  4]  0.0-10.2 sec  96.9 MBytes  79.8 Mbits/sec
+
+
+iperf -s -w 30k
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 60.0 KByte (WARNING: requested 30.0 KByte)
+------------------------------------------------------------
+[  4] local 192.168.0.100 port 5001 connected with 192.168.0.109 port 50184
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-10.0 sec   112 MBytes  93.9 Mbits/sec
+[  5] local 192.168.0.100 port 5001 connected with 192.168.0.109 port 50185
+[  5]  0.0-10.0 sec  85.6 MBytes  71.6 Mbits/sec
+[  4] local 192.168.0.100 port 5001 connected with 192.168.0.109 port 50186
+[  4]  0.0-10.0 sec  85.8 MBytes  71.8 Mbits/sec
+[  5] local 192.168.0.100 port 5001 connected with 192.168.0.109 port 50187
+[  5]  0.0-10.0 sec  27.6 MBytes  23.1 Mbits/sec
+[  4] local 192.168.0.100 port 5001 connected with 192.168.0.109 port 50188
+[  4]  0.0-10.1 sec  27.8 MBytes  23.1 Mbits/sec
+
+
+
+
+
+root@bench01:~# iperf -w 300k -P 2  -i 2  -c 192.168.0.100
+------------------------------------------------------------
+Client connecting to 192.168.0.100, TCP port 5001
+TCP window size:  320 KByte (WARNING: requested  300 KByte)
+------------------------------------------------------------
+[  3] local 192.168.0.109 port 50183 connected with 192.168.0.100 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 2.0 sec  22.6 MBytes  94.9 Mbits/sec
+[  3]  2.0- 4.0 sec  22.4 MBytes  93.8 Mbits/sec
+[  3]  4.0- 6.0 sec  22.5 MBytes  94.4 Mbits/sec
+[  3]  6.0- 8.0 sec  22.5 MBytes  94.4 Mbits/sec
+[  3]  8.0-10.0 sec  22.4 MBytes  93.8 Mbits/sec
+[  3]  0.0-10.0 sec   112 MBytes  94.3 Mbits/sec
+root@bench01:~# iperf -w 300k -P 2  -i 2  -c 192.168.0.100
+------------------------------------------------------------
+Client connecting to 192.168.0.100, TCP port 5001
+TCP window size:  320 KByte (WARNING: requested  300 KByte)
+------------------------------------------------------------
+[  3] local 192.168.0.109 port 50184 connected with 192.168.0.100 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 2.0 sec  22.5 MBytes  94.4 Mbits/sec
+[  3]  2.0- 4.0 sec  22.4 MBytes  93.8 Mbits/sec
+[  3]  4.0- 6.0 sec  22.5 MBytes  94.4 Mbits/sec
+[  3]  6.0- 8.0 sec  22.4 MBytes  93.8 Mbits/sec
+[  3]  8.0-10.0 sec  22.4 MBytes  93.8 Mbits/sec
+[  3]  0.0-10.0 sec   112 MBytes  94.0 Mbits/sec
+root@bench01:~# iperf -w 20k -P 2  -i 2  -c 192.168.0.100
+------------------------------------------------------------
+Client connecting to 192.168.0.100, TCP port 5001
+TCP window size: 40.0 KByte (WARNING: requested 20.0 KByte)
+------------------------------------------------------------
+[  3] local 192.168.0.109 port 50185 connected with 192.168.0.100 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 2.0 sec  17.1 MBytes  71.8 Mbits/sec
+[  3]  2.0- 4.0 sec  17.1 MBytes  71.8 Mbits/sec
+[  3]  4.0- 6.0 sec  17.0 MBytes  71.3 Mbits/sec
+[  3]  6.0- 8.0 sec  17.1 MBytes  71.8 Mbits/sec
+[  3]  8.0-10.0 sec  17.1 MBytes  71.8 Mbits/sec
+[  3]  0.0-10.0 sec  85.6 MBytes  71.7 Mbits/sec
+root@bench01:~# iperf -w 20k -P 128  -i 2  -c 192.168.0.100
+------------------------------------------------------------
+Client connecting to 192.168.0.100, TCP port 5001
+TCP window size: 40.0 KByte (WARNING: requested 20.0 KByte)
+------------------------------------------------------------
+[  3] local 192.168.0.109 port 50186 connected with 192.168.0.100 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 2.0 sec  17.0 MBytes  71.3 Mbits/sec
+[  3]  2.0- 4.0 sec  17.1 MBytes  71.8 Mbits/sec
+[  3]  4.0- 6.0 sec  17.4 MBytes  72.9 Mbits/sec
+[  3]  6.0- 8.0 sec  17.1 MBytes  71.8 Mbits/sec
+[  3]  8.0-10.0 sec  17.0 MBytes  71.3 Mbits/sec
+[  3]  0.0-10.0 sec  85.8 MBytes  71.8 Mbits/sec
+root@bench01:~# iperf -w 3k -P 128  -i 2  -c 192.168.0.100
+------------------------------------------------------------
+Client connecting to 192.168.0.100, TCP port 5001
+TCP window size: 6.00 KByte (WARNING: requested 3.00 KByte)
+------------------------------------------------------------
+[  3] local 192.168.0.109 port 50187 connected with 192.168.0.100 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 2.0 sec  5.62 MBytes  23.6 Mbits/sec
+[  3]  2.0- 4.0 sec  5.50 MBytes  23.1 Mbits/sec
+[  3]  4.0- 6.0 sec  5.50 MBytes  23.1 Mbits/sec
+[  3]  6.0- 8.0 sec  5.50 MBytes  23.1 Mbits/sec
+^C[  3]  0.0-10.0 sec  27.6 MBytes  23.2 Mbits/sec
+root@bench01:~# iperf -w 3k   -i 2  -c 192.168.0.100
+------------------------------------------------------------
+Client connecting to 192.168.0.100, TCP port 5001
+TCP window size: 6.00 KByte (WARNING: requested 3.00 KByte)
+------------------------------------------------------------
+[  3] local 192.168.0.109 port 50188 connected with 192.168.0.100 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0- 2.0 sec  5.62 MBytes  23.6 Mbits/sec
+[  3]  2.0- 4.0 sec  5.50 MBytes  23.1 Mbits/sec
+[  3]  4.0- 6.0 sec  5.50 MBytes  23.1 Mbits/sec
+[  3]  6.0- 8.0 sec  5.50 MBytes  23.1 Mbits/sec
+[  3]  8.0-10.0 sec  5.50 MBytes  23.1 Mbits/sec
+[  3]  0.0-10.1 sec  27.8 MBytes  23.2 Mbits/sec
+
+
+
