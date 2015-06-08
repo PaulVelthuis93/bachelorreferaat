@@ -1,3 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: paper.aux
-The style file: abbrvnat.bst
-Database file #1: sigproc.bib
+[0] Config.pm:318> INFO - This is Biber 1.8
+[0] Config.pm:321> INFO - Logfile is 'paper.blg'
+[80] biber-MSWIN:272> INFO - === %a %b %e, %Y, %H:%M:%S
+[81] Biber.pm:333> INFO - Reading 'paper.bcf'
+[159] Utils.pm:169> WARN - Warning: Found biblatex control file version 2.6, expected version 2.5
+[160] Utils.pm:169> WARN - No data sources defined!

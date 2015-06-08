@@ -5,3 +5,7 @@ ffmpeg -i sintel.mp4 -c:v libx264 -c:a copy -s 320x240 sintel-240p.mp4
 ffmpeg -i sintel.mp4 -c:v libx264 -c:a copy -s 160x120 sintel-120p.mp4
 
 stream with 
+
+measure CPU with top
+
+This will result in about 200 % CPU usage

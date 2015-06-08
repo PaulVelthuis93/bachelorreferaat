@@ -11,8 +11,8 @@
 \BOOKMARK [1][-]{section.5}{System\040description}{}% 11
 \BOOKMARK [1][-]{section.6}{Setup\040&\040Experiment}{}% 12
 \BOOKMARK [2][-]{subsection.6.1}{Experiment\040approach}{section.6}% 13
-\BOOKMARK [2][-]{subsection.6.2}{Raspberry\040Pi\0402\040inside\040a\040data\040center}{section.6}% 14
-\BOOKMARK [2][-]{subsection.6.3}{Raspberry\040Pi\0402\040setup}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.2}{RPi2\040inside\040a\040data\040center}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.3}{RPi2\040setup}{section.6}% 15
 \BOOKMARK [2][-]{subsection.6.4}{Raspberry\040Pi\0402\040testing}{section.6}% 16
 \BOOKMARK [3][-]{subsubsection.6.4.1}{CPU\040test}{subsection.6.4}% 17
 \BOOKMARK [3][-]{subsubsection.6.4.2}{Iperf\040test}{subsection.6.4}% 18
